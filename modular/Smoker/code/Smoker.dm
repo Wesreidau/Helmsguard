@@ -1,4 +1,4 @@
-/obj/item/storage/fancy/shhig
+/*/obj/item/storage/fancy/shhig
 	name = "Shhig Brand Zigs"
 	desc = "Dr. V's Shhig's; much like the image of serpents these zigs are synonymous with both healing and killing. Your life expectancy isnt very high anyway."
 	icon = 'modular/Smoker/icon/smokable.dmi'
@@ -151,3 +151,4 @@
 	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_GENERIC)
 	. = ..()
 	. = 1
+*/

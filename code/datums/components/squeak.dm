@@ -67,8 +67,7 @@
 		return
 	if(ismob(AM))
 		var/mob/M = AM
-		var/mob/living/carbon/human/HM = AM
-		if(M.movement_type & (FLYING|FLOATING) || isseelie(HM))	//Dont squeek for seelie, since they fly but do not have FLYING|FLOATING tags (Add wingcheck here too)
+		if(M.movement_type & (FLYING|FLOATING))
 			return
 	var/atom/current_parent = parent
 	if(isturf(current_parent.loc))

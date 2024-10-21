@@ -14,7 +14,7 @@
 	tutorial = "You have likely seen the brutality of the Northmen firsthand. Put aside any notion of rescue, and serve the warband well. Taken so far away from home, it is better to keep your head down and do your part, for you will likely never see your loved ones ever again."
 	whitelist_req = FALSE
 
-	
+
 	outfit = /datum/outfit/job/roguetown/farmer
 	display_order = JDO_VIKINGFARMER
 	min_pq = -10
@@ -60,11 +60,3 @@
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		belt = /obj/item/storage/belt/rogue/leather/rope
 		backl = /obj/item/storage/backpack/rogue/backpack/surgery
-	if(isseelie(H))
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/seelie_dust)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/summon_rat)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/strip)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/seelie_kiss)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/splash)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/roustame)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/animate_object)

@@ -69,14 +69,14 @@
 
 /obj/structure/Crossed(atom/movable/AM)
 	. = ..()
-	if(isliving(AM) && !AM.throwing && !isseelie(AM))	//Need to look into a wing check here for wingless seelie
+	if(isliving(AM) && !AM.throwing)	//Need to look into a wing check here for wingless seelie
 		var/mob/living/user = AM
 		if(climb_offset)
 			user.set_mob_offsets("structure_climb", _x = 0, _y = climb_offset)
 
 /obj/structure/Uncrossed(atom/movable/AM)
 	. = ..()
-	if(isliving(AM) && !AM.throwing && !isseelie(AM))	//Need to look into a wing check here for wingless seelie
+	if(isliving(AM) && !AM.throwing)	//Need to look into a wing check here for wingless seelie
 		var/mob/living/user = AM
 		if(climb_offset)
 			user.reset_offsets("structure_climb")
@@ -125,7 +125,7 @@
 	adjusted_climb_time -= user.STASPD * 2
 	adjusted_climb_time = max(adjusted_climb_time, 0)
 //	if(adjusted_climb_time)
-//		user.visible_message(span_warning("[user] starts climbing onto [src]."), span_warning("I start climbing onto [src]..."))								
+//		user.visible_message(span_warning("[user] starts climbing onto [src]."), span_warning("I start climbing onto [src]..."))
 	structureclimber = user
 	if(do_mob(user, user, adjusted_climb_time))
 		if(src.loc) //Checking if structure has been destroyed

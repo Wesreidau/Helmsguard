@@ -115,7 +115,7 @@
 			H.change_stat("intelligence", 1)
 			H.change_stat("perception", 2)
 			H.change_stat("endurance", 1)
-			H.change_stat("speed", 2)		
+			H.change_stat("speed", 2)
 			H.verbs += list(/mob/living/carbon/human/proc/magicreport, /mob/living/carbon/human/proc/magiclearn)
 
 	var/colleges = list(
@@ -123,7 +123,7 @@
 		"College of Eloquence",
 		"College of Spirits",
 		"College of Swords",
-		"College of Whispers")			
+		"College of Whispers")
 	var/collegechoice = input("Choose your college", "Available colleges") as anything in colleges
 	switch(collegechoice)
 		if("College of Lore")
@@ -141,7 +141,7 @@
 		if("College of Swords")
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-			H.give_fightingstyle() //gives one fighting style 
+			H.give_fightingstyle() //gives one fighting style
 
 		if("College of Whispers")
 			H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
@@ -164,11 +164,3 @@
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)	//You have speed, use it. What musucian plays with cumbersome armor anyway?
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
-	if(isseelie(H))
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/seelie_dust)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/summon_rat)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/strip)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/seelie_kiss)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/splash)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/roustame)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/animate_object)

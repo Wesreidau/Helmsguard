@@ -75,7 +75,7 @@
 			else
 				for(var/S in H.dna.species.specstats)
 					change_stat(S, H.dna.species.specstats[S])*/
-		
+
 		if (H.statpack)
 			H.statpack.apply_to_human(H)
 		if (H.dna?.species) // LETHALSTONE EDIT: apply our race bonus, if we have one
@@ -130,9 +130,6 @@
 	var/newamt = 0
 	switch(stat)
 		if("strength")
-			if(isseelie(src))
-				STASTR = 1
-				return
 			newamt = STASTR + amt
 			if(BUFSTR < 0)
 				BUFSTR = BUFSTR + amt

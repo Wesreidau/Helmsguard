@@ -151,4 +151,4 @@
 	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_GENERIC)
 	. = ..()
 	. = 1
-*/
+

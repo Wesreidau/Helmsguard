@@ -29,16 +29,8 @@
 	beltr = /obj/item/rogueweapon/huntingknife/idagger
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/rogue/instrument/lute = 1, /obj/item/rogue/instrument/flute = 1, /obj/item/rogue/instrument/drum = 1)
-	H.change_stat("speed", 1)  
+	H.change_stat("speed", 1)
 	H.change_stat("fortune", 1)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
-	if(isseelie(H))
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/seelie_dust)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/summon_rat)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/strip)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/seelie_kiss)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/splash)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/roustame)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/animate_object)

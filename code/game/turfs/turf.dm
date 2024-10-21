@@ -264,11 +264,7 @@
 		return
 	if(zFall(A, ++levels))
 		return FALSE
-	var/mob/living/carbon/human/FM = A
-	if(isseelie(FM) && !FM.resting)	//Add wingcheck
-		A.visible_message(span_danger("[A] floats gently onto [src]!"))
-	else
-		A.visible_message(span_danger("[A] crashes into [src]!"))
+	A.visible_message(span_danger("[A] crashes into [src]!"))
 	A.onZImpact(src, levels)
 	return TRUE
 

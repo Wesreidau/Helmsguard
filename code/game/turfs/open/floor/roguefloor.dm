@@ -217,9 +217,6 @@
 
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)
 	//No tile slowdown for fairies
-	var/mob/living/carbon/human/FM = user
-	if(isseelie(FM) && !(FM.resting))	//Add wingcheck
-		return 0
 
 	var/returned = slowdown
 	var/negate_slowdown = FALSE
@@ -263,7 +260,7 @@
 	..()
 	if(ishuman(O))
 		var/mob/living/carbon/human/H = O
-		if((H.shoes && !HAS_TRAIT(H, TRAIT_LIGHT_STEP)) || !isseelie(H)) //Seelie hover, so they won't step on blood
+		if((H.shoes && !HAS_TRAIT(H, TRAIT_LIGHT_STEP))) //Seelie hover, so they won't step on blood
 			var/obj/item/clothing/shoes/S = H.shoes
 			if(!S.can_be_bloody)
 				return
@@ -347,9 +344,10 @@
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
+	canSmoothWith = list(/turf/open/floor/rogue, /turf/open/floor/rogue/dirt, /turf/closed/mineral, /turf/closed/wall/mineral)
 	neighborlay = "dirtedge"
 	slowdown = 0
+
 /turf/open/floor/rogue/dirt/road/get_slowdown(mob/user)
 	var/returned = slowdown
 	var/negate_slowdown = FALSE
@@ -682,7 +680,7 @@
 	landsound = 'sound/foley/jumpland/stoneland.wav'
 	neighborlay = "cobblerock"
 	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
+	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass, /turf/open/floor/rogue/dirt/road)
 
 /turf/open/floor/rogue/cobblerock/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)

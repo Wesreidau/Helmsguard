@@ -69,59 +69,14 @@
 		/datum/customizer/bodypart_feature/accessory,
 		/datum/customizer/bodypart_feature/face_detail,
 		/datum/customizer/bodypart_feature/underwear,
-		/datum/customizer/organ/tail/anthro,
-		/datum/customizer/organ/tail_feature/anthro,
-		/datum/customizer/organ/snout/anthro,
-		/datum/customizer/organ/ears/anthro,
-		/datum/customizer/organ/horns/anthro,
-		/datum/customizer/organ/frills/anthro,
-		/datum/customizer/organ/wings/anthro,
-		/datum/customizer/organ/neck_feature/anthro,
-		/datum/customizer/organ/testicles/anthro,
-		/datum/customizer/organ/penis/anthro,
-		/datum/customizer/organ/breasts/animal,
-		/datum/customizer/organ/belly/animal,
-		/datum/customizer/organ/vagina/anthro,
+		/datum/customizer/organ/testicles/human,
+		/datum/customizer/organ/penis/human,
+		/datum/customizer/organ/breasts/human,
+		/datum/customizer/organ/belly/human,
+		/datum/customizer/organ/vagina/human,
 		)
-	body_marking_sets = list(
-		/datum/body_marking_set/none,
-		/datum/body_marking_set/belly,
-		/datum/body_marking_set/bellysocks,
-		/datum/body_marking_set/tiger,
-		/datum/body_marking_set/tiger_dark,
-	)
 	body_markings = list(
-		/datum/body_marking/plain,
-		/datum/body_marking/tiger,
-		/datum/body_marking/tiger/dark,
-		/datum/body_marking/sock,
-		/datum/body_marking/socklonger,
-		/datum/body_marking/tips,
-		/datum/body_marking/bellyscale,
-		/datum/body_marking/bellyscaleslim,
-		/datum/body_marking/bellyscalesmooth,
-		/datum/body_marking/bellyscaleslimsmooth,
-		/datum/body_marking/buttscale,
-		/datum/body_marking/belly,
-		/datum/body_marking/bellyslim,
-		/datum/body_marking/butt,
-		/datum/body_marking/tie,
-		/datum/body_marking/tiesmall,
-		/datum/body_marking/backspots,
-		/datum/body_marking/front,
-		/datum/body_marking/drake_eyes,
 		/datum/body_marking/tonage,
-		/datum/body_marking/spotted,
-	)
-	descriptor_choices = list(
-		/datum/descriptor_choice/body,
-		/datum/descriptor_choice/stature,
-		/datum/descriptor_choice/face,
-		/datum/descriptor_choice/face_exp,
-		/datum/descriptor_choice/skin_all,
-		/datum/descriptor_choice/voice,
-		/datum/descriptor_choice/prominent_one,
-		/datum/descriptor_choice/prominent_two,
 	)
 
 /datum/species/anthromorphbig/on_species_gain(mob/living/carbon/C, datum/species/old_species)
@@ -144,18 +99,43 @@
 
 /datum/species/anthromorphbig/get_skin_list()
 	return list(
-		"a Sun Giant" = "271f1b",
-		"a Moon Giant" = "271f1c",
-		"a Storm Giant" = "271f1d",
-		"a Wood Giant" = "271f1e",
-		"a Plague Giant" = "271f1f",
-		"a Bronze Giant" = "271f2a",
-		"a Tomb Giant" = "271f2b",
-		"a Mad Giant" = "271f1f",
-		"a War Giant" = "271f2a",
+		"Frostlander" = SKIN_COLOR_GRENZELHOFT,
+		"Umberite" = SKIN_COLOR_HAMMERHOLD,
+		"Grenzelhoft" = SKIN_COLOR_AVAR,
+		"Rockhill" = SKIN_COLOR_ROCKHILL,
+		"Forester" = SKIN_COLOR_OTAVA,
+		"Highlander" = SKIN_COLOR_ETRUSCA,
+		"Moravian" = SKIN_COLOR_GRONN,
+		"Gizan" = SKIN_COLOR_GIZA,
+		"Zybantine" = SKIN_COLOR_SHALVISTINE,
+		"Merkite" = SKIN_COLOR_LALVESTINE,
+		"Valorian" = SKIN_COLOR_EBON,,
 	)
 
-/datum/species/anthromorphbig/get_random_features()
+/datum/species/human/northern/get_hairc_list()
+	return sortList(list(
+	"blond - pale" = "9d8d6e",
+	"blond - dirty" = "88754f",
+	"blond - drywheat" = "d5ba7b",
+	"blond - strawberry" = "c69b71",
+
+	"brown - mud" = "362e25",
+	"brown - oats" = "584a3b",
+	"brown - grain" = "58433b",
+	"brown - soil" = "48322a",
+
+	"black - oil" = "181a1d",
+	"black - cave" = "201616",
+	"black - rogue" = "2b201b",
+	"black - midnight" = "1d1b2b",
+
+	"red - berry" = "48322a",
+	"red - wine" = "82534c",
+	"red - sunset" = "82462b",
+	"red - blood" = "822b2b"
+
+	))
+/*/datum/species/anthromorphbig/get_random_features()
 	var/list/returned = MANDATORY_FEATURE_LIST
 	var/main_color
 	var/second_color
@@ -190,4 +170,4 @@
 	returned["mcolor2"] = second_color
 	returned["mcolor3"] = third_color
 	return returned
-
+*/

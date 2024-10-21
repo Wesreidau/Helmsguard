@@ -899,11 +899,6 @@
 
 //Target = what was clicked on, User = thing doing the clicking
 /mob/living/carbon/human/MouseDrop_T(mob/living/target, mob/living/user)
-	if(isseelie(target) && !(HAS_TRAIT(src, TRAIT_TINY)) && istype(user.rmb_intent, /datum/rmb_intent/weak))
-		if(can_piggyback(target))
-			shoulder_ride(target)
-			return TRUE
-
 	if(user == target)
 		return FALSE
 	if(pulling == target && stat == CONSCIOUS)

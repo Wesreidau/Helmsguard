@@ -563,9 +563,6 @@
 	if(target.buckled)	//Seelie is buckled
 		to_chat(user, span_warning("Unbuckle them first."))
 		return
-	if((isseelie(user)) && HAS_TRAIT(target, TRAIT_TINY))	//Left this one as a seelie check since they shrink items
-		to_chat(user, span_warning("You shrink the [src] by holding it, they cant fit!"))
-		return
 	if(on)
 		to_chat(user, span_warning("[src] is lit, you'll burn them!"))
 		return

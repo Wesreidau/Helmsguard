@@ -228,13 +228,13 @@
 	. = ..()
 	START_PROCESSING(SSroguemachine, src)
 	update_icon()
-//	held_items[/obj/item/reagent_containers/hypospray/medipen/snekbt] = list("PRICE" = rand(35,50),"NAME" = "snake bite")
+	held_items[/obj/item/reagent_containers/hypospray/medipen/snekbt] = list("PRICE" = rand(35,50),"NAME" = "snake bite")
 	held_items[/obj/item/reagent_containers/powder] = list("PRICE" = 25,"NAME" = "chuckledust")
 	held_items[/obj/item/reagent_containers/powder/ozium] = list("PRICE" = 30,"NAME" = "ozium")
 	held_items[/obj/item/reagent_containers/powder/moondust] = list("PRICE" = 25,"NAME" = "moondust")
 	held_items[/obj/item/clothing/mask/cigarette/rollie/cannabis] = list("PRICE" = 15,"NAME" = "swampweed zig")
-//	held_items[/obj/item/reagent_containers/hypospray/medipen/nourish] = list("PRICE" = rand(15,20),"NAME" = "NOURISH")
-//	held_items[/obj/item/storage/fancy/shhig] = list("PRICE" = rand(15,25),"NAME" = "box of ssssigs")
+	held_items[/obj/item/reagent_containers/hypospray/medipen/nourish] = list("PRICE" = rand(15,20),"NAME" = "NOURISH")
+	held_items[/obj/item/storage/fancy/shhig] = list("PRICE" = rand(15,25),"NAME" = "box of ssssigs")
 	held_items[/obj/item/storage/box/matches] = list("PRICE" = rand(10,15),"NAME" = "tinderbox")
 
 #undef DRUGRADE_MONEYA

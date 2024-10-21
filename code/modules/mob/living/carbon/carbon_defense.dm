@@ -195,7 +195,7 @@
 	I.funny_attack_effects(src, user)
 	var/statforce = get_complex_damage(I, user)
 	if(statforce)
-	
+
 		if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && I.improvised)
 			statforce *= 1.5
 
@@ -256,7 +256,7 @@
 		var/datum/disease/D = thing
 		if(D.spread_flags & DISEASE_SPREAD_CONTACT_SKIN)
 			ContactContractDisease(D)
-	
+
 	if(!user.cmode)
 		var/try_to_fail = !istype(user.rmb_intent, /datum/rmb_intent/weak)
 		var/list/possible_steps = list()
@@ -424,7 +424,7 @@
 //		if(buckled)
 //			to_chat(M, span_warning("I need to unbuckle [src] first to do that!"))
 //			return
-//		M.visible_message(span_notice("[M] shakes [src] trying to get [p_them()] up!"), span_notice("I shake [src] trying to get [p_them()] up!"))					
+//		M.visible_message(span_notice("[M] shakes [src] trying to get [p_them()] up!"), span_notice("I shake [src] trying to get [p_them()] up!"))
 //	else
 	M.visible_message(span_notice("[M] shakes [src]."), \
 				span_notice("I shake [src] to get [p_their()] attention."))
@@ -444,12 +444,6 @@
 	AdjustSleeping(-100)
 	AdjustParalyzed(-60)
 	AdjustImmobilized(-60)
-	if(isseelie(src))
-		var/obj/item/organ/wings/Wing = src.getorganslot(ORGAN_SLOT_WINGS)
-		if(Wing == null)
-			to_chat(M, span_warning("They cant stand without their wings!"))
-			return
-	
 	set_resting(FALSE)
 
 	playsound(loc, 'sound/blank.ogg', 50, TRUE, -1)

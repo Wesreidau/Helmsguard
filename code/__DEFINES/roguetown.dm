@@ -14,14 +14,10 @@
 	/datum/species/akula,\
 	/datum/species/moth,\
 	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphsmall,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
 	/datum/species/kobold,\
-	/datum/species/anthromorphbig,\
 	/datum/species/goblinp,\
-	/datum/species/seelie,\
 )
 
 #define RACES_RESPECTED \
@@ -32,7 +28,6 @@
 	/datum/species/aasimar,\
 	/datum/species/lupian,\
 	/datum/species/vulpkanin,\
-	/datum/species/anthromorphbig,\
 	/datum/species/moth,\
 	/datum/species/dracon,
 
@@ -42,23 +37,23 @@
 	/datum/species/lizardfolk,\
 	/datum/species/tabaxi,\
 	/datum/species/akula,\
-	/datum/species/anthromorph,\
 	/datum/species/demihuman
 
 #define RACES_SHUNNED \
 	/datum/species/halforc,\
-	/datum/species/anthromorphsmall,\
 	/datum/species/kobold
 
 #define RACES_DESPISED \
 	/datum/species/goblinp,\
 
+/*
 #define RACES_SEELIE \
 	/datum/species/seelie,\
+*/
 
 #define RACES_ALL_KINDS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)
 
-#define RACES_ALL_KINDSPLUS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED, RACES_SEELIE)
+#define RACES_ALL_KINDSPLUS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)
 
 #define RACES_SHUNNED_UP list(RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)
 
@@ -79,13 +74,9 @@
 	/datum/species/akula,\
 	/datum/species/moth,\
 	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphsmall,\
-	/datum/species/anthromorphbig,\
 	/datum/species/demihuman,\
 	/datum/species/kobold,\
 	/datum/species/goblinp,\
-	/datum/species/seelie,\
 )
 
 #define CLOTHED_RACES_TYPES list(\
@@ -103,14 +94,10 @@
 	/datum/species/akula,\
 	/datum/species/moth,\
 	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphsmall,\
-	/datum/species/anthromorphbig,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
 	/datum/species/kobold,\
 	/datum/species/goblinp,\
-	/datum/species/seelie,\
 )
 // Non-dwarf non-kobold non-goblin mostly
 #define NON_DWARVEN_RACE_TYPES list(\
@@ -127,11 +114,8 @@
 	/datum/species/akula,\
 	/datum/species/moth,\
 	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphbig,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
-	/datum/species/seelie,\
 )
 // Non-elf non-dwarf non-kobold non-goblin mostly
 #define HUMANLIKE_RACE_TYPES list(\
@@ -145,8 +129,6 @@
 	/datum/species/akula,\
 	/datum/species/moth,\
 	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphbig,\
 	/datum/species/demihuman,\
 )
 #define ALL_CLERIC_PATRONS list(/datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/necra, /datum/patron/divine/pestra, /datum/patron/divine/eora, /datum/patron/divine/xylix, /datum/patron/divine/ravox, /datum/patron/divine/malum, /datum/patron/divine/abyssor)

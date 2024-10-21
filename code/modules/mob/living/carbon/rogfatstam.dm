@@ -82,10 +82,6 @@
 		addtimer(CALLBACK(src, PROC_REF(Immobilize), 30), 10)
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
-			if(isseelie(C))  //Add wingcheck here
-				C.visible_message(span_warning("[C] falls from the air!"), span_warning("I fall down in exhaustion!"))
-				addtimer(CALLBACK(C, TYPE_PROC_REF(/mob/living/carbon/human, Knockdown), 10), 10)
-				C.heart_attack()
 			if(!HAS_TRAIT(C, TRAIT_NOHUNGER))
 				if(C.nutrition <= 0)
 					if(C.hydration <= 0)

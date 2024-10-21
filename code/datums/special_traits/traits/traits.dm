@@ -308,7 +308,7 @@
 	name = "Giant"
 	greet_text = span_notice("I've always been called a giant. I am valued for my stature, but, this world made for smaller folk has forced me to move cautiously.")
 	req_text = "Not a kobold, seelie, verminvolk or a dwarf"
-	restricted_races = list(/datum/species/anthromorphsmall, /datum/species/dwarf/mountain, /datum/species/kobold, /datum/species/seelie)
+	restricted_races = list(/datum/species/dwarf/mountain, /datum/species/kobold)
 	weight = 50
 
 /datum/special_trait/backproblems/on_apply(mob/living/carbon/human/character)
@@ -337,7 +337,7 @@
 
 /datum/special_trait/nimrod/on_apply(mob/living/carbon/human/character, silent)
 	character.change_stat("speed", -2)
-	character.change_stat("intelligence", -4)	
+	character.change_stat("intelligence", -4)
 
 /datum/special_trait/nopouch
 	name = "No Pouch"

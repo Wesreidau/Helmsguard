@@ -8,7 +8,7 @@
 	domain = "Goddess of the Sun, Day, and Order"
 	desc = "Astrata, the Firstborn of Psydon. She is the goddess of the Sun, the Day and of Order. She is Twin to Noc, Goddess of the Moon. \
 		She is worshipped by noble hearted men, as well as zealous fanatics and farmers. She is said to have gifted man the sun, the source of all life, without it crops would wither and man would freeze to death. \
-		Astrata is depicted as a women with golden skin, two large wings on her back, one hand holding up the sun itself, the other holding up a sword." 
+		Astrata is depicted as a women with golden skin, two large wings on her back, one hand holding up the sun itself, the other holding up a sword."
 	worshippers = "The Noble Hearted, Zealots and Farmers"
 	t1 = /obj/effect/proc_holder/spell/invoked/sacred_flame_rogue
 	t2 = /obj/effect/proc_holder/spell/invoked/heal
@@ -100,7 +100,7 @@
 	t1 = /obj/effect/proc_holder/spell/targeted/burialrite
 	t2 = /obj/effect/proc_holder/spell/targeted/churn
 	t3 = /obj/effect/proc_holder/spell/targeted/soulspeak
-	t4 = /obj/effect/proc_holder/spell/invoked/revive/shaman
+//	t4 = /obj/effect/proc_holder/spell/invoked/revive/shaman
 	confess_lines = list(
 		"ALL SOULS FIND THEIR WAY TO NECRA!",
 		"THE UNDERMAIDEN IS OUR FINAL REPOSE!",
@@ -144,7 +144,7 @@
 	t1 = /obj/effect/proc_holder/spell/invoked/heal
 	t2 = /obj/effect/proc_holder/spell/invoked/attach_bodypart
 	t3 = /obj/effect/proc_holder/spell/invoked/cure_rot
-	t4 = /obj/effect/proc_holder/spell/invoked/revive/shaman
+//	t4 = /obj/effect/proc_holder/spell/invoked/revive/shaman
 	confess_lines = list(
 		"PESTRA SOOTHES ALL ILLS!",
 		"DECAY IS A CONTINUATION OF LIFE!",

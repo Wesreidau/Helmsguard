@@ -39,26 +39,14 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, 2, TRUE)
-		if(!isseelie(H))	
-			H.STASTR = rand(1, 20)
-			H.STAINT = rand(1, 20)
-			H.STALUC = rand(1, 20)
-		else if(isseelie(H))
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/seelie_dust)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/summon_rat)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/strip)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/seelie_kiss)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/splash)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/roustame)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/animate_object)
 		H.cmode_music = 'sound/music/combat_jester.ogg'
 	H.verbs |= /mob/living/carbon/human/proc/ventriloquate
 	H.verbs |= /mob/living/carbon/human/proc/ear_trick
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LEAPER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
-	if(prob(50))	
+	if(prob(50))
 		ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC) // Jester :3
-	else	
+	else
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Joker >:(
 

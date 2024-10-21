@@ -161,7 +161,7 @@ GLOBAL_LIST_INIT(roguewar_positions, list(
 	"Adventurer",
 ))
 
-
+/*
 GLOBAL_LIST_INIT(goblin_positions, list(
 	"Tribal Cook",
 	"Tribal Guard",
@@ -182,7 +182,7 @@ GLOBAL_LIST_INIT(vampire_positions, list(
 	"Antediluvian Peasant",
 	"Vampire Smith"
 ))
-
+*/
 
 GLOBAL_LIST_INIT(roguefight_positions, list(
 	"Red Captain",
@@ -210,7 +210,7 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.yeoman_positions
 	sorting_order += GLOB.peasant_positions
 	sorting_order += GLOB.apprentices_positions
-	sorting_order += GLOB.goblin_positions
+//	sorting_order += GLOB.goblin_positions
 	return sorting_order
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

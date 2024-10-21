@@ -52,8 +52,8 @@
 
 /mob/living/onZImpact(turf/T, levels)
 	if(HAS_TRAIT(src, TRAIT_NOFALLDAMAGE1))
-		if(levels <= 2 || isseelie(src))	
-			return 
+		if(levels <= 2)
+			return
 	var/points
 	for(var/i in 2 to levels)
 		i++
@@ -384,7 +384,7 @@
 //		else
 //			if(!supress_message)
 //				AM.visible_message(span_danger("[src] has pulled [AM] from [AM.pulledby]'s grip."), span_danger("[src] has pulled me from [AM.pulledby]'s grip."), null, null, src)
-//								
+//
 //				to_chat(src, span_notice("I pull [AM] from [AM.pulledby]'s grip!"))
 //			log_combat(AM, AM.pulledby, "pulled from", src)
 //			AM.pulledby.stop_pulling() //an object can't be pulled by two mobs at once.
@@ -667,11 +667,6 @@
 		to_chat(src, span_warning("I'm grabbed!"))
 		return
 	if(resting)
-		if(isseelie(src))
-			var/obj/item/organ/wings/Wing = src.getorganslot(ORGAN_SLOT_WINGS)
-			if(Wing == null)
-				to_chat(src, span_warning("I can't stand without my wings!"))
-				return
 		if(!IsKnockdown() && !IsStun() && !IsParalyzed())
 			src.visible_message(span_notice("[src] stands up."))
 			if(move_after(src, 10, target = src))
@@ -690,11 +685,6 @@
 		to_chat(src, span_warning("I'm grabbed!"))
 		return
 	if(resting)
-		if(isseelie(src))
-			var/obj/item/organ/wings/Wing = src.getorganslot(ORGAN_SLOT_WINGS)
-			if(Wing == null)
-				to_chat(src, span_warning("I can't stand without my wings!"))
-				return
 		if(!IsKnockdown() && !IsStun() && !IsParalyzed())
 			src.visible_message(span_info("[src] begins to stand up."))
 			if(move_after(src, 10, target = src))
@@ -714,18 +704,10 @@
 	if(!silent)
 		if(rest == resting)
 			if(resting)
-				if(isseelie(src))
-					//Quiet the falling and rising sound for fairies. Possibly replace the ogg outright
-					playsound(src, 'sound/foley/toggledown.ogg', 30, FALSE)
-				else
-					playsound(src, 'sound/foley/toggledown.ogg', 100, FALSE)
+				playsound(src, 'sound/foley/toggledown.ogg', 100, FALSE)
 				src.visible_message(span_info("[src] lays down."))
 			else
-				if(isseelie(src))
-					//Quiet the falling and rising sound for fairies. Possibly replace the ogg outright
-					playsound(src, 'sound/foley/toggleup.ogg', 30, FALSE)
-				else
-					playsound(src, 'sound/foley/toggleup.ogg', 100, FALSE)
+				playsound(src, 'sound/foley/toggleup.ogg', 100, FALSE)
 		else
 			to_chat(src, span_warning("I fail to get up!"))
 	update_cone_show()
@@ -1127,13 +1109,13 @@
 		wrestling_diff += (mind.get_skill_level(/datum/skill/combat/wrestling)) //NPCs don't use this
 	if(L.mind)
 		wrestling_diff -= (L.mind.get_skill_level(/datum/skill/combat/wrestling))
-	
+
 	resist_chance += ((STASTR - L.STASTR) * 10)
-	
+
 	if(!(mobility_flags & MOBILITY_STAND))
-		resist_chance += -20 + min((wrestling_diff * 5), -20) //Can improve resist chance at high skill difference     
+		resist_chance += -20 + min((wrestling_diff * 5), -20) //Can improve resist chance at high skill difference
 	if(pulledby.grab_state >= GRAB_AGGRESSIVE)
-		resist_chance += -20 + max((wrestling_diff * 10), 0) 
+		resist_chance += -20 + max((wrestling_diff * 10), 0)
 		resist_chance = max(resist_chance, 50 + min((wrestling_diff * 5), 0))
 	else
 		resist_chance = max(resist_chance, 70 + min((wrestling_diff * 5), 0))
@@ -1239,7 +1221,7 @@
 	if(check_arm_grabbed(active_hand_index))
 		to_chat(src, span_warning("Someone is grabbing my arm!"))
 		return
-	
+
 	if(istype(src, /mob/living/carbon/spirit))
 		to_chat(src, span_warning("Your hands pass right through \the [what]!"))
 		return
@@ -1592,8 +1574,6 @@
 
 	var/should_be_lying = !canstand
 	if(buckled)
-		if(isseelie(src))
-			src.reset_offsets("pixie_hover")
 		if(buckled.buckle_lying != -1)
 			should_be_lying = buckled.buckle_lying
 
@@ -1604,14 +1584,8 @@
 			if(buckled.buckle_lying != -1)
 				lying = buckled.buckle_lying
 		if(!lying) //force them on the ground
-			//If Seelie then they need to 'fall' to the ground by resetting position
-			if(isseelie(src))
-				src.reset_offsets("pixie_hover")
 			lying = 90
 	else
-		//Shift Seelie back 'up' from lying down on the ground
-		if(isseelie(src) && !buckled)
-			src.set_mob_offsets("pixie_hover", _x = 0, _y = 10)
 		mobility_flags |= MOBILITY_STAND
 		lying = 0
 
@@ -1990,7 +1964,7 @@
 	if(!istype(T))
 		return
 	changeNext_move(CLICK_CD_MELEE)
-	
+
 	var/_x = T.x-loc.x
 	var/_y = T.y-loc.y
 	var/dist = get_dist(src, T)

@@ -98,9 +98,6 @@
 			else if(fallingas)
 				fallingas = 0
 			tiredness = min(tiredness + 1, 100)
-				
-		if(!IsSleeping() && (mobility_flags & MOBILITY_STAND) && isseelie(src) && (haswings(src) == TRUE) && !(buckled)) //Very slop but dont know of another way
-			fairy_hover()
 
 		handle_brain_damage()
 
@@ -109,19 +106,8 @@
 
 
 	check_cremation()
-	//Seelie luck aura
-	if(isseelie(src) && !IsSleeping())
-		for(var/mob/living/carbon/human/H in view(1, src))
-			if(!H || isseelie(H))
-				continue
-			switch(src.aura)
-				if(FALSE)
-					H.apply_status_effect(/datum/status_effect/buff/seelie/sad)
-					H.remove_status_effect(/datum/status_effect/buff/seelie/happy)
-				if(TRUE)
-					H.apply_status_effect(/datum/status_effect/buff/seelie/happy)
-					H.remove_status_effect(/datum/status_effect/buff/seelie/sad)
-	//Updates the number of stored chemicals for powers
+
+//Updates the number of stored chemicals for powers
 //	handle_changeling()
 
 	if(stat != DEAD)

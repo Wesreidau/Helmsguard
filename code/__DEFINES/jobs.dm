@@ -197,10 +197,8 @@
 #define TRIBALSHAMAN	(1<<4)
 #define TRIBALVILLAGER	(1<<5)
 
-#define VIKING		(1<<9)
-#define HIGHKING	(1<<0)
-#define VIKINGFARMER	(1<<1)
-#define VIKINGGRUNT	(1<<1)
+#define ORC			(1<<9)
+#define ORCGRUNT	(1<<0)
 
 #define VAMPIRE		(1<<10)
 #define VAMPTHRALL	(1<<0)
@@ -212,6 +210,7 @@
 #define DEATHKNIGHT (1<<1)
 #define SKELETON	(1<<2)
 
+
 #define JCOLOR_NOBLE "#aa83b9"
 #define JCOLOR_COURTIER "#81adc8"
 #define JCOLOR_CHURCH "#c0ba8d"
@@ -219,7 +218,7 @@
 #define JCOLOR_YEOMAN "#819e82"
 #define JCOLOR_PEASANT "#b09262"
 #define JCOLOR_MERCENARY "#c86e3a"
-
+#define JCOLOR_ORC "#c86e3a"
 
 // job display orders //
 
@@ -305,19 +304,12 @@
 #define JDO_HOSTAGE 35.3
 #define JDO_LUNATIC 35.4
 
-#define JDO_CHIEFTAIN 36
-#define JDO_TRIBALCOOK 37
-#define JDO_TRIBALGUARD 38
-#define JDO_TRIBALSMITH 39
-#define JDO_TRIBALSHAMAN 40
-#define JDO_TRIBALVILLAGER 41
+//ORCS
+#define JDO_ORCGRUNT 36
 
-#define JDO_HIGHKING 42
-#define JDO_VIKINGFARMER 43
-#define JDO_VIKINGGRUNT 44
 
-#define JDO_VAMPTHRALL 45
-#define JDO_VAMPSMITH 46
+#define JDO_VAMPTHRALL 37
+#define JDO_VAMPSMITH 38
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
@@ -396,3 +388,7 @@
 	/datum/job/roguetown/manorguard,\
 	/datum/job/roguetown/sheriff,\
 	/datum/job/roguetown/guardsman
+
+#define ORC_ROLES \
+	/datum/job/roguetown/orcgrunt,\
+

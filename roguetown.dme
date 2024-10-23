@@ -2320,9 +2320,6 @@
 #include "code\modules\jobs\job_types\roguetown\peasants\vagabond.dm"
 #include "code\modules\jobs\job_types\roguetown\vampire\vampsmith.dm"
 #include "code\modules\jobs\job_types\roguetown\vampire\vampthrall.dm"
-#include "code\modules\jobs\job_types\roguetown\viking\highking.dm"
-#include "code\modules\jobs\job_types\roguetown\viking\vikingfarmer.dm"
-#include "code\modules\jobs\job_types\roguetown\viking\vikinggrunt.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\alchemist.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\apothecary.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\archivist.dm"
@@ -3602,7 +3599,6 @@
 #include "modular_hearthstone\code\game\objects\effects\dungeon_chest.dm"
 #include "modular_hearthstone\code\game\objects\effects\dungeon_mob_spawn.dm"
 #include "modular_hearthstone\code\game\objects\effects\track.dm"
-#include "modular_hearthstone\code\game\objects\items\northern_horn.dm"
 #include "modular_hearthstone\code\game\objects\items\signal_horn.dm"
 #include "modular_hearthstone\code\game\objects\items\clothes\bell_dress.dm"
 #include "modular_hearthstone\code\game\objects\items\clothes\leia.dm"
@@ -3648,4 +3644,5 @@
 #include "modular_hearthstone\statpacks\mental.dm"
 #include "modular_hearthstone\statpacks\physical.dm"
 #include "modular_hearthstone\statpacks\wildcard.dm"
+#include "modular_helmsguard\code\modules\jobs\job_types\roguetown\orc\orcgrunt.dm"
 // END_INCLUDE

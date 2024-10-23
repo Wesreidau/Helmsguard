@@ -3456,6 +3456,18 @@
 /area/rogue/indoors/town/library{
 	icon_state = "wiz"
 	})
+"bCK" = (
+/obj/structure/fluff/railing/border{
+	dir = 4
+	},
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/obj/effect/landmark/start/orcgrunt,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "vertw"
+	},
+/area/rogue/outdoors/beach)
 "bDl" = (
 /obj/structure/stairs{
 	dir = 1
@@ -15495,6 +15507,15 @@
 	icon_state = "horzw"
 	},
 /area/rogue/indoors/town/church/chapel)
+"jiw" = (
+/obj/structure/fluff/railing/border{
+	dir = 5
+	},
+/obj/effect/landmark/start/orclate,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "wooden_floort"
+	},
+/area/rogue/outdoors/beach)
 "jiS" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/blocks,
@@ -37044,6 +37065,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
+/obj/effect/landmark/start/orclate,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "wooden_floort"
 	},
@@ -226760,7 +226782,7 @@ bIl
 bIl
 wPt
 fgs
-fgs
+bCK
 rgd
 rEg
 fPw
@@ -227162,7 +227184,7 @@ bIl
 bIl
 bIl
 qwG
-qXx
+jiw
 kzz
 rrP
 kzz

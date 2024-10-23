@@ -598,7 +598,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	omegalist += list(GLOB.peasant_positions)
 	omegalist += list(GLOB.mercenary_positions)
 	omegalist += list(GLOB.apprentices_positions)
-
+	omegalist += list(GLOB.orc_positions)
 	if(istype(SSticker.mode, /datum/game_mode/chaosmode))
 		var/datum/game_mode/chaosmode/C = SSticker.mode
 		if(C.allmig)
@@ -643,10 +643,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 					cat_name = "Apprentices"
 				if (MERCENARIES)
 					cat_name = "Mercenaries"
-				if (TRIBAL)
-					cat_name = "Tribe"
-				if (VIKING)
-					cat_name = "Viking"
+				if (ORC)
+					cat_name = "Orcs"
 				if (VAMPIRE)
 					cat_name = "Vampire"
 

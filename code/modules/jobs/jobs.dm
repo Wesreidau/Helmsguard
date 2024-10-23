@@ -184,6 +184,10 @@ GLOBAL_LIST_INIT(vampire_positions, list(
 ))
 */
 
+GLOBAL_LIST_INIT(orc_positions, list(
+	"Orc Grunt",
+))
+
 GLOBAL_LIST_INIT(roguefight_positions, list(
 	"Red Captain",
 	"Red Caster",
@@ -211,6 +215,7 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.peasant_positions
 	sorting_order += GLOB.apprentices_positions
 //	sorting_order += GLOB.goblin_positions
+	sorting_order += GLOB.orc_positions
 	return sorting_order
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

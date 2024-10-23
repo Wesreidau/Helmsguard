@@ -249,7 +249,7 @@
 /obj/item/storage/backpack/rogue/satchel/mule/PopulateContents()
 	for(var/i in 1 to 3)
 		switch(rand(1,4))
-			if(1)	
+			if(1)
 				new /obj/item/reagent_containers/powder/moondust/purest(src)
 			if(2)
 				new /obj/item/reagent_containers/powder/moondust/purest(src)
@@ -324,10 +324,42 @@
 	icon_state = "ornate_belt"
 	sellprice = 50
 	sewrepair = FALSE
-	anvilrepair = /datum/skill/craft/armorsmithing	
+	anvilrepair = /datum/skill/craft/armorsmithing
 
 /obj/item/storage/belt/rogue/leather/blackleather
 	name = "black leather belt"
 	icon_state = "blackleatherbelt"
 	sewrepair = TRUE
-	sellprice = 10	
+	sellprice = 10
+
+/obj/item/storage/belt/rogue/leather/orc
+	name = "large fur lined belt"
+	desc = "A large belt lined with fur"
+	icon_state = "orcbelt"
+	sellprice = 50
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+
+/obj/item/storage/belt/rogue/leather/orc_skull
+	name = "large fur lined belt"
+	desc = "A large belt lined with fur, this one has a skull hanging from it."
+	icon_state = "orcbelt_skull"
+	sellprice = 50
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+
+/obj/item/storage/belt/rogue/leather/loincloth
+	name = "warrior's loincloth"
+	desc = "A loincloth typically worn by orc warriors"
+	icon_state = "loincloth"
+	sellprice = 30
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+
+/obj/item/storage/belt/rogue/leather/loincloth_skull
+	name = "warrior's loincloth"
+	desc = "A loincloth typically worn by orc warriors, this one has a skull hanging from it."
+	icon_state = "loinclothskull"
+	sellprice = 30
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing

@@ -180,7 +180,7 @@
 	edelay_type = 1
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
-	max_integrity = 100	
+	max_integrity = 100
 
 /obj/item/clothing/head/roguetown/necrahood
 	name = "death shroud"
@@ -614,6 +614,31 @@
 	block2add = FOV_BEHIND
 	max_integrity = 400
 
+/obj/item/clothing/head/roguetown/helmet/orc_sallet
+	name = "orcish helm"
+	icon_state = "orchelm"
+	desc = "A crude iron helmet worn by orc warriors."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/roguetown/helmet/orc_sallet_alt
+	name = "orcish helm"
+	icon_state = "orchelm2"
+	desc = "A crude iron helmet worn by orc warriors."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/roguetown/helmet/orc_ravager
+	name = "orc ravager helm"
+	icon_state = "orchelm3"
+	desc = "An iron helmet worn by orc ravagers."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+
+
 /obj/item/clothing/head/roguetown/helmet/sallet/visored/AdjustClothes(mob/user)
 	if(loc == user)
 		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
@@ -675,7 +700,7 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST)
 	block2add = FOV_BEHIND
 	smeltresult = /obj/item/ingot/steel
-	max_integrity = 400	
+	max_integrity = 400
 
 /obj/item/clothing/head/roguetown/helmet/heavy/guard
 	name = "savoyard"
@@ -923,7 +948,7 @@
 	emote_environment = 3
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/heavy/eorahelm
     name = "eora helmet"
@@ -984,7 +1009,7 @@
 	body_parts_covered = HEAD|HAIR|EARS|NOSE
 	flags_inv = HIDEEARS|HIDEHAIR
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface
 	name = "pigface bascinet"
@@ -1081,7 +1106,7 @@
 	emote_environment = 3
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/heavy/blacksunhelm
 	name = "black sun helmet"
@@ -1203,7 +1228,7 @@
 	prevent_crits = list(BCLASS_BLUNT, BCLASS_TWIST)
 	anvilrepair = null
 	sewrepair = TRUE
-	blocksound = SOFTHIT	
+	blocksound = SOFTHIT
 
 /obj/item/clothing/head/roguetown/wizhat
 	name = "wizard hat"
@@ -1371,7 +1396,7 @@
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
-		add_overlay(pic)		
+		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/grenzknighthelmet
 	name = "grenzelhoft knight helmet"
@@ -1423,7 +1448,7 @@
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
-		add_overlay(pic)				
+		add_overlay(pic)
 //Eora content from Stonekeep
 
 /obj/item/clothing/head/roguetown/eoramask
@@ -1449,7 +1474,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
-	smeltresult = /obj/item/ingot/iron	
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/head/roguetown/helmet/heavy/dwarfhelm
 	name = "dwarven helmet"
@@ -1558,7 +1583,7 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	emote_environment = 3
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/heavy/malumhelm
 	name = "malum fullmask"
@@ -1568,7 +1593,7 @@
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEHAIR
 	emote_environment = 3
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/heavy/abyssorhelm
 	name = "abyssor helmet"
@@ -1578,7 +1603,7 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	emote_environment = 3
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel		
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/heavy/xylixhelm
 	name = "xylix helmet"
@@ -1588,7 +1613,7 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	emote_environment = 3
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/heavy/pestrahelm
 	name = "pestra helmet"
@@ -1598,7 +1623,7 @@
 	flags_inv = HIDEFACE|HIDEHAIR
 	emote_environment = 3
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/ironpothelmet
 	name = "iron pot helmet"
@@ -1621,7 +1646,7 @@
 	body_parts_covered = HEAD|HAIR|EARS
 	flags_inv = HIDEHAIR
 	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel	
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/head/roguetown/helmet/nephilhelm
 	name = "nephilim helmet"
@@ -1644,7 +1669,7 @@
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEFACIALHAIR
 	icon_state = "ironplate"
 	item_state = "ironplate"
-	smeltresult = /obj/item/ingot/iron	
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/head/roguetown/helmet/malumhelmet
 	name = "malum helmet"
@@ -1711,7 +1736,7 @@
 	flags_inv = HIDEHAIR
 	icon_state = "valoriandecoratedhelm"
 	item_state = "valoriandecoratedhelm"
-	smeltresult = /obj/item/ingot/iron	
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/head/roguetown/helmet/vikinghelmet
 	name = "viking helmet"
@@ -1869,7 +1894,7 @@
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
-		add_overlay(pic)		
+		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/decoratedhounskull
 	name = "decorated hounskull"
@@ -1923,7 +1948,7 @@
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
-		add_overlay(pic)		
+		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/decoratedbucket
 	name = "decorated greathelm"
@@ -1977,7 +2002,7 @@
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
-		add_overlay(pic)		
+		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/decoratedgbucket
 	name = "decorated goldhelm"
@@ -2031,4 +2056,4 @@
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
-		add_overlay(pic)		
+		add_overlay(pic)

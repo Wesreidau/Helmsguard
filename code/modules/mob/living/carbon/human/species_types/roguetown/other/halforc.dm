@@ -2,13 +2,13 @@
 	race = /datum/species/halforc
 
 /datum/species/halforc
-	name = "Half Orc"
+	name = "Orc"
 	id = "halforc"
-	desc = "<b>Half Orcs</b><br>\
+	desc = "<b>Orcs</b><br>\
 		The result of communion between an Orc and a Humen, these outcasts of Orcish society find themselves struggling to find purpose in the lands of other races. \
 		Looked down upon by most for their birth, Half-Orcs are not as strong as pure Orcs, but sadly still retain much of their ignorance and stupidity. \
 		Some Half-Orcs find a way to rise above their Orcish heritage, usually through martial prowess. \
-		It is for this reason that Half-Orcs predominantly worship Ravox over other gods in the divine pantheon." 
+		It is for this reason that Half-Orcs predominantly worship Ravox over other gods in the divine pantheon."
 
 	skin_tone_wording = "Clan"
 

@@ -127,7 +127,7 @@
 	if(do_sound)
 		AddComponent(/datum/component/squeak, list('sound/foley/footsteps/armor/chain (1).ogg',\
 													'sound/foley/footsteps/armor/chain (2).ogg',\
-													'sound/foley/footsteps/armor/chain (3).ogg'), 70)		
+													'sound/foley/footsteps/armor/chain (3).ogg'), 70)
 
 /obj/item/clothing/suit/roguetown/armor/carapace/cuirass
 	name = "carapace cuirass"
@@ -217,7 +217,7 @@
 	max_integrity = 500
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
-	armor_class = ARMOR_CLASS_MEDIUM	
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/plate/ironarmor
 	slot_flags = ITEM_SLOT_ARMOR
@@ -233,7 +233,7 @@
 	max_integrity = 100
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_MEDIUM	
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/plate/halfplateroyalguard
 	slot_flags = ITEM_SLOT_ARMOR
@@ -250,7 +250,7 @@
 	max_integrity = 300
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
-	armor_class = ARMOR_CLASS_MEDIUM	
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/bikini
 	name = "plate bikini"
@@ -314,7 +314,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 	equip_delay_self = 40
-	armor_class = ARMOR_CLASS_MEDIUM			
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	slot_flags = ITEM_SLOT_ARMOR
@@ -660,7 +660,29 @@
 	item_state = "graggaritechestplate"
 	max_integrity = 200
 	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_MEDIUM	
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/orc_carapace
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "orc carapace armor"
+	desc = "A carapace armor worn by orc warriors"
+	icon_state = "orcplate"
+	item_state = "orcplate"
+	max_integrity = 200
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/orc_carapace_heavy
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "heavy orc carapace armor"
+	desc = "A heavy carapace armor worn by orc warriors"
+	icon_state = "orcplate_heavy"
+	item_state = "orcplate_heavy"
+	max_integrity = 250
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_HEAVY
+
+
 
 /obj/item/clothing/suit/roguetown/armor/barrelarmor
 	slot_flags = ITEM_SLOT_ARMOR
@@ -687,7 +709,7 @@
 	item_state = "katefractoiichestplate"
 	max_integrity = 200
 	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_MEDIUM	
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/plate/dwarffull
 	name = "dwarven fullarmor"
@@ -915,7 +937,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
 	equip_delay_self = 20
-	armor_class = ARMOR_CLASS_LIGHT	
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/suit/roguetown/armor/plate/vikingbodyguardchestplate
 	slot_flags = ITEM_SLOT_ARMOR
@@ -928,7 +950,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 	equip_delay_self = 40
-	armor_class = ARMOR_CLASS_MEDIUM		
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/goldchestplate
 	slot_flags = ITEM_SLOT_ARMOR
@@ -943,7 +965,7 @@
 	max_integrity = 450
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/gold
-	armor_class = ARMOR_CLASS_MEDIUM	
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/suit/roguetown/armor/bone/chestplate
 	name = "bone chestplate"

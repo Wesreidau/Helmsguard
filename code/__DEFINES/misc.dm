@@ -33,20 +33,20 @@
 #define SHOESLEEVE_LAYER		32
 #define SHIRT_LAYER				31
 #define WRISTS_LAYER			30
-#define ARMOR_LAYER				29
-#define TABARD_LAYER			28
-#define BELT_LAYER				27		//only when looking south
-#define UNDER_CLOAK_LAYER		26
-#define HANDS_PART_LAYER		25
-#define GLOVES_LAYER			24
-#define ARM_DAMAGE_LAYER		23
-#define SHIRTSLEEVE_LAYER		22
-#define GLOVESLEEVE_LAYER		21
-#define WRISTSLEEVE_LAYER		20
-#define ARMORSLEEVE_LAYER		19
-#define RING_LAYER				18
-#define GLASSES_LAYER			17
-#define NECK_LAYER				16
+#define NECK_LAYER				29
+#define ARMOR_LAYER				28
+#define TABARD_LAYER			27
+#define BELT_LAYER				26		//only when looking south
+#define UNDER_CLOAK_LAYER		25
+#define HANDS_PART_LAYER		24
+#define GLOVES_LAYER			23
+#define ARM_DAMAGE_LAYER		22
+#define SHIRTSLEEVE_LAYER		21
+#define GLOVESLEEVE_LAYER		20
+#define WRISTSLEEVE_LAYER		19
+#define ARMORSLEEVE_LAYER		18
+#define RING_LAYER				17
+#define GLASSES_LAYER			16
 #define CLOAK_LAYER				15		//only when looking north or west/east
 #define HAIR_LAYER				14		//TODO: make part of head layer?
 #define MASK_LAYER				13

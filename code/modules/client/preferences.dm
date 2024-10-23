@@ -151,11 +151,11 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/update_mutant_colors = TRUE
 
 	var/headshot_link
-	
+
 	var/flavor_text
 
 	var/ooc_notes
-	
+
 	var/nsfw_headshot_link
 	var/nsfw_info
 
@@ -444,30 +444,14 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<br>"
 			dat += "<b>Voice Color: </b><a href='?_src_=prefs;preference=voice;task=input'>Change</a>"
 			dat += "<br>Voice Pitch: </b><a href='?_src_=prefs;preference=voice_pitch;task=input'>[voice_pitch]</a>"
-			dat += "<br><b>Accent:</b> <a href='?_src_=prefs;preference=char_accent;task=input'>[char_accent]</a>"
 			dat += "<br><b>Features:</b> <a href='?_src_=prefs;preference=customizers;task=menu'>Change</a>"
 			dat += "<br><b>Markings:</b> <a href='?_src_=prefs;preference=markings;task=menu'>Change</a>"
-			dat += "<br><b>Descriptors:</b> <a href='?_src_=prefs;preference=descriptors;task=menu'>Change</a>"
 
 			dat += "<br><b>Headshot:</b> <a href='?_src_=prefs;preference=headshot;task=input'>Change</a>"
 			if(headshot_link != null)
 				dat += "<br><img src='[headshot_link]' width='250px' height='250px'>"
 			dat += "<br><b>Flavor Text:</b> <a href='?_src_=prefs;preference=flavor;task=input'>Change</a>"
 			dat += "<br><b>OOC Notes:</b> <a href='?_src_=prefs;preference=oocnotes;task=input'>Change</a>"
-			dat += "<br><b>Infocard Background:</b> <a href='?_src_=prefs;preference=background;task=input'>Change</a>"
-			dat += "<br><b>Title:</b> <a href='?_src_=prefs;preference=alias;task=input'>Change</a>"
-			dat += "<br><b>Height:</b> <a href='?_src_=prefs;preference=height;task=input'>Change</a>"
-			dat += "<br><b>Interest:</b> <a href='?_src_=prefs;preference=interest;task=input'>Change</a>"
-			dat += "<br><b>Personality:</b> <a href='?_src_=prefs;preference=personality;task=input'>Change</a>"
-			dat += "<br><b>Strengths:</b> <a href='?_src_=prefs;preference=strengths;task=input'>Change</a>"
-			dat += "<br><b>Weaknesses:</b> <a href='?_src_=prefs;preference=weakness;task=input'>Change</a>"
-			dat += "<br><b>Theme:</b> <a href='?_src_=prefs;preference=theme;task=input'>Change</a>"
-			dat += "<br><b>Loadout Item:</b> <a href='?_src_=prefs;preference=loadout_item;task=input'>[loadout ? loadout.name : "None"]</a>"
-			if(user.client.prefs.nsfw)
-				dat += "<br><b>NSFW Headshot:</b> <a href='?_src_=prefs;preference=nsfw_headshot;task=input'>Change</a>"
-				if(nsfw_headshot_link != null)
-					dat += "<br><img src='[nsfw_headshot_link]' width='250px' height='250px'>"
-				dat += "<br><b>NSFW Info:</b> <a href='?_src_=prefs;preference=nsfwinfo;task=input'>Change</a>"
 			dat += "</td>"
 
 			dat += "</tr></table>"
@@ -1540,7 +1524,7 @@ Slots: [job.spawn_positions]</span>
 						// LETHALSTONE EDIT END
 						ResetJobs()
 						to_chat(user, "<font color='red'>Classes reset.</font>")
-					
+
 				// LETHALSTONE EDIT: add statpack selection
 				if ("statpack")
 					var/list/statpacks_available = list()
@@ -1556,7 +1540,7 @@ Slots: [job.spawn_positions]</span>
 						statpack = statpack_chosen
 						to_chat(user, "<font color='purple'>[statpack.name]</font>")
 						to_chat(user, "<font color='purple'>[statpack.description_string()]</font>")
-					
+
 				// LETHALSTONE EDIT: add pronouns
 				if ("pronouns")
 					var pronouns_input = input(user, "Choose your character's pronouns", "Pronouns") as null|anything in GLOB.pronouns_list
@@ -1824,7 +1808,7 @@ Slots: [job.spawn_positions]</span>
 					nsfw_headshot_link = new_nsfw_headshot_link
 					to_chat(user, "<span class='notice'>Successfully updated NSFW Headshot picture</span>")
 					log_game("[user] has set their NSFW Headshot image to '[nsfw_headshot_link]'.")
-		
+
 				if("nsfwinfo")
 					to_chat(user, "<span class='notice'>Please use this for things such as image links, f-list links, or any additional NSFW information.</span>")
 					var/new_nsfw_info = input(user, "Type your NSFW Info here:", "NSFW Info", nsfw_info) as message|null

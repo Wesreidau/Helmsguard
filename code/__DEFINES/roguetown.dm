@@ -20,6 +20,24 @@
 	/datum/species/goblinp,\
 )
 
+#define DEMI_HUMANS list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/dwarf/mountain,\\
+	/datum/species/aasimar,\
+	/datum/species/lupian,\
+	/datum/species/tabaxi,\
+	/datum/species/vulpkanin,\
+	/datum/species/akula,\
+	/datum/species/demihuman,\
+)
+
+#define GREENSKINS list(\
+	/datum/species/halforc,\
+	/datum/species/goblinp,\
+)
+
+
 #define RACES_RESPECTED \
 	/datum/species/human/northern,\
 	/datum/species/elf/wood,\

@@ -1,7 +1,6 @@
-//regardless of horn type only same faction gets information.
 /obj/item/war_horn
-	name = "war horn"
-	desc = "Used to sound the alarm."
+	name = "generic war horn"
+	desc = "Used to coordiante troops in the field."
 	icon = 'modular_helmsguard/icons/obj/items/warhorns.dmi'
 	icon_state = "humanhorn"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_NECK
@@ -14,11 +13,11 @@
 	var/hornchannel
 
 /obj/item/war_horn/human
-	name = "Demi-human war horn"
+	name = "humenic war horn"
 	icon_state = "humanhorn"
 
 /obj/item/war_horn/orc
-	name = "Orc war horn"
+	name = "Orcish war horn"
 	icon_state = "orchorn"
 
 /datum/intent/war_horn
@@ -107,6 +106,7 @@
 				else
 					disttext = " very far"
 			//sound played for other players
+			player.stop_sound_channel(hornchannel)
 			if(intent.type == /datum/intent/war_horn/retreat)
 				player.playsound_local(get_turf(player), retreatsound, 35, FALSE, pressure_affected = FALSE)
 				to_chat(player, span_warning("I hear the signal to retreat somewhere[disttext][dirtext]!"))

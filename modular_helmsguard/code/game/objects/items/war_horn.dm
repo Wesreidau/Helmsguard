@@ -152,7 +152,8 @@
 			else
 				soundtouse = farchargesound
 		if(player.faction[1] in user.faction) //first is probably their primary.
-			to_chat(player, span_warning("I hear the signal to [user.a_intent.name] somewhere[disttext][dirtext]!"))
+			var/area/currentarea = get_area(user.loc)
+			to_chat(player, span_warning("I hear the signal to [user.a_intent.name] somewhere[disttext][dirtext] in the [currentarea.name]!"))
 		else
 			to_chat(player, span_warning("I hear a foreign signal somewhere[disttext][dirtext]!"))
 		player.playsound_local(get_turf(player), soundtouse, 35, FALSE, pressure_affected = FALSE, channel = hornchannel)

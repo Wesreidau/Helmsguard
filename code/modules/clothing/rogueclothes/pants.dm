@@ -123,7 +123,7 @@
 /obj/item/clothing/under/roguetown/trou/stripedpants
 	name = "striped pants"
 	desc = "Some blue pants with white stripes."
-	icon_state = "stripedpants"	
+	icon_state = "stripedpants"
 	item_state = "stripedpants"
 
 /obj/item/clothing/under/roguetown/trou/narvalipantsred
@@ -142,7 +142,7 @@
 	name = "highland pants"
 	desc = "Pants worn by clanmen in the Narvali Highlands."
 	icon_state = "narvali_green"
-	item_state = "narvali_green"		
+	item_state = "narvali_green"
 
 /obj/item/clothing/under/roguetown/trou/leather/mourning
 	name = "mourning trousers"
@@ -205,6 +205,22 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	blocksound = PLATEHIT
 	var/do_sound = FALSE
+	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
+	anvilrepair = /datum/skill/craft/armorsmithing
+	r_sleeve_status = SLEEVE_NOMOD
+	l_sleeve_status = SLEEVE_NOMOD
+
+/obj/item/clothing/under/roguetown/platelegs/orc
+	name = "orc carapace breeches"
+	desc = "Armored breeches for the orcs"
+	gender = PLURAL
+	icon_state = "orc_plate"
+	item_state = "orc_plate"
+//	adjustable = CAN_CADJUST
+	sewrepair = FALSE
+	armor = list("blunt" = 90, "slash" = 100, "stab" = 80, "bullet" = 50, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
+	blocksound = PLATEHIT
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	anvilrepair = /datum/skill/craft/armorsmithing
 	r_sleeve_status = SLEEVE_NOMOD

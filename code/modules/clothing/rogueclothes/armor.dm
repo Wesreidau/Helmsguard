@@ -678,6 +678,8 @@
 	desc = "A heavy carapace armor worn by orc warriors"
 	icon_state = "orcplate_heavy"
 	item_state = "orcplate_heavy"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	sleevetype = "orcplate_heavy"
 	max_integrity = 250
 	smeltresult = /obj/item/ingot/iron
 	armor_class = ARMOR_CLASS_HEAVY

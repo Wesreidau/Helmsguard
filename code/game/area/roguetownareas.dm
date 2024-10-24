@@ -279,6 +279,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'sound/music/area/DS2_majula.ogg'
 	droning_sound_night = 'sound/music/area/JS_secunda.ogg'
+	location_name = "the town"
 
 
 //// UNDER AREAS (no indoor rain sound usually)
@@ -631,6 +632,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = 'sound/music/area/HK_reflection.ogg'
 	converted_type = /area/rogue/indoors/shelter/town
 	first_time_text = "THE TOWN OF ROCKHILL"
+	location_name = "the city"
 /area/rogue/indoors/shelter/town
 	icon_state = "town"
 	droning_sound = 'sound/music/area/townstreets.ogg'

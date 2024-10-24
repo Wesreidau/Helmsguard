@@ -84,6 +84,7 @@
 		playsound(src, chargesound, 100, TRUE, channel = hornchannel)
 
 	var/turf/origin_turf = get_turf(src)
+	var/area/currentarea = get_area(user.loc)
 	for(var/mob/living/player in GLOB.player_list)
 		if(player.stat == DEAD)
 			continue
@@ -93,7 +94,7 @@
 		var/distance = get_dist(player, origin_turf)
 		if(distance <= 7)
 			if(player.faction[1] in user.faction)
-				to_chat(player, span_warning("[user] signals to [user.a_intent]!"))
+				to_chat(player, span_warning("[user] signals to [user.a_intent] at [currentarea.location_name]!"))
 			continue
 		var/dirtext = " to the "
 		var/direction = get_dir(player, origin_turf)
@@ -152,7 +153,6 @@
 			else
 				soundtouse = farchargesound
 		if(player.faction[1] in user.faction) //first is probably their primary.
-			var/area/currentarea = get_area(user.loc)
 			to_chat(player, span_warning("I hear the signal to [user.a_intent.name] somewhere[disttext][dirtext] in the [currentarea.name]!"))
 		else
 			to_chat(player, span_warning("I hear a foreign signal somewhere[disttext][dirtext]!"))

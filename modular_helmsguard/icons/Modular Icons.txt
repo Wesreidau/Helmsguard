@@ -14,3 +14,7 @@ Lets say we want to make gold boots.
 The same flow works for any other icon addition. Check how the icons were organized in Roguetown, create a folder in a duplicate folder structure named for that original .dmi, and create a purpose-made .dmi containing the icons required for your addition.
 
 Although it is some work compared to just using the .dmi that already exists, it breaks the spaghetti code that is hundreds of icons packed into a singular, hard to collaborate-on file.
+
+In some cases, however, we do want to make broad changes to the palette or brightness of the gamespace. This would be the turf .dmi files.
+
+If we wanted to lighten the shade of grey used in pre-existing stonework, we will refer to roguefloors.dmi or similar. If we wish to add a new form of stonework, such as sandstone, we will make a new file, ideally denoted as helms_standstone_floor.dmi and helms_sandstone_wall.dmi. With the helms_ prefix, we avoid conflicts with upstream additions and save ourselves future problems by breaking our .dmi from the big spaghetti files.

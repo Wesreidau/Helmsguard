@@ -3646,5 +3646,6 @@
 #include "modular_hearthstone\statpacks\physical.dm"
 #include "modular_hearthstone\statpacks\wildcard.dm"
 #include "modular_helmsguard\code\game\objects\items\war_horn.dm"
+#include "modular_helmsguard\code\game\objects\structures\ladders.dm"
 #include "modular_helmsguard\code\modules\jobs\job_types\roguetown\orc\orcgrunt.dm"
 // END_INCLUDE

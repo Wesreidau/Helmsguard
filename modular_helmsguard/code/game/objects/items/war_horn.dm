@@ -21,26 +21,26 @@
 /obj/item/war_horn/human
 	name = "humenic war horn"
 	icon_state = "humanhorn"
-	retreatsound = 'modular_helmsguard/sound/items/human 1.ogg'
-	rallysound = 'modular_helmsguard/sound/items/human 2.ogg'
-	holdsound = 'modular_helmsguard/sound/items/human 2.ogg'
-	chargesound = 'modular_helmsguard/sound/items/human 3.ogg'
-	farretreatsound = 'modular_helmsguard/sound/items/human 1 distant.ogg'
-	farrallysound = 'modular_helmsguard/sound/items/human 2 distant.ogg'
-	farholdsound = 'modular_helmsguard/sound/items/human 2 distant.ogg'
-	farchargesound = 'modular_helmsguard/sound/items/human 3.ogg'
+	retreatsound = 'modular_helmsguard/sound/items/horns/h_retreat.ogg'
+	rallysound = 'modular_helmsguard/sound/items/horns/h_rally.ogg'
+	holdsound = 'modular_helmsguard/sound/items/horns/h_hold.ogg'
+	chargesound = 'modular_helmsguard/sound/items/horns/h_charge.ogg'
+	farretreatsound = 'modular_helmsguard/sound/items/horns/h_retreat_distant.ogg'
+	farrallysound = 'modular_helmsguard/sound/items/horns/h_rally_distant.ogg'
+	farholdsound = 'modular_helmsguard/sound/items/horns/h_hold_distant.ogg'
+	farchargesound = 'modular_helmsguard/sound/items/horns/h_charge_distant.ogg'
 
 /obj/item/war_horn/orc
 	name = "Orcish war horn"
 	icon_state = "orchorn"
-	retreatsound = 'modular_helmsguard/sound/items/orc 1.ogg'
-	rallysound = 'modular_helmsguard/sound/items/orc 2.ogg'
-	holdsound = 'modular_helmsguard/sound/items/orc 2.ogg'
-	chargesound = 'modular_helmsguard/sound/items/orc 3.ogg'
-	farretreatsound = 'modular_helmsguard/sound/items/orc 1 distant.ogg'
-	farrallysound = 'modular_helmsguard/sound/items/orc 2 distant.ogg'
-	farholdsound = 'modular_helmsguard/sound/items/orc 2 distant.ogg'
-	farchargesound = 'modular_helmsguard/sound/items/orc 3.ogg'
+	retreatsound = 'modular_helmsguard/sound/items/horns/o_retreat.ogg'
+	rallysound = 'modular_helmsguard/sound/items/horns/o_rally.ogg'
+	holdsound = 'modular_helmsguard/sound/items/horns/o_hold.ogg'
+	chargesound = 'modular_helmsguard/sound/items/horns/o_charge.ogg'
+	farretreatsound = 'modular_helmsguard/sound/items/horns/o_retreat_distant.ogg'
+	farrallysound = 'modular_helmsguard/sound/items/horns/o_rally_distant.ogg'
+	farholdsound = 'modular_helmsguard/sound/items/horns/o_hold_distant.ogg'
+	farchargesound = 'modular_helmsguard/sound/items/horns/o_charge_distant.ogg'
 
 /datum/intent/war_horn
 	attack_verb = list("hit", "strike")

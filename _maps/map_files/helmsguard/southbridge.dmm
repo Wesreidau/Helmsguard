@@ -63,7 +63,7 @@
 "qn" = (/turf/open/floor/rogue/blocks/stone/stonepattern2,/area/rogue)
 "qX" = (/obj/structure/stairs/fancy/r{dir = 1},/turf/open/floor/rogue/carpet/lord/right,/area/rogue)
 "sj" = (/obj/effect/decal/border/stone{dir = 6},/obj/effect/decal/border/stone/inverted,/obj/structure/fluff/railing/fence{dir = 1; icon_state = "fence"; pixel_y = 12},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/cobble,/area/rogue)
-"sn" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/woodturned{color = nullsssssssssssssss},/area/rogue)
+"sn" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/woodturned{color = null},/area/rogue)
 "sF" = (/obj/effect/decal/border/stone/inverted{dir = 8},/turf/open/floor/rogue/naturalstone,/area/rogue)
 "sJ" = (/obj/structure/chair/bench/church/r,/turf/open/floor/rogue/wood/herringbone,/area/rogue)
 "sX" = (/obj/effect/decal/border/stone{dir = 6},/obj/effect/decal/border/stone{dir = 5},/obj/effect/decal/border/stone{dir = 8},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/cobble,/area/rogue)

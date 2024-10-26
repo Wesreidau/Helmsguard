@@ -4,12 +4,12 @@
 "bz" = (/obj/structure/roguewindow/stained/zizo{name = "Cross Descendant"; desc = "A window of crimson crystal glass fixed in lead, depicting the ominous Cross Descendant."},/turf/open/floor/rogue/churchrough,/area/rogue)
 "ca" = (/turf/open/floor/rogue/rooftop{dir = 8},/area/rogue)
 "cg" = (/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood,/area/rogue)
-"ch" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/obj/effect/decal/border/ruinedwood/inverted{dir = 4},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"ch" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
 "cE" = (/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue)
 "cF" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/transparent/openspace,/area/rogue)
 "cY" = (/obj/effect/decal/border/ruinedwood/inverted{dir = 8},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
 "dq" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 5},/turf/open/floor/rogue/woodturned,/area/rogue)
-"dM" = (/obj/effect/decal/border/ruinedwood{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue)
+"dM" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 9; pixel_x = -1},/turf/open/floor/rogue/wood,/area/rogue)
 "eb" = (/obj/effect/decal/wood,/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue)
 "eO" = (/turf/open/floor/rogue/carpet/lord/center,/area/rogue)
 "fb" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue)
@@ -27,28 +27,28 @@
 "iB" = (/obj/structure/stairs/fancy{dir = 1},/turf/open/floor/rogue/churchmarble,/area/rogue)
 "iC" = (/turf/closed/mineral/rogue/bedrock,/area/rogue)
 "iI" = (/obj/structure/roguewindow/stained/zizo{name = "Cross Descendant"; desc = "A window of crimson crystal glass fixed in lead, depicting the ominous Cross Descendant."},/turf/open/transparent/openspace,/area/rogue)
-"jy" = (/obj/structure/fluff/railing/border,/obj/structure/ladder{pixel_y = 10},/obj/effect/decal/border/ruinedwood/inverted{dir = 1},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"jy" = (/obj/structure/fluff/railing/border,/obj/structure/ladder{pixel_y = 16},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
 "jG" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 6},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "kc" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/transparent/openspace,/area/rogue)
 "ke" = (/obj/structure/stairs{dir = 1},/obj/machinery/light/rogue/wallfire/candle,/turf/open/floor/rogue/woodturned,/area/rogue)
-"kq" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/turf/open/floor/rogue/blocks/platform{dir = 4},/area/rogue)
+"kq" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/turf/open/floor/rogue/cobble3{dir = 4},/area/rogue)
 "kt" = (/obj/effect/decal/wood{dir = 1},/obj/structure/chair/bench/church/r,/turf/open/floor/rogue/wood/herringbone,/area/rogue)
 "ky" = (/turf/closed/wall/mineral/rogue/decostone/cand,/area/rogue)
 "kS" = (/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/church,/area/rogue)
-"kT" = (/obj/effect/decal/wood,/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood{dir = 5; pixel_x = 3},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"kT" = (/obj/effect/decal/wood,/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood{dir = 5},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "kX" = (/obj/structure/ladder{pixel_y = 10},/turf/open/floor/rogue/wood/nosmooth,/area/rogue)
 "ld" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "ll" = (/turf/closed/wall/mineral/rogue/craftstone,/area/rogue)
-"ls" = (/obj/structure/fluff/railing/border{dir = 5},/obj/effect/decal/border/ruinedwood,/obj/effect/decal/wood/ruinedwood{dir = 1},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"ls" = (/obj/structure/fluff/railing/border{dir = 5},/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/wood,/area/rogue)
 "lC" = (/turf/open/floor/rogue/rooftop/green{dir = 1},/area/rogue)
 "lO" = (/obj/effect/decal/border/stone/inverted{dir = 4},/turf/open/floor/rogue/naturalstone,/area/rogue)
 "lZ" = (/obj/structure/roguewindow/openclose/reinforced{dir = 8},/turf/open/floor/rogue/church,/area/rogue)
-"md" = (/obj/machinery/light/rogue/torchholder/l,/obj/effect/decal/border/ruinedwood{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue)
-"mh" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 6},/obj/effect/decal/border/ruinedwood{dir = 1},/obj/effect/decal/wood/ruinedwood,/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"md" = (/obj/machinery/light/rogue/torchholder/l,/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
+"mh" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 6},/obj/effect/decal/wood,/turf/open/floor/rogue/wood,/area/rogue)
 "mA" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue)
 "mB" = (/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 1; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/dirt/road,/area/rogue)
 "mV" = (/obj/structure/chair/bench/church/r,/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue)
-"mX" = (/obj/effect/decal/wood/ruinedwood,/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 1; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/blocks/platform{dir = 1},/area/rogue)
+"mX" = (/obj/effect/decal/wood/ruinedwood,/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 1; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/cobble3{dir = 1},/area/rogue)
 "nz" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/transparent/openspace,/area/rogue)
 "nD" = (/turf/closed/wall/mineral/rogue/roofwall/middle{dir = 4},/area/rogue)
 "om" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/floor/rogue/churchmarble,/area/rogue)
@@ -68,7 +68,7 @@
 "sJ" = (/obj/structure/chair/bench/church/r,/turf/open/floor/rogue/wood/herringbone,/area/rogue)
 "sX" = (/obj/effect/decal/border/stone{dir = 6},/obj/effect/decal/border/stone{dir = 5},/obj/effect/decal/border/stone{dir = 8},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/cobble,/area/rogue)
 "tp" = (/obj/structure/roguewindow/stained/yellow{name = "Cross-in-Conflict"; desc = "A window of fine dwarven crystal glass fixed in lead, depicting a Cross Mundane."},/turf/open/floor/rogue/church,/area/rogue)
-"tM" = (/obj/effect/landmark/start/guardsman,/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"tM" = (/obj/effect/landmark/start/guardsman,/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/wood,/area/rogue)
 "tR" = (/obj/structure/fluff/railing/border{dir = 10},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
 "ud" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
 "uL" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/bars/pipe{pixel_y = 8},/turf/open/transparent/openspace,/area/rogue)
@@ -76,32 +76,35 @@
 "vb" = (/obj/structure/chair/bench/church,/turf/open/floor/rogue/wood/herringbone,/area/rogue)
 "vs" = (/obj/effect/decal/wood,/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "vL" = (/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue)
-"we" = (/obj/effect/decal/border/ruinedwood/inverted,/obj/effect/decal/wood/ruinedwood/turned{dir = 6; pixel_y = -1},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"we" = (/obj/effect/decal/wood/turnd{dir = 6},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "wg" = (/obj/structure/mineral_door/wood/donjon/stone{name = "Cloister"; locked = 1; lockid = "church"},/turf/open/floor/rogue/church,/area/rogue)
-"ww" = (/obj/effect/decal/wood{dir = 9; pixel_x = -1},/obj/effect/decal/wood{dir = 10},/obj/effect/decal/wood{dir = 6},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"ww" = (/obj/effect/decal/wood{dir = 9},/obj/effect/decal/wood{dir = 10},/obj/effect/decal/wood{dir = 6},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "wF" = (/obj/effect/decal/cobbleedge{icon_state = "borderfall"; dir = 1},/obj/structure/fluff/walldeco/stone{pixel_y = 32},/turf/open/floor/rogue/churchmarble,/area/rogue)
-"wS" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood{dir = 9; pixel_x = -1},/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"wS" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood{dir = 9},/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "xc" = (/turf/closed/mineral/rogue,/area/rogue)
 "xd" = (/obj/effect/decal/stone,/turf/open/transparent/openspace,/area/rogue)
+"xM" = (/obj/structure/ladder{pixel_y = 16},/obj/effect/decal/wood,/turf/open/floor/rogue/wood,/area/rogue)
 "xP" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
-"xQ" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 5; pixel_x = 3},/turf/open/floor/rogue/blocks/stonered,/area/rogue)
+"xQ" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 5},/turf/open/floor/rogue/blocks/stonered,/area/rogue)
 "yf" = (/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/church,/area/rogue)
+"yv" = (/turf/open/floor/rogue/blocks/stone{dir = 8},/area/rogue)
+"yz" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/turf/open/floor/rogue/cobble3{dir = 8},/area/rogue)
 "yF" = (/turf/closed/wall/mineral/rogue/decostone,/area/rogue)
 "yG" = (/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
-"yL" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood,/obj/effect/decal/wood{dir = 9; pixel_x = -1},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
-"yW" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/turf/open/floor/rogue/blocks/platform{dir = 4},/area/rogue)
-"yX" = (/obj/structure/fluff/railing/fence{icon_state = "fence"; dir = 1; pixel_y = 12},/obj/effect/decal/border/stone{dir = 1},/obj/effect/decal/border/stone,/turf/open/floor/rogue/cobble,/area/rogue)
+"yL" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood,/obj/effect/decal/wood{dir = 9},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"yW" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 8; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/cobble3{dir = 8},/area/rogue)
+"yX" = (/obj/structure/fluff/railing/fence{icon_state = "fence"; dir = 1; pixel_y = 12},/obj/effect/decal/border/stone{dir = 1},/obj/effect/decal/border/stone,/turf/open/floor/rogue/cobble{dir = 4},/area/rogue)
 "zo" = (/obj/effect/decal/border/stone/inverted{dir = 1},/turf/open/floor/rogue/naturalstone,/area/rogue)
-"zr" = (/obj/structure/stairs{icon_state = "stairs"; dir = 8},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"zr" = (/obj/structure/stairs{icon_state = "stairs"; dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "zF" = (/turf/open/floor/rogue/rooftop/green/corner1{dir = 10},/area/rogue)
 "zI" = (/obj/effect/decal/border/stone{dir = 4},/turf/open/floor/rogue/naturalstone,/area/rogue)
-"AG" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood{dir = 9; pixel_x = -1},/turf/open/floor/rogue/blocks/stonered,/area/rogue)
+"AG" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood{dir = 9},/turf/open/floor/rogue/blocks/stonered,/area/rogue)
 "AO" = (/obj/effect/decal/border/ruinedwood/inverted,/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
 "Bc" = (/obj/machinery/light/rogue/wallfire/candle,/turf/open/transparent/openspace,/area/rogue)
-"Bg" = (/obj/structure/bed/rogue/shit,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"Bg" = (/obj/structure/bed/rogue/shit,/turf/open/floor/rogue/wood,/area/rogue)
 "Bi" = (/turf/closed/wall/mineral/rogue/decowood,/area/rogue)
 "Bj" = (/obj/item/reagent_containers/glass/bottle/rogue/wine,/obj/effect/decal/border/stone/inverted,/turf/open/floor/rogue/naturalstone,/area/rogue)
-"Bp" = (/obj/machinery/light/rogue/torchholder{icon_state = "torchwall1"; dir = 4},/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"Bp" = (/obj/machinery/light/rogue/torchholder{icon_state = "torchwall1"; dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
 "BB" = (/turf/open/floor/rogue/rooftop/green{dir = 8},/area/rogue)
 "BJ" = (/obj/structure/roguewindow/openclose/reinforced{dir = 4},/turf/open/floor/rogue/church,/area/rogue)
 "BX" = (/obj/structure/fluff/railing/border{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
@@ -111,7 +114,7 @@
 "CD" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue)
 "CH" = (/obj/effect/decal/wood,/turf/open/floor/rogue/woodturned,/area/rogue)
 "CT" = (/obj/structure/table/church{dir = 1},/turf/open/floor/rogue/churchmarble,/area/rogue)
-"Dc" = (/obj/effect/decal/dirt/road,/obj/effect/decal/wood/ruinedwood{dir = 1},/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 1; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/cobble,/area/rogue)
+"Dc" = (/obj/effect/decal/dirt/road,/obj/effect/decal/wood{dir = 1},/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 1; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/cobble,/area/rogue)
 "Dp" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 5},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "Dz" = (/turf/open/floor/rogue/blocks/stonered,/area/rogue)
 "DR" = (/obj/structure/mineral_door/wood/donjon/stone{name = "Church of the Shepherd"; locked = 1; lockid = "church"},/turf/open/floor/rogue/church,/area/rogue)
@@ -126,16 +129,17 @@
 "Gy" = (/turf/closed/wall/mineral/rogue/craftstone/window{icon_state = "stonewindow"},/area/rogue)
 "GA" = (/obj/effect/decal/border/ruinedwood/inverted{dir = 1},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
 "GO" = (/obj/structure/stairs/stone{dir = 8},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"GR" = (/turf/open/floor/rogue/blocks/stone/stonepattern3{dir = 8},/area/rogue)
 "Hf" = (/obj/structure/chair/bench/church,/turf/open/floor/carpet/royalblack,/area/rogue)
 "Hl" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/churchmarble,/area/rogue)
 "Hr" = (/obj/structure/stairs/stone{dir = 4},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
-"Hy" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"Hy" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/wood,/area/rogue)
 "HA" = (/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue)
 "HB" = (/obj/effect/decal/border/ruinedwood{dir = 8},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
 "Ia" = (/obj/effect/decal/border/ruinedwood/inverted{dir = 4},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
 "Ii" = (/obj/effect/decal/border/stone{dir = 9},/obj/effect/decal/border/stone/inverted{dir = 4},/obj/structure/fluff/railing/fence,/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/cobble,/area/rogue)
 "Is" = (/obj/effect/decal/border/stone{dir = 10},/obj/effect/decal/border/stone{dir = 6},/obj/effect/decal/border/stone{dir = 1},/obj/structure/fluff/railing/fence{icon_state = "fence"; dir = 1; pixel_y = 12},/turf/open/floor/rogue/cobble,/area/rogue)
-"Iz" = (/obj/effect/decal/wood{dir = 5; pixel_x = 3},/obj/effect/decal/wood{dir = 9; pixel_x = -1},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"Iz" = (/obj/effect/decal/wood{dir = 5},/obj/effect/decal/wood{dir = 9},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "IA" = (/obj/structure/fluff/railing/border{dir = 9},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue)
 "ID" = (/obj/structure/stationary_bell{desc = "This great bronze bell summon's the Shepherd's flock."},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "II" = (/obj/structure/chair/bench/church/r,/turf/open/floor/carpet/royalblack,/area/rogue)
@@ -147,7 +151,7 @@
 "Jr" = (/turf/open/floor/rogue/dirt/road,/area/rogue)
 "Js" = (/obj/effect/decal/border/stone,/turf/open/floor/rogue/naturalstone,/area/rogue)
 "JG" = (/obj/effect/decal/border/stone{dir = 4},/obj/effect/decal/border/stone{dir = 8},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/cobble,/area/rogue)
-"JR" = (/obj/effect/decal/border/ruinedwood{dir = 8},/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"JR" = (/turf/open/floor/rogue/blocks/stone/stonepattern3{dir = 1},/area/rogue)
 "Ka" = (/turf/open/floor/rogue/carpet/lord/left,/area/rogue)
 "Kb" = (/obj/structure/fluff/railing/fence{dir = 8},/obj/effect/decal/border/stone{dir = 8},/obj/effect/decal/border/stone{dir = 4},/turf/open/floor/rogue/cobble,/area/rogue)
 "Kd" = (/turf/closed/wall/mineral/rogue/roofwall/outercorner{dir = 8},/area/rogue)
@@ -169,47 +173,50 @@
 "Nf" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue)
 "NJ" = (/turf/closed/wall/mineral/rogue/roofwall/middle,/area/rogue)
 "Ob" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 1},/obj/structure/fluff/railing/fence{icon_state = "fence"; dir = 1; pixel_y = 12},/turf/open/floor/rogue/cobble,/area/rogue)
-"OZ" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 5; pixel_x = 3},/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"OZ" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 5},/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "Pn" = (/obj/structure/roguewindow/stained/silver{name = "Cross Ascendant"; desc = "A window of fine dwarven crystal glass fixed in lead, depicting a Cross Ascendant."},/turf/open/floor/rogue/churchrough,/area/rogue)
 "PA" = (/turf/open/floor/rogue/rooftop/green{dir = 4},/area/rogue)
 "PH" = (/turf/open/floor/grass,/area/rogue)
 "PK" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue)
 "PR" = (/turf/open/floor/rogue/grass,/area/rogue)
+"Qa" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 5},/turf/open/floor/rogue/wood,/area/rogue)
 "Qe" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue)
 "Qh" = (/turf/open/floor/rogue/wood,/area/rogue)
 "Qk" = (/turf/open/floor/rogue/carpet/lord/right,/area/rogue)
-"Qn" = (/obj/structure/ladder{pixel_y = 10},/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"Qn" = (/obj/structure/ladder{pixel_y = 16},/turf/open/floor/rogue/wood,/area/rogue)
 "Qu" = (/turf/closed/wall/mineral/rogue/wooddark/window,/area/rogue)
+"QP" = (/turf/open/floor/rogue/blocks/stone/stonepattern3{dir = 4},/area/rogue)
 "QX" = (/obj/effect/decal/cobbleedge{icon_state = "borderfall"; dir = 1},/obj/structure/chair/bench/church/smallbench,/turf/open/floor/rogue/churchmarble,/area/rogue)
 "Ry" = (/obj/effect/decal/border/ruinedwood{dir = 1},/obj/structure/ladder{pixel_y = 10},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
 "RI" = (/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
-"RY" = (/obj/structure/stairs{icon_state = "stairs"; dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue)
+"RY" = (/turf/open/floor/rogue/blocks/stone{dir = 4},/area/rogue)
 "Sk" = (/obj/structure/fluff/railing/border,/turf/open/floor/rogue/church,/area/rogue)
-"Sz" = (/obj/structure/ladder{pixel_y = 10},/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/naturalstone,/area/rogue)
+"Sz" = (/obj/structure/ladder{pixel_y = 16},/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/naturalstone,/area/rogue)
 "SE" = (/turf/open/floor/rogue/churchrough,/area/rogue)
 "SW" = (/turf/open/floor/rogue/rooftop/green/corner1{dir = 6},/area/rogue)
-"Tb" = (/obj/structure/table/wood{icon_state = "tablewood1"},/obj/item/dice,/obj/item/dice,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"Tb" = (/obj/structure/table/wood{icon_state = "tablewood1"},/obj/item/dice,/obj/item/dice,/turf/open/floor/rogue/wood,/area/rogue)
+"Tg" = (/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/wood,/area/rogue)
 "Tl" = (/turf/open/floor/rogue/woodturned,/area/rogue)
 "Ty" = (/obj/structure/chair/bench/church/mid,/turf/open/floor/carpet/royalblack,/area/rogue)
 "TK" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 6},/turf/open/transparent/openspace,/area/rogue)
-"UE" = (/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 8; locked = 1; lockid = "garrison"},/turf/open/transparent/openspace,/area/rogue)
+"UE" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 10},/turf/open/floor/rogue/wood,/area/rogue)
 "Vk" = (/obj/structure/bars/pipe{pixel_y = 8},/turf/open/transparent/openspace,/area/rogue)
 "Vo" = (/obj/structure/chair/bench/church/mid,/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue)
 "VD" = (/obj/effect/decal/border/stone{dir = 10},/obj/effect/decal/border/stone/inverted{dir = 1},/obj/structure/fluff/railing/fence{icon_state = "fence"; dir = 1; pixel_y = 12},/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/cobble,/area/rogue)
 "VL" = (/turf/closed/wall/mineral/rogue/roofwall/center,/area/rogue)
-"VN" = (/obj/effect/decal/wood{dir = 5; pixel_x = 3},/obj/effect/decal/wood{dir = 10},/obj/effect/decal/wood{dir = 6},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
+"VN" = (/obj/effect/decal/wood{dir = 5},/obj/effect/decal/wood{dir = 10},/obj/effect/decal/wood{dir = 6},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
 "VT" = (/turf/closed/wall/mineral/rogue/decostone/mossy,/area/rogue)
 "Wi" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "Wm" = (/obj/structure/stairs/fancy{dir = 1},/obj/structure/stairs/fancy/c{dir = 1},/turf/open/floor/rogue/carpet/lord/center,/area/rogue)
 "Ww" = (/turf/open/floor/rogue/church,/area/rogue)
 "WD" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood/turnd{dir = 8},/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
-"WZ" = (/obj/effect/decal/border/ruinedwood{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue)
+"WZ" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 6},/turf/open/floor/rogue/wood,/area/rogue)
 "Xv" = (/turf/open/water/cleanshallow,/area/rogue)
 "XX" = (/obj/structure/roguewindow/stained/silver{name = "Cross Ascendant"; desc = "A window of fine dwarven crystal glass fixed in lead, depicting a Cross Ascendant."},/turf/open/transparent/openspace,/area/rogue)
 "Yc" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue)
-"Yg" = (/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue)
+"Yg" = (/turf/open/floor/rogue/blocks/stone/stonepattern2{dir = 1},/area/rogue)
 "Yl" = (/obj/effect/decal/border/ruinedwood{dir = 4},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
-"YR" = (/obj/effect/decal/border/ruinedwood/inverted{dir = 8},/obj/effect/decal/wood/ruinedwood{dir = 5; pixel_x = 1},/turf/open/floor/rogue/ruinedwood/spiral,/area/rogue)
+"YR" = (/obj/effect/decal/wood/turnd{dir = 5},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue)
 "Zc" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue)
 "ZK" = (/obj/effect/decal/border/stone{dir = 8},/turf/open/floor/rogue/naturalstone,/area/rogue)
 "ZU" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/transparent/openspace,/area/rogue)
@@ -391,7 +398,6 @@ iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxc
 iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxciC
 iCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiC
 "}
-
 (1,1,2) = {"
 iCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiC
 iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxciC
@@ -569,7 +575,6 @@ iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxc
 iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxciC
 iCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiC
 "}
-
 (1,1,3) = {"
 iCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiC
 iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxciC
@@ -747,7 +752,6 @@ iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxc
 iCxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxciC
 iCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiC
 "}
-
 (1,1,4) = {"
 hWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
@@ -765,23 +769,23 @@ PRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllllllllllllllllllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllJrJrJrJrJrJrJrllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRhWPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllllllllllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllJrVTVTVTVTVTJrllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllWZkXdMllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllJrVToHHAHAVTJrllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllmdQuRYllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmBVTVTHAHAVTmBllllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllWZLWdMllJrPHPHPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrVTHAHAHAVTJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllWZxMUEllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllJrVToHHAHAVTJrllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllmdQuzrllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmBVTVTHAHAVTmBllllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllQaTgdMllJrPHPHPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrVTHAHAHAVTJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllllllDcllJrPHPHPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRllVTVTqkqkqkVTVTllPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllJrJrJrPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAHAHAHAHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRJrPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAHAHAHAHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAHAHAHAHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTVTVTqkqkqkqkqkVTVTVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAqnHAHAHAHAHAqnHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTqkkyqkqkqkqkqkkyqkVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRJrJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAqnHAHAHAHAHAHAHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAqnHAHAHAHAHAHAHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTqkkyqkqkqkqkqkkyqkVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAqnHAHAHAHAHAqnHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAqnHAHAHAHAHAqnHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTqkkyqkqkqkqkqkkyqkVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
-PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAqnHAHAHAHAHAqnHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTJRyvHAGRHAHAGRyvJRVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTYgkyqnqnqnqnqnkyYgVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRJrJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHARYHAQPJRHAQPRYHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTHARYJRGRHAJRHARYQPVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTqnkyYgYgYgYgYgkyqnVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTQPyvHAJRHAJRHAyvHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRllPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHAyvHAQPGRHAQPyvHAVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTYgkyqnqnqnqnqnkyYgVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
+PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRVTHARYHAJRGRJRQPRYJRVTPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRVTVTyFyFqkqkqkyFyFVTyFPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRyFHAHAHAHAHAyFPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRJrPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRyFHAHAHAHAHAyFPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
@@ -925,7 +929,6 @@ PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 PRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPRPR
 "}
-
 (1,1,5) = {"
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
@@ -944,10 +947,10 @@ GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbxdGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGyAOibibRyibibGAGyGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbllGyQuGyllGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuHByFyFyFyFyFYlQuGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGywemhjyGyGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbllHByFBcHlgyyFYlllGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
-GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuJRzrnzQuyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXQuHByFgyomyFyFYlQuyXyXyXyXyXGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
-GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGyYRlschyWauLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWkqcYyFGwGwGwyFIayWLWLWLWLWLWGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
+GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuWizrnzQuyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXyXQuHByFgyomyFyFYlQuyXyXyXyXyXGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
+GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGyYRlschyWauLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWLWkqcYyFGwGwGwyFIayzLWLWLWLWLWGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbllGyQumXllkckckckckckckckckckckckckckckckckckckckckckckckckckckcllyFyFyFwgyFyFyFllkckckckckcGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
-GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbKbQeZUUEGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbPnwFLkiBLkwFPnGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
+GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbKbQeZUGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbPnwFLkiBLkwFPnGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbKbFaZUGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbyFGwGwGwGwGwyFGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbMVGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbPnGwKmpSCTGwPnGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbMVGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbyFLGyFSkKaeOQkSkyFLGyFGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
@@ -1103,7 +1106,6 @@ GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 "}
-
 (1,1,6) = {"
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
@@ -1122,8 +1124,8 @@ GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJGFaMVLWkXLWMVFafzGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbBiQuQuQuBiGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJGFayFyFLKyFyFFafzGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuHyTbQnQuGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbsXNfyFQufPBcyFNfCjGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
-GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuBptMYgQuGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJGFaLKazsnpqLKFafzGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
-GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuYgBgYgQuGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJGFayFTldqcEyFFafzGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
+GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuBptMQhQuGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJGFaLKazsnpqLKFafzGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
+GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbQuQhBgQhQuGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJGFayFTldqcEyFFafzGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbBiQuQuQuBiGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbMEyFyFyFLKyFyFyFIiGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbXXGbGbGbGbGbXXGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbyFGbGbGbGbGbyFGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
@@ -1281,7 +1283,6 @@ GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 "}
-
 (1,1,7) = {"
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb
 GbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGb

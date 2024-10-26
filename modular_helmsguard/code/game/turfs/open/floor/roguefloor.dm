@@ -81,3 +81,44 @@
 	neighborlay = "cobbleedge"
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
+
+//Church floors
+
+/turf/open/floor/rogue/churchmarble
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
+
+/turf/open/floor/rogue/churchbrick
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
+
+// Rooftops
+
+/turf/open/floor/rogue/rooftop
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Previously tiles did not slope correctly.
+
+/*	icon_state = "roof-arw"
+	footstep = FOOTSTEP_WOOD
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_WOOD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+
+/turf/open/floor/rogue/rooftop/Initialize()
+	. = ..()
+	icon_state = "roof"
+
+/turf/open/floor/rogue/rooftop/green
+	icon_state = "roofg-arw"
+
+/turf/open/floor/rogue/rooftop/green/Initialize()
+	. = ..()
+	icon_state = "roofg"
+
+/turf/open/floor/rogue/rooftop/green/corner1
+	icon_state = "roofgc1-arw"
+
+/turf/open/floor/rogue/rooftop/green/corner1/Initialize()
+	. = ..()
+	icon_state = "roofgc1"
+
+All this might be redundant or might not, if it works, remove contents of this comment. Or never do.
+*/

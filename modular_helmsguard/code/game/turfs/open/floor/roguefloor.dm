@@ -104,32 +104,20 @@
 	mouse_opacity = 0
 
 /obj/effect/decal/wood/
-	name = ""
-	desc = ""
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 	icon_state = "wooden_floor2edge"
-	mouse_opacity = 0
 
 /obj/effect/decal/wood/turnd
-	name = ""
-	desc = ""
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 	icon_state = "wooden_floor2tedge"
-	mouse_opacity = 0
 
 /obj/effect/decal/wood/ruinedwood
-	name = ""
-	desc = ""
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 	icon_state = "wooden_flooredge"
-	mouse_opacity = 0
 
 /obj/effect/decal/wood/ruinedwood/turned
-	name = ""
-	desc = ""
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 	icon_state = "wooden_floortedge"
-	mouse_opacity = 0
 
 /obj/effect/decal/border
 	name = ""

@@ -70,6 +70,12 @@
 	if(do_after(user, 15))
 		sound_horn(user, user.a_intent)
 
+/obj/item/war_horn/rmb_self(mob/user)
+	. = ..()
+	var/inputty = input("Make an announcement", "ROGUETOWN") as text|null
+	if(inputty)
+		sound_horn_announcement(user, user.a_intent, inputty)
+
 /obj/item/war_horn/proc/sound_horn(mob/living/user, datum/intent)
 	user.stop_sound_channel(hornchannel)
 	hornchannel = SSsounds.random_available_channel()
@@ -154,6 +160,95 @@
 				soundtouse = farchargesound
 		if(player.faction[1] in user.faction) //first is probably their primary.
 			to_chat(player, span_warning("I hear the signal to [user.a_intent.name] somewhere[disttext][dirtext] in the [currentarea.name]!"))
+		else
+			to_chat(player, span_warning("I hear a foreign signal somewhere[disttext][dirtext]!"))
+		player.playsound_local(get_turf(player), soundtouse, 35, FALSE, pressure_affected = FALSE, channel = hornchannel)
+
+/obj/item/war_horn/proc/sound_horn_announcement(mob/living/user, datum/intent, inputty)
+	user.stop_sound_channel(hornchannel)
+	hornchannel = SSsounds.random_available_channel()
+	user.visible_message(span_warning("[user] sounds the horn!"))
+	if(intent.type == /datum/intent/war_horn/retreat) //retreat
+		playsound(src, retreatsound, 100, TRUE, channel = hornchannel)
+	if(intent.type == /datum/intent/war_horn/rally) //rally here
+		playsound(src, rallysound, 100, TRUE, channel = hornchannel)
+	if(intent.type == /datum/intent/war_horn/hold) //hold
+		playsound(src, holdsound, 100, TRUE, channel = hornchannel)
+	if(intent.type == /datum/intent/war_horn/charge) //charge
+		playsound(src, chargesound, 100, TRUE, channel = hornchannel)
+
+	var/turf/origin_turf = get_turf(src)
+	var/area/currentarea = get_area(user.loc)
+	for(var/mob/living/player in GLOB.player_list)
+		if(player.stat == DEAD)
+			continue
+		if(isbrain(player))
+			continue
+
+		var/distance = get_dist(player, origin_turf)
+		if(distance <= 7)
+			if(player.faction[1] in user.faction)
+				to_chat(player, span_warning("[user] sends out a horn signal at [currentarea.location_name]!"))
+				to_chat(player, span_colossus("[inputty]"))
+			continue
+		var/dirtext = " to the "
+		var/direction = get_dir(player, origin_turf)
+		switch(direction)
+			if(NORTH)
+				dirtext += "north"
+			if(SOUTH)
+				dirtext += "south"
+			if(EAST)
+				dirtext += "east"
+			if(WEST)
+				dirtext += "west"
+			if(NORTHWEST)
+				dirtext += "northwest"
+			if(NORTHEAST)
+				dirtext += "northeast"
+			if(SOUTHWEST)
+				dirtext += "southwest"
+			if(SOUTHEAST)
+				dirtext += "southeast"
+			else //Where ARE you.
+				dirtext = ", although I cannot make out a direction"
+		var/disttext
+		switch(distance)
+			if(0 to 20)
+				disttext = " very close"
+			if(20 to 40)
+				disttext = " close"
+			if(40 to 80)
+				disttext = ""
+			if(80 to 160)
+				disttext = " far"
+			else
+				disttext = " very far"
+		//sound played for other players
+		player.stop_sound_channel(hornchannel)
+		var/soundtouse
+		if(intent.type == /datum/intent/war_horn/retreat)
+			if(distance < 80)
+				soundtouse = retreatsound
+			else
+				soundtouse = farretreatsound
+		if(intent.type == /datum/intent/war_horn/rally)
+			if(distance < 80)
+				soundtouse = rallysound
+			else
+				soundtouse = farrallysound
+		if(intent.type == /datum/intent/war_horn/hold)
+			if(distance < 80)
+				soundtouse = holdsound
+			else
+				soundtouse = farholdsound
+		if(intent.type == /datum/intent/war_horn/charge)
+			if(distance < 80)
+				soundtouse = chargesound
+			else
+				soundtouse = farchargesound
+		if(player.faction[1] in user.faction) //first is probably their primary.
+			to_chat(player, span_colossus("[inputty]"))
 		else
 			to_chat(player, span_warning("I hear a foreign signal somewhere[disttext][dirtext]!"))
 		player.playsound_local(get_turf(player), soundtouse, 35, FALSE, pressure_affected = FALSE, channel = hornchannel)

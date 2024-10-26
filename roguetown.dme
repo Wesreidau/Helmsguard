@@ -8,6 +8,7 @@
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
+#include "_maps\map_files\helmsguard\sundmark.dmm"
 #include "_maps\templates\bog_shack_small.dm"
 #include "_maps\templates\sewers.dm"
 #include "_maps\templates\smalldungeons.dm"
@@ -3647,5 +3648,7 @@
 #include "modular_hearthstone\statpacks\wildcard.dm"
 #include "modular_helmsguard\code\game\objects\items\war_horn.dm"
 #include "modular_helmsguard\code\game\turfs\open\floor\roguefloor.dm"
+#include "modular_helmsguard\code\game\objects\structures\ladders.dm"
 #include "modular_helmsguard\code\modules\jobs\job_types\roguetown\orc\orcgrunt.dm"
+#include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
 // END_INCLUDE

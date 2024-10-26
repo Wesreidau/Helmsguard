@@ -82,13 +82,51 @@
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
 
+/turf/open/floor/rogue/blocks/stonered
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "stoneredlarge"
+
+/turf/open/floor/rogue/blocks/stonered/tiny
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "stoneredtiny"
+
+/turf/open/floor/rogue/blocks/newstone
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "newstone2"
+
+/turf/open/floor/rogue/blocks/newstone/alt
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "bluestone"
+
+/turf/open/floor/rogue/blocks/stone
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "stone1"
+
+/turf/open/floor/rogue/blocks/stone/stonepattern2
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "stone2"
+
+/turf/open/floor/rogue/blocks/stone/stonepattern3
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+//	icon_state = "stone3"
+
+
+
 //Church floors
 
 /turf/open/floor/rogue/churchmarble
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
 
+/turf/open/floor/rogue/church
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
+
 /turf/open/floor/rogue/churchbrick
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
+
+/turf/open/floor/rogue/churchrough
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Generated alternate stone directions
+
+
 
 // Rooftops
 

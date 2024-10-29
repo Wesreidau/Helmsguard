@@ -1223,7 +1223,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!nodmg)
 			if(user.limb_destroyer)
 				var/easy_dismember = HAS_TRAIT(target, TRAIT_EASYDISMEMBER) || affecting.rotted
-				var/probability = damage / (2 - easy_dismember)
+				var/probability = damage / (6 - easy_dismember)
 				if(HAS_TRAIT(target, TRAIT_HARDDISMEMBER) && !easy_dismember)
 					probability = min(probability, 5)
 				if(prob(probability) && affecting.dismember())

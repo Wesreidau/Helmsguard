@@ -21,7 +21,6 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 /mob/living/carbon/human/species/human/northern/searaider/brute/after_creation()
 	equipOutfit(new /datum/outfit/job/roguetown/human/species/human/northern/searaider/brute)
 
-
 /mob/living/carbon/human/species/human/northern/searaider/retaliate(mob/living/L)
 	var/newtarg = target
 	.=..()
@@ -98,7 +97,7 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/horned
 	H.STASPD = 8
-	H.STACON = 4
+	H.STACON = 12
 	H.STAEND = 15
 	H.STAINT = 1
 	H.STASTR = rand(11,16)
@@ -131,8 +130,8 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 	if(prob(60))
 		mask = /obj/item/clothing/mask/rogue/facemask
 	gloves = /obj/item/clothing/gloves/roguetown/chain
-	H.STASPD = 9
-	H.STACON = 8
+	H.STASPD = 8
+	H.STACON = 15
 	H.STAEND = 15
 	H.STAINT = 1
 	H.STASTR = rand(15,18)
@@ -164,7 +163,7 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 	speak_chance = 5
 	turns_per_move = 1
 	move_to_delay = 3
-	STACON = 9
+	STACON = 14
 	STASTR = 14
 	STASPD = 13
 	maxHealth = 120

@@ -76,7 +76,8 @@
 	if(nuforce < 10)
 		return 0
 
-	var/probability = nuforce * (total_dam / affecting.max_damage)
+	var/probability = (nuforce * (total_dam / (affecting.max_damage * 1.5))) * 0.75
+	probability = min(probability, 10) // Optional: cap for normal cases
 	var/hard_dismember = HAS_TRAIT(affecting, TRAIT_HARDDISMEMBER)
 	var/easy_dismember = affecting.rotted || affecting.skeletonized || HAS_TRAIT(affecting, TRAIT_EASYDISMEMBER)
 	if(affecting.owner)

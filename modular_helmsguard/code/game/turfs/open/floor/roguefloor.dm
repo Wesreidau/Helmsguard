@@ -82,23 +82,23 @@
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
 
-/turf/open/floor/rogue/blocks/stonered
+/turf/open/floor/rogue/blocks/stonered/nosmooth
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 //	icon_state = "stoneredlarge"
 
-/turf/open/floor/rogue/blocks/stonered/tiny
+/turf/open/floor/rogue/blocks/stonered/tiny/nosmooth
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 //	icon_state = "stoneredtiny"
 
-/turf/open/floor/rogue/blocks/newstone
+/turf/open/floor/rogue/blocks/newstone/nosmooth
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 //	icon_state = "newstone2"
 
-/turf/open/floor/rogue/blocks/newstone/alt
+/turf/open/floor/rogue/blocks/newstone/alt/nosmooth
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 //	icon_state = "bluestone"
 
-/turf/open/floor/rogue/blocks/stone
+/turf/open/floor/rogue/blocks/stone/nosmooth
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 //	icon_state = "stone1"
 
@@ -114,18 +114,38 @@
 
 //Church floors
 
-/turf/open/floor/rogue/churchmarble
+/turf/open/floor/rogue/churchmarble/nosmooth
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
 
 /turf/open/floor/rogue/church
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
 
+//
+// These try to fix the need for nosmooth / norand turfs.
+
+/turf/open/floor/rogue/church/nosmooth
+	smooth = null											// Disable smoothing
+
+/turf/open/floor/rogue/church/nosmooth/Initialize()			// Remove random dir initialize() in parent object.
+
 /turf/open/floor/rogue/churchbrick
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
+
+/turf/open/floor/rogue/churchbrick/nosmooth
+	smooth = null											// Disable smoothing
+
+/turf/open/floor/rogue/churchbrick/nosmooth/Initialize()	// Remove random dir initialize() in parent object.
 
 /turf/open/floor/rogue/churchrough
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Generated alternate stone directions
 
+/turf/open/floor/rogue/churchrough/nosmooth
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Generated alternate stone directions
+
+/turf/open/floor/rogue/churchrough/nosmooth/Initialize()	// Remove random dir initialize() in parent object.
+
+// End of attempted nosmooth / norand turfs.
+//
 
 
 // Rooftops

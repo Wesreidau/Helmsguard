@@ -5,10 +5,10 @@
 	icon_state = "catapult_ready"
 	anchored = 1
 	density = 1
-	var/xinput = 0
-	var/yinput = 0
-	var/xdial
-	var/ydial
+	drag_slowdown = 7
+	var/fire_distance = 0
+	var/min_distance = 10
+	var/max_distance = 50
 	var/xoffset = 0
 	var/yoffset = 0
 	var/offset_per_turfs = 20 //Number of turfs to offset from target by 1
@@ -19,6 +19,7 @@
 	var/busy = 0
 	var/ready = 1
 	var/loaded = 0
+	var/list/choices = list("Fire!", "Set Direction", "Set Target Distance", "Pack Up")
 
 /*/obj/structure/catapult/examine(mob/user)
 	. = ..()
@@ -65,10 +66,8 @@
 			to_chat(user, "<span class='warning'>The catapult is already loaded with a projectile.</span>")
 		return
 
-	var/choice_unpacked = alert(user, "What would you like to do with the catapult?", "Catapult Actions", "Fire!", "Target", "Pack Up")
-
-
 	if(ready && !packed)
+		var/choice_unpacked = input("What would you like to do with the catapult?", "Catapult Actions") in choices
 		switch(choice_unpacked)
 			if ("Fire!")
 				if (check_obstruction(src))  // Check for obstruction
@@ -76,40 +75,53 @@
 				if (!loaded)
 					to_chat(user, "<span class='warning'>The catapult is not loaded yet.</span>")
 					return
-				if(xinput == 0 && yinput == 0) //Mortar wasn't set
+				if(fire_distance == 0)
 					to_chat(user, "<span class='warning'>[src] needs to be aimed first.</span>")
 					return
 				else
 					fire_catapult(user) // Pass the distance to fire_catapult
-			if ("Target")
-				var/temp_targ_x = input("Set longitude of strike.") as num
-				if(temp_targ_x > world.maxx || temp_targ_x < 0)
-					to_chat(user, "<span class='warning'>You cannot aim at this coordinate, it is outside of the area of operations.</span>")
-					return
-				var/temp_targ_y = input("Set latitude of strike.") as num
-				if(temp_targ_y > world.maxy || temp_targ_y < 0)
-					to_chat(user, "<span class='warning'>You cannot aim at this coordinate, it is outside of the area of operations.</span>")
-					return
-				var/turf/T = locate(temp_targ_x, temp_targ_y, src.z)
-				if(get_dist(loc, T) < 10)
-					to_chat(user, "<span class='warning'>You cannot aim at this coordinate, it is too close to your mortar.</span>")
-					return
+			if ("Set Direction")
+				var/current_direction = dir
+				var/list/directionlist = list("NORTH", "SOUTH", "EAST", "WEST")
+				var/direction = input("Directions", "Select a direction") as anything in directionlist
+				var/texttodirection = text2dir(direction)
 				if(busy)
-					to_chat(user, "<span class='warning'>Someone else is currently using this mortar.</span>")
+					to_chat(user, "<span class='warning'>Someone else is currently using this catapult.</span>")
 					return
 				playsound(src, pick("modular_helmsguard/sound/catapult/aim.ogg", "modular_helmsguard/sound/catapult/aim2.ogg"),  100)
-				user.visible_message("<span class='notice'>([user] starts adjusting [src]'s firing angle and distance.</span>",
-			"<span class='notice'>You start adjusting [src]'s firing angle and distance to match the new coordinates.</span>")
-				busy = 1
-				if(do_after(user, 30, src))
-					dir = get_dir(src, T)
-					user.visible_message("<span class='notice'>([user] finishes adjusting [src]'s firing angle and distance.</span>",
-					"<span class='notice'>You finish adjusting [src]'s firing angle and distance to match the new coordinates.</span>")
-					busy = 0
-					xinput = temp_targ_x
-					yinput = temp_targ_y
+				user.visible_message("<span class='notice'>([user] tries to turn the [src] to face [direction].</span>")
+				if(texttodirection != current_direction)
+					busy = 1
+					if(do_after(user, 30, src))
+						dir = texttodirection
+						user.visible_message("<span class='notice'>([user] set the [src]'s firing direction to [direction].</span>",
+						"<span class='notice'>You finish adjusting [src]'s firing direction.</span>")
+						busy = 0
+					else
+						user.visible_message("<span class='notice'>(The [src] is already facing [direction].</span>")
+						busy = 0
+						return
 				else
 					busy = 0
+			if ("Set Target Distance")
+				var/distance_input = input("Set target distance of bombardment.", "tiles") as num
+				if(distance_input>max_distance)
+					to_chat(user, "<span class='warning'>The catapult can only fire at the maximum distance of [max_distance] tiles.</span>")
+					return
+				if(distance_input<min_distance)
+					to_chat(user, "<span class='warning'>The range must be at the minimum distance of [min_distance] tiles.</span>")
+					return
+				else
+					busy = 1
+					playsound(src, pick("modular_helmsguard/sound/catapult/aim.ogg", "modular_helmsguard/sound/catapult/aim2.ogg"),  100)
+					user.visible_message("<span class='notice'>([user] begins to set the [src]'s firing distance.</span>")
+					if(do_after(user, 30, src))
+						fire_distance = distance_input
+						user.visible_message("<span class='notice'>([user] sets the [src] to fire at the distance of [fire_distance] tiles.</span>")
+						busy = 0
+					else
+						busy = 0
+						return
 			if ("Pack Up")
 				user.visible_message("<span class='notice'>[user] begins to pack the catapult up.</span>")
 				busy = 1
@@ -118,9 +130,11 @@
 					user.visible_message("<span class='notice'>[user] have packed the catapult up for moving.</span>")
 					anchored = 0
 					packed = 1
-					xinput = 0
-					yinput = 0
+					fire_distance = 0
 					busy = 0
+				else
+					busy = 0
+					return
 	else
 		return
 
@@ -129,6 +143,7 @@
 		if(!ishuman(usr))
 			return
 		visible_message(span_notice("[usr] sets up the [src]."))
+		playsound(src, "modular_helmsguard/sound/catapult/adjusting.ogg",  100)
 		if(do_after(usr, 10 SECONDS, target = src))
 			anchored = 1
 			packed = 0
@@ -158,7 +173,9 @@
 	var/launchsound = list("modular_helmsguard/sound/catapult/launch.ogg", "modular_helmsguard/sound/catapult/launch2.ogg", "modular_helmsguard/sound/catapult/launch3.ogg")
 	xoffset = rand(-8, 8)
 	yoffset = rand(-8, 8)
-	var/turf/T = locate(xinput + xoffset, yinput + yoffset, src.z)
+	var/turf/targetx = get_ranged_target_turf(src, dir, fire_distance).x
+	var/turf/targety = get_ranged_target_turf(src, dir, fire_distance).y
+	var/turf/T = locate(targetx + xoffset, targety + yoffset, src.z)
 
 	if(!isturf(T))
 		for(var/turf/O in range(2,T))

@@ -30,11 +30,12 @@
 		icon_state = "catapult_ready"
 	else
 		icon_state = "catapult_launch"
-	if(loaded && ready)
+/*	if(loaded && ready)
 		add_overlay("boulder", HIGH_OBJ_LAYER)
 	else
-
-
+		cut_overlays()
+		update_overlays()
+*/
 
 /obj/structure/catapult/proc/check_obstruction(mob/living/carbon/user)
 	var/turf/T = get_turf(src)
@@ -141,7 +142,7 @@
 		if(loaded)
 			to_chat(user, "<span class='warning'>The catapult is already loaded with a projectile.</span>")
 			return
-		update_icon(src)
+
 		user.dropItemToGround(O, src)
 		O.forceMove(src)
 		loaded = 1
@@ -149,6 +150,7 @@
 		playsound(src, 'sound/foley/hit_rock.ogg', 100)
 		// Optional: Remove the projectile from the world to show it's loaded
 		O.loc = src // Keeps it "inside" the catapult
+		update_icon()
 		return
 
 
@@ -159,7 +161,7 @@
 	var/turf/T = locate(xinput + xoffset, yinput + yoffset, src.z)
 
 	if(!isturf(T))
-		for(var/turf/O in range(5,T))
+		for(var/turf/O in range(2,T))
 			T = O
 			continue
 /*
@@ -168,12 +170,11 @@
 	if (ready)
 		playsound(src, pick(launchsound), 100)
 		spawn(10)
-			var/obj/item/boulder/flying/P = /obj/item/boulder/flying
+			var/obj/item/boulder/P = /obj/item/boulder
 //			var/atom/target = get_edge_target_turf(src, dir)
 			user.visible_message("<span class='notice'>You fire the catapult!</span>")
 			loaded = 0
 			ready = 0
-			update_icon()
 		// Adjust `distance_input` with a random variation
 		//	var/random_distance = distance_input + rand(-5, 5)
 			var/z_position = src.z + 1 // Start one level above the catapult
@@ -193,7 +194,9 @@
 				P.throw_at(get_turf(T), get_dist(src, T), 3)
 				P.travel_time = get_dist(P, src)
 
+			cut_overlays()
 			update_icon()
+			update_overlays()
 
 /obj/structure/catapult/attack_right(mob/user)
 	. = ..()
@@ -218,15 +221,22 @@
 /obj/item/boulder
 	name = "boulder"
 	icon = 'modular_helmsguard/icons/obj/structure/cata_ammo.dmi'
-	icon_state = "boulder"
+	icon_state = "b-1"
 	w_class = 5
 	var/launched = FALSE
 	var/travel_time = 0
 	var/incoming = list('modular_helmsguard/sound/catapult/incoming.ogg', 'modular_helmsguard/sound/catapult/incoming2.ogg', 'modular_helmsguard/sound/catapult/incoming3.ogg')
 
-/obj/item/boulder/flying
+
+/obj/item/boulder/Initialize()
+	. = ..()
+	icon_state = "b-[rand(1,3)]"
+
+
+
+/*/obj/item/boulder/flying
 	icon = 'modular_helmsguard/icons/obj/structure/cata_ammo.dmi'
-	icon_state = "boulder"
+	icon_state = "boulder"*/
 
 
 /obj/item/boulder/Bump(atom/A)
@@ -243,6 +253,7 @@
 		spawn(travel_time * 6)
 			explosion(get_turf(src), 1, -1, 2, 0)
 			do_shrapnel_effect(get_turf(src))
+
 			qdel(src)
 
 /obj/item/boulder/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)

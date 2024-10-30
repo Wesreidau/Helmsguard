@@ -40,7 +40,6 @@
 "bP" = (/obj/structure/fluff/railing/border{dir = 9},/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "bQ" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "bU" = (/obj/effect/landmark/start/tribalshaman,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
-"bV" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/structure/chair/stool/rogue,/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered,/area/rogue/outdoors/town)
 "bX" = (/obj/effect/landmark/start/squire,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "bY" = (/turf/closed/wall/mineral/rogue/decowood/vert,/area/rogue/outdoors/town)
 "bZ" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 1},/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/floor/rogue/cobble{dir = 4},/area/rogue/outdoors/town)
@@ -122,7 +121,6 @@
 "fu" = (/obj/effect/decal/wood,/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "fv" = (/obj/effect/decal/border/stone/stonepattern1{dir = 9},/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/cloth,/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
 "fA" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/obj/structure/roguemachine/scomm,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
-"fC" = (/obj/effect/decal/border/stone{dir = 8},/obj/machinery/light/rogue/torchholder/l{pixel_x = -8},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "fE" = (/obj/effect/decal/wood/herringbone{dir = 4},/turf/open/floor/rogue/rooftop/green{dir = 8},/area/rogue/outdoors/town)
 "fG" = (/obj/structure/bookcase/random/archive{pixel_y = 16},/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "fH" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/turf/open/floor/rogue/churchrough{dir = 8},/area/rogue/under/cavewet)
@@ -213,9 +211,7 @@
 "jf" = (/turf/open/water/swamp/deep,/area/rogue/under/cavewet)
 "jg" = (/obj/effect/decal/border/stone{dir = 1},/obj/effect/decal/border/stone,/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
 "ji" = (/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
-"jm" = (/obj/item/roguekey/church,/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
 "jr" = (/obj/effect/decal/wood,/obj/effect/decal/wood{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
-"jt" = (/obj/effect/decal/wood/ruinedwood,/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "ju" = (/obj/effect/decal/border/stone,/turf/open/floor/rogue/blocks/stone{dir = 4},/area/rogue/outdoors/town)
 "jw" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 1},/obj/structure/fluff/railing/border{icon_state = "border"; dir = 6},/turf/open/floor/rogue/cobble{dir = 4},/area/rogue/outdoors/town)
 "jz" = (/obj/effect/decal/wood{dir = 1},/obj/structure/fluff/railing/border{dir = 10},/obj/machinery/light/rogue/wallfire/candle,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
@@ -266,7 +262,7 @@
 "lA" = (/obj/effect/decal/wood,/obj/structure/fluff/railing/border{icon_state = "border"; dir = 6},/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "lD" = (/obj/effect/decal/border/stone{dir = 4},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "lH" = (/obj/effect/landmark/start/shophand,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
-"lJ" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/floor/rogue/metal,/area/rogue/outdoors/town)
+"lJ" = (/obj/structure/chair/stool/rogue,/obj/effect/decal/wood/turnd{dir = 4},/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered,/area/rogue/outdoors/town)
 "lM" = (/obj/structure/fluff/railing/border{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "lN" = (/obj/effect/decal/border/stone,/turf/open/floor/rogue/churchmarble,/area/rogue/under/cavewet)
 "lO" = (/obj/structure/gravemarker,/obj/structure/closet/dirthole/closed,/obj/effect/landmark/observer_start,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/town)
@@ -303,6 +299,7 @@
 "nf" = (/obj/effect/landmark/start/delf,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "nj" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 9},/turf/open/floor/rogue/cobblerock,/area/rogue/under/cavewet)
 "nk" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
+"nl" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/floor/rogue/metal/barograte,/area/rogue/outdoors/town)
 "nm" = (/obj/effect/decal/border/stone{dir = 8},/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
 "nn" = (/obj/structure/ladder{pixel_y = 16},/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/naturalstone,/area/rogue/under/cavewet)
 "no" = (/turf/closed/wall/mineral/rogue/decostone/center,/area/rogue/outdoors/town)
@@ -345,6 +342,7 @@
 "oU" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/obj/structure/mineral_door/bars{lockid = "blacksmith"; locked = 1; name = "Smithy"},/obj/effect/decal/border/stone/stonepattern2,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town)
 "pb" = (/turf/closed/mineral/rogue/gem,/area/rogue/under/cavewet)
 "pg" = (/obj/structure/stairs/stone{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/town)
+"ph" = (/obj/effect/decal/wood,/obj/structure/stairs{dir = 1; invisibility = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
 "pi" = (/obj/machinery/light/rogue/torchholder/l{pixel_x = -8},/obj/effect/decal/border/stone/inverted{dir = 8},/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
 "pj" = (/obj/effect/landmark/start/archivist,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "pl" = (/obj/effect/decal/wood/ruinedwood,/obj/effect/decal/wood/ruinedwood{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
@@ -377,6 +375,7 @@
 "qv" = (/obj/effect/decal/wood,/obj/structure/mineral_door/wood/fancywood{name = "Sirs"},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "qw" = (/obj/effect/decal/border/stone/inverted,/obj/machinery/light/rogue/lanternpost{pixel_y = 20},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/town)
 "qy" = (/obj/effect/landmark/start/tribalsmith,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/town)
+"qC" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/floor/rogue/metal,/area/rogue/outdoors/town)
 "qD" = (/obj/structure/stairs/stone{dir = 1},/turf/open/floor/rogue/cobble{dir = 4},/area/rogue/outdoors/town)
 "qE" = (/turf/closed/wall/mineral/rogue/roofwall/middle,/area/rogue/outdoors/town)
 "qH" = (/obj/structure/closet/crate/drawer,/obj/item/candle/yellow{pixel_x = 7; pixel_y = 6},/obj/item/clothing/suit/roguetown/shirt/robe,/obj/item/clothing/suit/roguetown/shirt/robe,/obj/item/clothing/head/roguetown/roguehood,/obj/item/clothing/head/roguetown/roguehood,/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
@@ -437,7 +436,6 @@
 "tB" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue/outdoors/town)
 "tE" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "tF" = (/obj/structure/flora/roguegrass/bush/wall/tall,/obj/effect/decal/cobbleedge{dir = 8},/obj/effect/decal/border/stone{dir = 4},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
-"tI" = (/obj/effect/decal/wood,/obj/structure/stairs{dir = 1; invisibility = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
 "tJ" = (/turf/open/floor/grass,/area/rogue/outdoors/town)
 "tQ" = (/obj/effect/decal/stone/hex{dir = 1},/turf/open/floor/rogue/churchmarble,/area/rogue/under/cavewet)
 "tR" = (/obj/effect/decal/border/stone/inverted,/obj/effect/decal/border/stone/stonepattern2{dir = 6},/turf/open/floor/rogue/cobble2,/area/rogue/outdoors/town)
@@ -465,7 +463,7 @@
 "uP" = (/obj/effect/decal/border/stone/stonepattern2,/obj/machinery/anvil,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/town)
 "uQ" = (/obj/machinery/anvil,/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/town)
 "uR" = (/turf/open/floor/rogue/blocks/stone{dir = 8},/area/rogue/outdoors/town)
-"uS" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town)
+"uS" = (/obj/item/roguekey/church,/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
 "uT" = (/obj/structure/roguewindow/openclose/reinforced{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town)
 "uU" = (/obj/effect/decal/border/stone{dir = 4},/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
 "uY" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 9},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
@@ -505,6 +503,7 @@
 "wM" = (/obj/effect/decal/wood,/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "wN" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 1},/obj/structure/fluff/railing/border,/turf/open/floor/rogue/cobble{dir = 4},/area/rogue/outdoors/town)
 "wO" = (/obj/structure/flora/ausbushes/fullgrass,/obj/structure/flora/ausbushes/brflowers,/obj/effect/decal/border/stone{dir = 9},/turf/open/floor/grass,/area/rogue/outdoors/town)
+"wW" = (/obj/structure/stairs{dir = 1; invisibility = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "xb" = (/obj/effect/decal/cobbleedge{icon_state = "borderfall"; dir = 1},/turf/open/floor/rogue/churchmarble,/area/rogue/outdoors/town)
 "xc" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/obj/structure/dye_bin,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town)
 "xd" = (/obj/effect/decal/wood{dir = 1},/obj/effect/decal/stone/hex{dir = 8},/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
@@ -575,10 +574,8 @@
 "zW" = (/obj/effect/decal/border/stone/stonepattern2{dir = 9},/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
 "zY" = (/obj/effect/decal/wood/ruinedwood,/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "zZ" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 5},/obj/effect/decal/wood/turnd{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
-"Ab" = (/obj/structure/chair/stool/rogue,/obj/effect/decal/wood/turnd{dir = 4},/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered,/area/rogue/outdoors/town)
 "Ad" = (/obj/machinery/light/rogue/wallfire/candle/l,/obj/effect/decal/wood/turnd{dir = 8},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/carpet/lord/center,/area/rogue/outdoors/town)
 "Aj" = (/turf/open/floor/rogue/blocks/stone,/area/rogue/under/cavewet)
-"Ak" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/floor/rogue/metal/barograte,/area/rogue/outdoors/town)
 "Al" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/border/stone/stonepattern1{dir = 9},/obj/structure/closet/crate/drawer/inn,/obj/item/clothing/head/roguetown/nun,/obj/item/clothing/suit/roguetown/shirt/robe/nun,/obj/item/clothing/neck/roguetown/psicross/silver,/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
 "Ao" = (/obj/effect/landmark/start/scribe,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "Aq" = (/obj/effect/decal/border/stone,/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/under/cavewet)
@@ -749,6 +746,7 @@
 "IH" = (/turf/open/floor/rogue/metal/barograte,/area/rogue/outdoors/town)
 "II" = (/obj/effect/landmark/start,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "IM" = (/obj/effect/decal/border/stone/stonepattern2{dir = 10},/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
+"IP" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/obj/structure/fluff/railing/border{dir = 10},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "IW" = (/obj/effect/decal/wood{dir = 1},/obj/effect/decal/stone/hex{dir = 4},/obj/structure/roguemachine/scomm,/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "IX" = (/obj/effect/landmark/start/nightman,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "IZ" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 6},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
@@ -871,6 +869,7 @@
 "ON" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/structure/table/wood/bar{icon_state = "largetable"; dir = 9},/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "OO" = (/obj/effect/decal/border/stone,/turf/open/floor/rogue/blocks/stone/stonepattern3{dir = 1},/area/rogue/outdoors/town)
 "OP" = (/obj/effect/decal/border/stone,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/town)
+"OR" = (/obj/effect/decal/border/stone{dir = 4},/obj/machinery/light/rogue/torchholder/r{pixel_x = 8},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "OT" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "OU" = (/obj/effect/decal/border/stone{dir = 10},/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
 "OZ" = (/obj/structure/fluff/railing/border{icon_state = "border"; dir = 1},/turf/open/floor/rogue/rooftop/green{dir = 1},/area/rogue/outdoors/town)
@@ -883,6 +882,7 @@
 "Pt" = (/turf/open/floor/rogue/rooftop,/area/rogue/outdoors/town)
 "Pu" = (/obj/effect/decal/stone/hex{dir = 1},/obj/structure/roguemachine/mail/r,/turf/open/floor/rogue/churchmarble,/area/rogue/under/cavewet)
 "Pv" = (/obj/effect/decal/wood/turnd{dir = 8},/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
+"Pw" = (/obj/effect/landmark/mapGenerator/sunlights,/turf/open/transparent/openspace,/area/rogue/outdoors/town)
 "Py" = (/obj/effect/landmark/start/barkeep,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "PC" = (/obj/effect/decal/dirt/road,/obj/effect/decal/wood{dir = 1},/obj/structure/mineral_door/wood{name = "Northwest Tower"; dir = 1; locked = 1; lockid = "garrison"},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/town)
 "PD" = (/turf/closed/wall/mineral/rogue/decostone/mossy/end{dir = 8},/area/rogue/outdoors/town)
@@ -966,7 +966,7 @@
 "Te" = (/obj/effect/decal/border/stone{dir = 1},/obj/effect/decal/border/stone,/obj/structure/table/wood/bar{icon_state = "longtable"; dir = 1},/obj/structure/bars{icon_state = "barsbent"},/turf/open/floor/rogue/cobble{dir = 4},/area/rogue/outdoors/town)
 "Tj" = (/obj/effect/decal/border/stone{dir = 4},/obj/machinery/light/rogue/torchholder/r{pixel_x = 8},/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
 "Tl" = (/obj/structure/rack/rogue,/obj/item/reagent_containers/glass/cup/silver,/obj/item/reagent_containers/glass/cup/silver,/obj/item/reagent_containers/glass/cup/silver,/obj/effect/decal/border/stone/inverted,/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
-"Tn" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/obj/structure/fluff/railing/border{dir = 10},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
+"Tn" = (/obj/effect/decal/border/stone{dir = 8},/obj/machinery/light/rogue/torchholder/l{pixel_x = -8},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "To" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "Tp" = (/obj/effect/decal/border/stone{dir = 1},/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
 "Tq" = (/obj/effect/decal/border/stone{dir = 8},/obj/effect/decal/border/stone{dir = 4},/obj/structure/roguewindow/openclose/reinforced{dir = 4},/turf/open/floor/rogue/cobble3,/area/rogue/outdoors/town)
@@ -1019,17 +1019,16 @@
 "VB" = (/obj/effect/decal/wood{dir = 1},/obj/structure/rack/rogue/shelf,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "VE" = (/obj/structure/plasticflaps,/turf/open/water/river,/area/rogue/under/cavewet)
 "VJ" = (/obj/effect/decal/wood/turnd{dir = 8; pixel_y = -1},/obj/effect/decal/border/stone/stonepattern1{dir = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
-"VK" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/obj/structure/stairs{dir = 1; invisibility = 1},/obj/effect/decal/wood/ruinedwood,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "VM" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/obj/effect/decal/border/stone/stonepattern1{dir = 5},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "VQ" = (/obj/effect/decal/wood/turnd{dir = 8; pixel_y = -1},/obj/structure/closet/crate/drawer/inn,/obj/item/book_crafting_kit,/obj/item/book_crafting_kit,/obj/item/paper,/obj/item/paper,/obj/item/paper,/obj/item/paper,/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "VT" = (/obj/effect/landmark/start/tailor,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "VW" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/effect/decal/wood{dir = 1},/obj/structure/closet/crate/roguecloset/inn/south,/obj/item/clothing/cloak/stabard/crusader/t,/obj/item/clothing/cloak/stabard/crusader/t,/obj/item/clothing/cloak/stabard/crusader/t,/obj/item/clothing/cloak/tabard,/obj/item/clothing/cloak/tabard,/turf/open/floor/rogue/wood/herringbone,/area/rogue/outdoors/town)
 "VX" = (/obj/machinery/light/rogue/oven/south,/turf/open/floor/rogue/hexstone,/area/rogue/outdoors/town)
+"VZ" = (/obj/effect/decal/wood/ruinedwood{dir = 1},/obj/structure/stairs{dir = 1; invisibility = 1},/obj/effect/decal/wood/ruinedwood,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "Wb" = (/obj/effect/decal/border/stone{dir = 4},/obj/structure/bars{icon_state = "barsbent"},/obj/item/reagent_containers/glass/bowl,/obj/structure/table/wood/bar{icon_state = "longtable"; dir = 1},/turf/open/floor/rogue/blocks/stone,/area/rogue/outdoors/town)
 "Wj" = (/obj/structure/fluff/railing/border{dir = 9},/obj/effect/decal/wood/turnd{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
 "Wk" = (/turf/open/floor/rogue/cobble{dir = 4},/area/rogue/outdoors/town)
 "Wl" = (/obj/effect/decal/dirt/road{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/town)
-"Wm" = (/obj/structure/stairs{dir = 1; invisibility = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/town)
 "Wp" = (/obj/structure/stairs{icon_state = "stairs"; dir = 8},/turf/open/floor/rogue/cobble/mossy,/area/rogue/outdoors/town)
 "Wt" = (/obj/structure/table/wood{icon_state = "tablewood1"; pixel_x = 1},/obj/machinery/light/rogue/torchholder/l{pixel_x = -8},/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/obj/item/reagent_containers/glass/bowl,/obj/item/reagent_containers/glass/cup/wooden,/turf/open/floor/rogue/blocks/stonered,/area/rogue/outdoors/town)
 "Wx" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/structure/bed/rogue/inn/wool,/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
@@ -1050,10 +1049,12 @@
 "Xs" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/obj/effect/decal/wood/ruinedwood/turned{dir = 4},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "Xy" = (/obj/structure/bars/tough,/turf/open/floor/rogue/blocks/stone{dir = 8},/area/rogue/outdoors/town)
 "Xz" = (/obj/structure/stairs{dir = 1},/turf/open/floor/rogue/blocks/stone{dir = 4},/area/rogue/outdoors/town)
+"XC" = (/obj/effect/decal/wood/ruinedwood/turned{dir = 8},/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town)
 "XD" = (/obj/effect/landmark/start/monk,/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "XG" = (/obj/structure/stairs/stone{dir = 1},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "XI" = (/obj/effect/decal/border/stone/inverted{dir = 8},/obj/structure/closet/crate/coffin/sarcophagus/alt3,/turf/open/floor/rogue/cobblerock,/area/rogue/under/cavewet)
 "XL" = (/obj/structure/closet/crate/drawer,/obj/item/candle/yellow{pixel_y = 9},/obj/item/clothing/suit/roguetown/shirt/robe/nun,/obj/item/clothing/suit/roguetown/shirt/robe/nun,/obj/item/clothing/head/roguetown/nun,/obj/item/clothing/head/roguetown/nun,/turf/open/floor/rogue/wood,/area/rogue/outdoors/town)
+"XM" = (/obj/effect/decal/wood/ruinedwood,/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town)
 "XN" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/churchmarble,/area/rogue/under/cavewet)
 "XQ" = (/obj/effect/decal/wood/turnd{dir = 8; pixel_y = -1},/turf/open/floor/rogue/blocks/stonered,/area/rogue/outdoors/town)
 "XT" = (/obj/effect/decal/border/stone/inverted,/turf/open/floor/rogue/naturalstone,/area/rogue/under/cavewet)
@@ -1105,7 +1106,7 @@
 "ZQ" = (/obj/machinery/light/rogue/wallfire{pixel_y = 32},/obj/effect/decal/border/stone/stonepattern1{dir = 1},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
 "ZR" = (/turf/open/floor/rogue/blocks/stone/stonepattern3,/area/rogue/outdoors/town)
 "ZS" = (/turf/closed/wall/mineral/rogue/decostone/end{dir = 8},/area/rogue/outdoors/town)
-"ZX" = (/obj/effect/decal/border/stone{dir = 4},/obj/machinery/light/rogue/torchholder/r{pixel_x = 8},/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/outdoors/town)
+"ZX" = (/obj/effect/decal/wood/turnd{dir = 4},/obj/structure/chair/stool/rogue,/obj/machinery/light/rogue/wallfire/candle/r,/turf/open/floor/rogue/blocks/stonered,/area/rogue/outdoors/town)
 "ZZ" = (/obj/structure/rack/rogue,/obj/item/customblank,/obj/item/customblank,/turf/open/floor/rogue/cobblerock,/area/rogue/under/cavewet)
 
 (1,1,1) = {"
@@ -1312,7 +1313,7 @@ OTOTOTOTOTOTOTOTOTOTOTFdCufMAooCOThwOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDDeBXlDumDeBXlD
 OTOTOTOTOTOTOTOTOTOTOTrvZCkPGzlHhwOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDXrYlXrDDXrYlXrDDgAxACnxAgAdRdRnoZSYlYlYlFBnodRdRxAxACnxAxADDSsjAEcYlDDJOGADDCnveveveveveveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTbXUyVTaeTyOTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDfmblblfIblblFWDDefBaCnsnZGSztbOdXdTpTpMAJiOdUUSzkrkrkrkrkrDDsvWbDDfNDDYrYrDDCnveNzkrkrNzveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTznyYbUqynMOTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDskBXBXixBXBXlDDDBavmCnCnakocDIuRiRZRZRekuUuRzbSzkrkrkrkrkrYraWMjWYMjftKbPkDDCnvekrhwkrkrveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
-OTOTOTOTOTOTOTOTOTOTOTPgHhryePyGOTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDfCBXBXixBXBXZXDDxAxACnFAFASzDIixnmekHbZRljixdxSzkrrUxArUkrDDVnItsGLysGMimHDDCnvehwkrkrhbveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
+OTOTOTOTOTOTOTOTOTOTOTPgHhryePyGOTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDTnBXBXixBXBXORDDxAxACnFAFASzDIixnmekHbZRljixdxSzkrrUxArUkrDDVnItsGLysGMimHDDCnvehwkrkrhbveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTZpxsSilzyhOTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDDeBXBXixBXBXlDDDXGXGCnvmzQSzdxSKmTLLLLOOesSKorSzhwOTZJOThwDDWtarsGfmsGMieQDDidvekrNzkrkrveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTvJhSDEZbvROTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDDeBXTwjusmBXlDixzPTvCnLPbJSzGOnoZSYlYlYlFBnoIpSzhwOTCnOTlODDVnItsGiNsGMimHDDYlvekrhwkrhwveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOThwpEiHFnIICvOTOTOTOTOTOTDDCnOTOTkrkrkrkrkrCnDDeWYldYDDeWYldYDDwOyBCnvmzQSzYlOdcjTpTpMAnrOdJOSzhwOTCnOThwDDcdsGsGKgsGMiPkDDYlvetuugugtuveOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
@@ -1321,7 +1322,7 @@ OTOTOTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnOTOTOTOTOTOTOTOTDDDeBXBXixBXBXlD
 OTOTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnOTOTOTOTOTOTOTOTDDnSHKHKJnHKHKNJDDFAZxCnRApnSzJOSKpiOOQBLLajSKjgSzhwPNCnPNhwDDVnItZAtqNeMimHDDYlijfjfjijXrijOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnOTOTOTOTOTOTOTOTDDDDDDDDDDDDDDDDDDgAxAdUxAgASzSznoZSgAyagAFBnoSzdRxrxAidxAxrDDFBcLZSUoFBcLZSDDYlYlYlYlumrWumOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnOTOTOTOTOTOTOTOTYlYlYlYlYlYlYlYlYlYlYlYlYlYlYlkcdRzCTpTpMAeOdRxFYlYlYlYlYlYlYlYlYlBpBTSeYlYlYlYlYlYlYlijMyijOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
-OTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnOTOTOTOTOTOTOTOTYlYlYlYlYlYlYlYlYlYlYljmYlYlYlkcdRUsTcmeAsmKdRxFYlYlYlYlYlYlYlYlYlYlYlYlYlYlYlYlOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
+OTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnOTOTOTOTOTOTOTOTYlYlYlYlYlYlYlYlYlYlYluSYlYlYlkcdRUsTcmeAsmKdRxFYlYlYlYlYlYlYlYlYlYlYlYlYlYlYlYlOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnDDDDDDDDDDXrfmXrDDDyXrXrDDYlqwNLNLNLOhkDNLKcYlJoSzIpcUIpcUIpSzPDfjpoaQQuQuQubFbFbFbFbFbFbFbFbFOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTOTDDCnumzyRjzyiwpvpvMcFCumIZRuumYlVlVbGjWlqNilqSZOYlYlYlYlYlYlYlYlYlYlYlMpNUNUNUNUNUNUNUNUNUNUNUNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOThwOTOTOTOTOTOTOTOTOTOTOTOTDDCnumbfluPTuRbfuQPTQTDyqPuYMeYlQMqNqNqNqNqNqNSmEcEcEcEcOUyRjAEcEcEcEcYzNUNUNUNUNUNUNUNUNUNUNUNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
@@ -1335,13 +1336,13 @@ OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwOTOTOTOTOTDDMWlyQaQaOKAMUtQaOkOFfmFNzWYlsbNUuA
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwOTOTOTOTDDjWQlQKqsOKSIUtQaQaoifmYljAGgglNUuADDBXBXBXBXBXBXBXDDDDcfNUMxDDDDBXBXBXBXBXBXBXDDYlYzNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwOTOTOTDDRGtEJOUJOKDDHECXTeHEDylttREzbENUuAFTBXBXBXBXBXBXBXDDeHUDNUdDpIDDqNqNBXBXBXBXBXixYlYzNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwOTOTDDwcUHDDbLOKSIZmsGsGXkRPdgjSkGYzNUuAFTBXBXBXBXBXBXBXFTeHUDNUdDNQFTqNqNBXBXBXBXBXixYlYzNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
-OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwOTDDMWlyQKUtONDDZmsGsGbVDyySjJbFaXNUuADDBXBXBXBXBXBXBXDDnTUDNUdDpIDDqNqNBXBXBXBXBXDDYlYzNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
+OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwOTDDMWlyQKUtONDDZmsGsGZXDyySjJbFaXNUuADDBXBXBXBXBXBXBXDDnTUDNUdDpIDDqNqNBXBXBXBXBXDDYlYzNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOThwDDjWlyQaYYoiBMZmsGsGepeAYlBpKkNUNUuADDDDkrkrkrkrkrDDDDDDNUNUNUDDDDDDkrkrkrkrkrDDDDhgglNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTDDRGlyQaQaOKBMZmsGsGepeAqdIMBpNnNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTNUNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrkrkrkrkrDDDDDDRPDDCXDDXruxXrDDDyRPFrDDhgNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTNUNUNUOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDJOumaCDDYDGxfABXMRaiXQsGIGCyhgNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDJOumdJaYYDFTPpBXqPUQZmsGgXbYhgNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
-OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDkQumuSSQsMFTCsZymoDDZmsGAbbYhgNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
+OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDkQumXCSQsMFTCsZymoDDZmsGlJbYhgNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDCnumVuwoxcFTPpBXqPSIZmsGIGCyhgNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDCnDDDDDDDDDDDDDDDDDDDDDDDDDDESNUuAOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
 OTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTDDCnOxWpCnCnCnCnCnCnCnCnCnCnCnGgNUrEOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTNUNUNUkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTkrOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOTOT
@@ -1487,7 +1488,7 @@ JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfnkNhJOJOJOJOJOJOJOTqbjxqpqumCOxqAl
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJObYIxuvleumIxuvlebYJOJOJOJOJOJOJOdRJeJeJeJeJedRJOJOJOJOJOJOJOfmxKSXQagYQaxKSXfmJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJOTqIxuvIrumIxuvIrEPEUEUEUEUEUsqJOecJexQGsgBJeecJObNEUEUEUEUEUbYyoyoPsPslAcrcrbYJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJODDXrijNSDDNSijXrDDEtwGxAEtEtdRhBdRukTSSdvsukdRhBdRSJxASJxASJDDXrXrDygSDyDigSDDJOijXrXrXrXrijJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJOTqtIzSBufmeouvIroRWkWkWkWkWkdRCwdRxbkfGUDCxbdRCwdRWkWkWkWkWkQAvBwLvBvBkhMPMPEPJOdAfoPbwgyLdAJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJOTqphzSBufmeouvIroRWkWkWkWkWkdRCwdRxbkfGUDCxbdRCwdRWkWkWkWkWkQAvBwLvBvBkhMPMPEPJOdAfoPbwgyLdAJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJOTqJOmgBuXzIxuvIroRiWiWSMWkWkTaZHXZZHZHZHZHZHXZZHTaWkhViWSMWkWPQaQaqazjDusgsgEPJOumSBUMUMyLumJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJODDYKcHBuixIxuvWVDDqDqDchDlDldRcSGFqjUmgaHTGFqjiudRDloaKYchDlDDCBQasoJOlMsgvCDDJOdAfoUMUMyLdAJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJONfgsNhJOJOJOJOJOJOJOTqIxuvBuixIxuvIrEPJOJOJOJOJOiJSANvEVZmsGIGNvEVtjiJJOJOJOJOJOTqQaQbhatYbPsgsgEPJOumfoUMUMyLumJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
@@ -1511,7 +1512,7 @@ JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOLxsKDDXrXrXrDDsNsNsNDDsNsNDyDDsqJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOLxsKsNkxjiaLbYVBUVVBbYjiSvuTTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOLxsKsNEHgSgSeIgSgSgSeIgScgbYTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOLxsKDDDqgSgSbYBByQdFbYFjNBuTTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOLxsKDDWmudneDDbYDDbYDDbYbYDyTJLWJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOLxsKDDwWudneDDbYDDbYDDbYbYDyTJLWJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOfKsKDDJOMLgSbYGhtcSFNroNFfuTTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOfKsKsNCWTogSeICDBXoNoNoNHVbYTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOfKsKsNhumjjdbYBXBXoNoNoNoNuTTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
@@ -1686,9 +1687,9 @@ JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOnVDdDdDdXrumumumumumumumXrJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOnVDdDdDdOxqEqEqEqEqEqEqEOxJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJObNnVDdDdDdDdDdDdDdDdDdDdDdRSsqJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOuCQLTGTGTGTGTGTGTGTGTGTGQLyCsxJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOXrVKTnnkdJImpAImdJImMKXrJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOXrJOjtcDdJsgZhsgdJsgBsXrJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOfmAklJNAijacDDvNijplPUfmJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOXrVZIPnkdJImpAImdJImMKXrJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOXrJOXMcDdJsgZhsgdJsgBsXrJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOfmnlqCNAijacDDvNijplPUfmJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOXrgiWNgidJsgOesgdJsgBsXrJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOXrIHgiIHdJRfLGRfdJRfTTXrJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJObNEUOxqEqEqEqEqEqEqEqEqEqEOxEUEUsqJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
@@ -1833,7 +1834,7 @@ JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOFgDhDhDhDhDhdoJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOmhDdDdDddoJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOOoHBTGdRTGcoyHJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOyHHBTGcoOoJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOOobvWmjzjiZtyHJOJOJOJOJOJOJOJOJOijfmfmfmijJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOyHHBTGcoOoJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOOobvwWjzjiZtyHJOJOJOJOJOJOJOJOJOijfmfmfmijJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOyHbvoEZtOoJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOOodRJOMLgSdRyHJOJOJOJOJOJObNsqJOfmWSSQsMfmJObNsqJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOyHxpqELTOoJOJOJOJOJOJOJOJObNsqbNEUsqbNsqJOJOJOJOJOJOJOJOOobviOKEFjZtyHJOJOJOJOJOJOWAeGeGumWSSQsMumTJTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOlpDhDhDhXWJOJOJOJOJOJOJOJOWADDeGLMTJDDNhJOJOJOJOJOJOJOJOdRdRdRNWdRdRdRJOJOJOJOJOJOWAeGeGDDWSDDsMDDTJTJNhJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
@@ -1991,5 +1992,5 @@ JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
-JOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
+PwJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJOJO
 "}

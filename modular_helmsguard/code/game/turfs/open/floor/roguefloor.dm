@@ -4,6 +4,69 @@
 //
 // This will free future contributors to make turf changes and minimize merge conflicts.
 
+
+//Adding subtype for random dir and nosmooth, used for mapping.
+
+/turf/open/floor/rogue/ruinedwood/nosmooth
+	icon_state = "wooden_floor"
+	smooth = SMOOTH_FALSE
+	canSmoothWith = null
+	neighborlay = null
+
+/turf/open/floor/rogue/ruinedwood/nosmooth/Initialize()
+//	dir = pick(GLOB.cardinals)
+//	. = ..()
+
+/turf/open/floor/rogue/ruinedwood/nosmooth/turned
+	icon_state = "wooden_floort"
+
+/turf/open/floor/rogue/ruinedwood/nosmooth/spiral
+	icon_state = "weird1"
+/turf/open/floor/rogue/ruinedwood/nosmooth/chevron
+	icon_state = "weird2"
+
+// Subtypes with the lighter shades since these aren't giving me trouble.
+
+
+/turf/open/floor/rogue/ruinedwood/nosmooth/herringbone2
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+	icon_state = "herringbonewood2"
+
+/turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+	icon_state = "wooden_floor2"
+
+/turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2turned
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+	icon_state = "wooden_floor2t"
+
+/turf/open/floor/rogue/twig/nospin
+	icon_state = "twig"
+
+/turf/open/floor/rogue/twig/nospin/Initialize()
+//	dir = pick(GLOB.cardinals)			Replaces the initialize in the parent.
+//	. = ..()
+
+/turf/open/floor/rogue/wood/nosmooth //Somehow the nosmooth children in the base .dm... smoothed.
+	icon_state = "wooden_floor"
+	smooth = SMOOTH_FALSE
+	canSmoothWith = null
+
+/turf/open/floor/rogue/woodturned/nosmooth
+	icon_state = "wooden_floort"
+	smooth = SMOOTH_FALSE
+	canSmoothWith = null
+
+
+
+
+
+
+
+
+
+// The following are resprites in modular_helmsguard.
+
 /obj/effect/decal/wood/
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
 //	icon_state = "wooden_floor2edge"	Keeping this noted for reference.
@@ -111,6 +174,21 @@
 //	icon_state = "stone3"
 
 
+// Nosmooth Stone Blocks
+
+/turf/open/floor/rogue/blocks/nosmooth
+	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'
+	icon_state = "blocks"
+	smooth = SMOOTH_FALSE
+	canSmoothWith = null
+/turf/open/floor/rogue/blocks/nosmooth/Initialize()
+
+/turf/open/floor/rogue/hexstone/nosmooth
+	smooth = SMOOTH_FALSE
+	canSmoothWith = null
+
+/turf/open/floor/rogue/hexstone/nosmooth/Initialize()
+
 
 //Church floors
 
@@ -120,7 +198,7 @@
 /turf/open/floor/rogue/church
 	icon = 'modular_helmsguard/icons/turf/roguefloor.dmi'	// Flipped so highlights are from NW
 
-//
+
 // These try to fix the need for nosmooth / norand turfs.
 
 /turf/open/floor/rogue/church/nosmooth
@@ -144,8 +222,9 @@
 
 /turf/open/floor/rogue/churchrough/nosmooth/Initialize()	// Remove random dir initialize() in parent object.
 
+
 // End of attempted nosmooth / norand turfs.
-//
+
 
 
 // Rooftops

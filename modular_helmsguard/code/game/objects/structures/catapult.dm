@@ -7,12 +7,10 @@
 	density = 1
 	drag_slowdown = 7
 	var/fire_distance = 0
-	var/min_distance = 10
-	var/max_distance = 50
+	var/min_distance = 20
+	var/max_distance = 65
 	var/xoffset = 0
 	var/yoffset = 0
-	var/offset_per_turfs = 20 //Number of turfs to offset from target by 1
-	var/fixed = 0
 	var/travel_time = 50
 	//var/obj/item/boulder/current_projectile = null
 	var/packed = 0
@@ -89,16 +87,16 @@
 					to_chat(user, "<span class='warning'>Someone else is currently using this catapult.</span>")
 					return
 				playsound(src, pick("modular_helmsguard/sound/catapult/aim.ogg", "modular_helmsguard/sound/catapult/aim2.ogg"),  100)
-				user.visible_message("<span class='notice'>([user] tries to turn the [src] to face [direction].</span>")
+				user.visible_message("<span class='notice'>[user] tries to turn the [src] to face [direction].</span>")
 				if(texttodirection != current_direction)
 					busy = 1
 					if(do_after(user, 30, src))
 						dir = texttodirection
-						user.visible_message("<span class='notice'>([user] set the [src]'s firing direction to [direction].</span>",
+						user.visible_message("<span class='notice'>[user] set the [src]'s firing direction to [direction].</span>",
 						"<span class='notice'>You finish adjusting [src]'s firing direction.</span>")
 						busy = 0
 					else
-						user.visible_message("<span class='notice'>(The [src] is already facing [direction].</span>")
+						user.visible_message("<span class='notice'>The [src] is already facing [direction].</span>")
 						busy = 0
 						return
 				else
@@ -114,10 +112,10 @@
 				else
 					busy = 1
 					playsound(src, pick("modular_helmsguard/sound/catapult/aim.ogg", "modular_helmsguard/sound/catapult/aim2.ogg"),  100)
-					user.visible_message("<span class='notice'>([user] begins to set the [src]'s firing distance.</span>")
+					user.visible_message("<span class='notice'>[user] begins to set the [src]'s firing distance.</span>")
 					if(do_after(user, 30, src))
 						fire_distance = distance_input
-						user.visible_message("<span class='notice'>([user] sets the [src] to fire at the distance of [fire_distance] tiles.</span>")
+						user.visible_message("<span class='notice'>[user] sets the [src] to fire at the distance of [fire_distance] tiles.</span>")
 						busy = 0
 					else
 						busy = 0
@@ -296,6 +294,10 @@
 	for(var/mob/M in urange(20, src))
 		if(!M.stat)
 			shake_camera(M, 3, 1)
+	for(var/mob/living/L in range(6, src))
+		if(!L.stat)
+			L.Knockdown(1)
+			L.Jitter(30)
 	for(var/mob/living/player in GLOB.player_list)
 		var/distance = get_dist(player, origin_turf)
 		if(player.stat == DEAD)
@@ -308,10 +310,10 @@
 /obj/projectile/rock_shard
 	name = "rock shard"
 	icon_state = "bullet"
-	damage = 10
+	damage = 15
 	range = 8
 	pass_flags = PASSTABLE | PASSGRILLE
-	armor_penetration = 8
+	armor_penetration = 15
 	damage_type = BRUTE
 	nodamage = FALSE
 	embedchance = 20

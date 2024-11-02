@@ -39,7 +39,11 @@
 	var/deaggroprob = 10
 	var/eat_forever
 	candodge = TRUE
-
+	var/charge = 0
+	var/charge_add = 0
+	var/charge_power = 0
+	var/def_prob = 0
+	var/atk_prob = 0
 
 /mob/living/simple_animal/hostile/retaliate/rogue/apply_damage(damage = 0,damagetype = BRUTE, def_zone = null, blocked = FALSE, forced = FALSE)
 	..()
@@ -275,53 +279,198 @@
 		var/mob/living/carbon/H = buckled_mobs[1]
 		var/obj/item/I = H.get_active_held_item()
 		var/obj/item/U = M.get_active_held_item()
-		var/charge_add = 0
-		var/charge_power = STASTR + rand(5,12)
-		if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M))
-			if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded)
-				if(STACON + H.STACON + charge_add >= M.STACON)
-					I.melee_attack_chain(H, M)
+		var/amt = (H?.mind ? H.mind.get_skill_level(/datum/skill/misc/riding) : 1)
+		var/pole_skill_atk = (H?.mind ? H.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
+		var/pole_skill_def = (M?.mind ? M.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
+		var/defending = FALSE
+		charge = amt*10 + rand(5,10)
+		charge_power = STASTR + rand(5,12)
+		if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M)) //If you are charging
 			if(HAS_TRAIT(H, TRAIT_CHARGER))
-				charge_add = 3
-			if(STACON + H.STACON + charge_add > M.STACON)
-				if(STASTR + H.STASTR + charge_add > M.STASTR)
-					M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-					M.emote("scream")
-					M.Knockdown(rand(15,30))
-					Immobilize(30)
-					if(M.has_buckled_mobs())
-						var/mob/living/carbon/J = M.buckled_mobs[1]
-						M.unbuckle_all_mobs()
-						J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-						J.emote("scream")
-						J.Knockdown(rand(15,30))
-				else
-					unbuckle_all_mobs()
-					Knockdown(1)
-					H.Knockdown(rand(15,30))
-					Immobilize(30)
-					H.Immobilize(30)
-			if(STACON + H.STACON + charge_add < M.STACON)
-				unbuckle_all_mobs()
+				charge_add = 2
+			if(istype(U, /obj/item/rogueweapon) && U.associated_skill == /datum/skill/combat/polearms && U.wielded && M.dir == get_dir(M, src) && (M.cmode))// Target has a polearm and is facing you with combat mode on
+				defending = TRUE
+				def_prob = pole_skill_def*10 + rand(10,30)
+			if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded)// If you have a lance/spear is equipped
+				atk_prob = pole_skill_atk*10 + rand(10,30)
+				if(defending)		// If charging a braced spearman
+					if(atk_prob > def_prob)
+						I.melee_attack_chain(H, M)
+					if(atk_prob < def_prob)
+						playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
+						U.melee_attack_chain(M, H)
+						Knockdown(rand(15,30))
+						Immobilize(30)
+						if(H.STACON < 10)
+							unbuckle_all_mobs()
+							H.Knockdown(rand(15,30))
+							H.Immobilize(30)
+					if(atk_prob == def_prob)
+						playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
+						M.Immobilize(30)
+				else	//if charging non-spears
+					if(STASTR + charge + charge_add >= M.STACON)
+						I.melee_attack_chain(H, M)
+					else
+						if(prob(50))
+							visible_message(span_warning("[M] narrowly avoided [H]'s attack!"))
+						else
+							I.melee_attack_chain(H, M)
+
+			if(STASTR + charge + charge_add > M.STACON)
+				M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+				M.emote("scream")
+				M.Knockdown(rand(15,30))
+				M.Immobilize(30)
+			if(STASTR + charge + charge_add < M.STACON)
 				Knockdown(1)
 				H.Knockdown(rand(15,30))
 				Immobilize(30)
 				H.Immobilize(30)
-			if(STACON + H.STACON + charge_add == M.STACON)
+			if(STASTR + charge + charge_add == M.STACON)
 				H.emote("scream")
 				M.emote("scream")
 				M.Knockdown(rand(15,30))
 				Knockdown(30)
-			if(istype(U, /obj/item/rogueweapon/spear) && M.used_intent.type == SPEAR_THRUST && U.wielded)
-				Immobilize(30)
-				emote("pain")
-				U.melee_attack_chain(M, H)
-				H.Immobilize(30)
-				if(STACON + H.STACON + charge_add <= M.STACON)
-					unbuckle_all_mobs()
-					H.throw_at(get_edge_target_turf(M, dir),1,5,src,TRUE)
-					H.Knockdown(rand(15,30))
+			if(defending)
+				if(STASTR + charge + charge_add > M.STACON + def_prob )
+					M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+					M.emote("scream")
+					M.Knockdown(rand(15,30))
+					M.Immobilize(30)
+				if(STASTR + charge + charge_add < M.STACON + def_prob)
+					Immobilize(30)
+					emote("pain")
+					U.melee_attack_chain(M, H)
+					H.Immobilize(30)
+					if(H.STACON < 10)
+						unbuckle_all_mobs()
+						H.Knockdown(rand(15,30))
+						H.Immobilize(30)
+				if(STASTR + charge + charge_add == M.STACON + def_prob)
+					Immobilize(30)
+					emote("pain")
+					H.Immobilize(30)
+					if(H.STACON < 5)
+						unbuckle_all_mobs()
+						H.Knockdown(rand(15,30))
+						H.Immobilize(30)
+
+			/// If target is mounted v
+
+
+			if(istype(M, /mob/living/simple_animal/hostile/retaliate/rogue))
+				var/mob/living/simple_animal/hostile/retaliate/rogue/A = M
+				if(A.has_buckled_mobs())
+					var/mob/living/carbon/J = A.buckled_mobs[1]
+					var/obj/item/E = J.get_active_held_item()
+					if(istype(E, /obj/item/rogueweapon) && E.associated_skill == /datum/skill/combat/polearms && E.wielded && J.dir == get_dir(J, src) && (J.cmode)) // Target is bracing with a polearm
+						defending = TRUE
+						pole_skill_def = (J?.mind ? J.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
+						def_prob = pole_skill_def*10 + rand(10,30)
+					if(J.m_intent == MOVE_INTENT_RUN && A.dir == get_dir(A, src)) //Target is charging you too
+						if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded) //You are charging with a polearm
+							atk_prob = pole_skill_atk*10 + rand(10,30)
+							if(A.atk_prob) //Enemy has a polearm
+								if(atk_prob > A.atk_prob)
+									I.melee_attack_chain(H, M)
+									if(J.STACON < 10)
+										A.unbuckle_all_mobs()
+										J.Knockdown(rand(15,30))
+										J.Immobilize(30)
+								if(atk_prob == A.atk_prob)
+									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
+									M.Immobilize(30)
+						else					//You are charging WITHOUT a polearm
+							if(A.atk_prob) // But the enemy has one
+								if(H.STACON + charge + charge_add <= A.atk_prob)
+									U.melee_attack_chain(J, H)
+									Immobilize(30)
+									H.Immobilize(30)
+									if(prob(50))
+										unbuckle_all_mobs()
+								else
+									if(prob(50))
+										visible_message(span_warning("[J] narrowly avoided [H]'s attack!"))
+									else
+										U.melee_attack_chain(J, H)
+							else //Both are charging each other WITHOUT polearms
+								if(H.STACON + charge + charge_add >= J.STACON + A.charge + A.charge_add)
+									A.unbuckle_all_mobs()
+									A.Immobilize(30)
+									J.Immobilize(30)
+									J.apply_damage(charge_power, BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = charge_power))
+
+					else 	// target is not charging you
+						if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded) //You are charging with a polearm
+							if(defending)		// If target is braced with spear on horseback
+								if(atk_prob > def_prob)
+									I.melee_attack_chain(H, J)
+									if(J.STACON < 10)
+										A.unbuckle_all_mobs()
+										J.Knockdown(rand(15,30))
+										J.Immobilize(30)
+								if(atk_prob < def_prob)
+									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
+									U.melee_attack_chain(J, H)
+									Knockdown(rand(15,30))
+									Immobilize(30)
+									if(H.STACON < 10)
+										unbuckle_all_mobs()
+										H.Knockdown(rand(15,30))
+										H.Immobilize(30)
+								if(atk_prob == def_prob)
+									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
+									M.Immobilize(30)
+							else	//if target is not braced with spear
+								if(STASTR + pole_skill_atk + charge + charge_add >= J.STACON)
+									I.melee_attack_chain(H, J)
+									if(J.STACON < 10)
+										A.unbuckle_all_mobs()
+										J.Knockdown(rand(15,30))
+										J.Immobilize(30)
+						if(STASTR + charge + charge_add > J.STACON)
+							J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+							J.emote("scream")
+							J.Knockdown(rand(15,30))
+							J.Immobilize(30)
+						if(STASTR + charge + charge_add < J.STACON)
+							Knockdown(1)
+							H.Knockdown(rand(15,30))
+							Immobilize(30)
+							H.Immobilize(30)
+						if(STASTR + charge + charge_add == J.STACON)
+							H.emote("scream")
+							J.emote("scream")
+							J.Knockdown(rand(15,30))
+							Knockdown(30)
+						if(defending)
+							if(STASTR + charge + charge_add > J.STACON + def_prob )
+								J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+								J.emote("scream")
+								J.Knockdown(rand(15,30))
+								J.Immobilize(30)
+							if(STASTR + charge + charge_add < J.STACON + def_prob)
+								Immobilize(30)
+								emote("pain")
+								E.melee_attack_chain(M, H)
+								H.Immobilize(30)
+								if(H.STACON < 10)
+									unbuckle_all_mobs()
+									H.Knockdown(rand(15,30))
+									H.Immobilize(30)
+							if(STASTR + charge + charge_add == J.STACON + def_prob)
+								Immobilize(30)
+								emote("pain")
+								H.Immobilize(30)
+								if(H.STACON < 5)
+									unbuckle_all_mobs()
+									H.Knockdown(rand(15,30))
+									H.Immobilize(30)
+
 			Immobilize(30)
+			defending = FALSE
+			def_prob = 0
 			var/playsound = FALSE
 			if(M.apply_damage(charge_power, BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = charge_power)))
 				playsound = TRUE
@@ -329,5 +478,6 @@
 				playsound(src, "genblunt", 100, TRUE)
 			emote("aggro")
 			visible_message(span_warning("[H] charges into [M] with [src]!"), span_warning("I charge into [M]!"))
+			defending = FALSE
 			return TRUE
 

@@ -291,7 +291,7 @@
 			if(istype(U, /obj/item/rogueweapon) && U.associated_skill == /datum/skill/combat/polearms && U.wielded && M.dir == get_dir(M, src) && (M.cmode))// Target has a polearm and is facing you with combat mode on
 				defending = TRUE
 				def_prob = pole_skill_def*10 + rand(10,30)
-			if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded)// If you have a lance/spear is equipped
+			if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && H.used_intent.type == SPEAR_THRUST && I.wielded && (H.cmode))// If you have a lance/spear is equipped
 				atk_prob = pole_skill_atk*10 + rand(10,30)
 				if(defending)		// If charging a braced spearman
 					if(atk_prob > def_prob)
@@ -313,7 +313,7 @@
 						I.melee_attack_chain(H, M)
 					else
 						if(prob(50))
-							visible_message(span_warning("[M] narrowly avoided [H]'s attack!"))
+			//				visible_message(span_warning("[M] narrowly avoided [H]'s attack!"))
 						else
 							I.melee_attack_chain(H, M)
 
@@ -322,32 +322,57 @@
 				M.emote("scream")
 				M.Knockdown(rand(15,30))
 				M.Immobilize(30)
+			//	visible_message(span_warning("[M] is knocked away by [H]'s charge!"))
 			if(STASTR + charge + charge_add < M.STACON)
 				Knockdown(1)
 				H.Knockdown(rand(15,30))
 				Immobilize(30)
 				H.Immobilize(30)
+			//	visible_message(span_warning("[M] managed to withstand [H]'s charge! "))
+				if(H.STACON < M.STACON)
+					unbuckle_all_mobs()
+					H.Knockdown(rand(15,30))
+					H.Immobilize(30)
+				//	visible_message(span_warning("[H] is knocked off of the [src]! "))
+				if(M.STASTR > H.STACON)
+					if(prob(60))
+						unbuckle_all_mobs()
+						H.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+						H.emote("scream")
+						H.Knockdown(rand(15,30))
+						H.Immobilize(30)
+					//	visible_message(span_warning("[H] is knocked off of their [src]! "))
 			if(STASTR + charge + charge_add == M.STACON)
 				H.emote("scream")
 				M.emote("scream")
 				M.Knockdown(rand(15,30))
 				Knockdown(30)
 			if(defending)
-				if(STASTR + charge + charge_add > M.STACON + def_prob )
+				if(STASTR + charge + charge_add > M.STACON + def_prob + rand(10,20))
 					M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
 					M.emote("scream")
 					M.Knockdown(rand(15,30))
 					M.Immobilize(30)
-				if(STASTR + charge + charge_add < M.STACON + def_prob)
+				//	visible_message(span_warning("[M] is knocked away by [H]'s charge!"))
+				if(STASTR + charge + charge_add < M.STACON + def_prob + rand(10,20))
 					Immobilize(30)
 					emote("pain")
-					U.melee_attack_chain(M, H)
 					H.Immobilize(30)
+				//	visible_message(span_warning("[M] managed to withstand [H]'s charge! "))
 					if(H.STACON < 10)
 						unbuckle_all_mobs()
 						H.Knockdown(rand(15,30))
 						H.Immobilize(30)
-				if(STASTR + charge + charge_add == M.STACON + def_prob)
+					//	visible_message(span_warning("[H] is knocked off of their [src]! "))
+					if(M.STASTR > 10)
+						if(prob(60))
+							unbuckle_all_mobs()
+							H.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+							H.emote("scream")
+							H.Knockdown(rand(15,30))
+							H.Immobilize(30)
+					//		visible_message(span_warning("[H] is knocked off of their [src]! "))
+				if(STASTR + charge + charge_add == M.STACON + def_prob + rand(10,20))
 					Immobilize(30)
 					emote("pain")
 					H.Immobilize(30)
@@ -369,7 +394,7 @@
 						pole_skill_def = (J?.mind ? J.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
 						def_prob = pole_skill_def*10 + rand(10,30)
 					if(J.m_intent == MOVE_INTENT_RUN && A.dir == get_dir(A, src)) //Target is charging you too
-						if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded) //You are charging with a polearm
+						if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && I.wielded && (H.cmode)) //You are charging with a polearm
 							atk_prob = pole_skill_atk*10 + rand(10,30)
 							if(A.atk_prob) //Enemy has a polearm
 								if(atk_prob > A.atk_prob)
@@ -402,7 +427,7 @@
 									J.apply_damage(charge_power, BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = charge_power))
 
 					else 	// target is not charging you
-						if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded) //You are charging with a polearm
+						if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && I.wielded && (H.cmode)) //You are charging with a polearm
 							if(defending)		// If target is braced with spear on horseback
 								if(atk_prob > def_prob)
 									I.melee_attack_chain(H, J)
@@ -445,7 +470,7 @@
 							J.Knockdown(rand(15,30))
 							Knockdown(30)
 						if(defending)
-							if(STASTR + charge + charge_add > J.STACON + def_prob )
+							if(STASTR + charge + charge_add > J.STACON + def_prob)
 								J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
 								J.emote("scream")
 								J.Knockdown(rand(15,30))

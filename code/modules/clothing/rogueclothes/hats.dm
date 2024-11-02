@@ -614,31 +614,6 @@
 	block2add = FOV_BEHIND
 	max_integrity = 400
 
-/obj/item/clothing/head/roguetown/helmet/orc_sallet
-	name = "orcish helm"
-	icon_state = "orchelm"
-	desc = "A crude iron helmet worn by orc warriors."
-	smeltresult = /obj/item/ingot/iron
-	body_parts_covered = HEAD|HAIR|EARS
-	flags_inv = HIDEEARS|HIDEHAIR
-
-/obj/item/clothing/head/roguetown/helmet/orc_sallet_alt
-	name = "orcish helm"
-	icon_state = "orchelm2"
-	desc = "A crude iron helmet worn by orc warriors."
-	smeltresult = /obj/item/ingot/iron
-	body_parts_covered = HEAD|HAIR|EARS
-	flags_inv = HIDEEARS|HIDEHAIR
-
-/obj/item/clothing/head/roguetown/helmet/orc_ravager
-	name = "orc ravager helm"
-	icon_state = "orchelm3"
-	desc = "An iron helmet worn by orc ravagers."
-	smeltresult = /obj/item/ingot/iron
-	body_parts_covered = HEAD|HAIR|EARS
-	flags_inv = HIDEEARS|HIDEHAIR
-
-
 /obj/item/clothing/head/roguetown/helmet/sallet/visored/AdjustClothes(mob/user)
 	if(loc == user)
 		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
@@ -2057,3 +2032,56 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+
+/// ORC STUFF
+
+
+/obj/item/clothing/head/roguetown/helmet/orc_sallet
+	name = "orcish helm"
+	icon_state = "orchelm"
+	desc = "A crude iron helmet worn by orc warriors."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/roguetown/helmet/orc_sallet_alt
+	name = "orcish helm"
+	icon_state = "orchelm2"
+	desc = "A crude iron helmet worn by orc warriors."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/roguetown/helmet/orc_ravager
+	name = "orc ravager helm"
+	icon_state = "orchelm3"
+	desc = "An iron helmet worn by orc ravagers."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+
+
+/obj/item/clothing/head/roguetown/helmet/orc_captain
+	name = "orc captain helm"
+	icon_state = "orccaphelm"
+	item_state = "orccaphelm"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	desc = "A decorated helm for orc captain."
+	smeltresult = /obj/item/ingot/iron
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
+	smeltresult = /obj/item/ingot/steel
+
+/obj/item/clothing/head/roguetown/helmet/orc_leather
+	name = "orc leather helmet"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	icon_state = "orchelm_leather"
+	item_state = "orchelm_leather"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	desc = "An orc helmet made of leather."
+	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEHAIR

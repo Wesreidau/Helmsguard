@@ -266,3 +266,68 @@
 		stop_automated_movement = TRUE
 		Goto(user,move_to_delay)
 		addtimer(CALLBACK(src, PROC_REF(return_action)), 3 SECONDS)
+
+
+
+
+/mob/living/simple_animal/hostile/retaliate/rogue/MobBump(mob/living/M) //CHARGE AND TRAMPLE
+	if(has_buckled_mobs())
+		var/mob/living/carbon/H = buckled_mobs[1]
+		var/obj/item/I = H.get_active_held_item()
+		var/obj/item/U = M.get_active_held_item()
+		var/charge_add = 0
+		var/charge_power = STASTR + rand(5,12)
+		if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M))
+			if(istype(I, /obj/item/rogueweapon/spear) && H.used_intent.type == SPEAR_THRUST && I.wielded)
+				if(STACON + H.STACON + charge_add >= M.STACON)
+					I.melee_attack_chain(H, M)
+			if(HAS_TRAIT(H, TRAIT_CHARGER))
+				charge_add = 3
+			if(STACON + H.STACON + charge_add > M.STACON)
+				if(STASTR + H.STASTR + charge_add > M.STASTR)
+					M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+					M.emote("scream")
+					M.Knockdown(rand(15,30))
+					Immobilize(30)
+					if(M.has_buckled_mobs())
+						var/mob/living/carbon/J = M.buckled_mobs[1]
+						M.unbuckle_all_mobs()
+						J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+						J.emote("scream")
+						J.Knockdown(rand(15,30))
+				else
+					unbuckle_all_mobs()
+					Knockdown(1)
+					H.Knockdown(rand(15,30))
+					Immobilize(30)
+					H.Immobilize(30)
+			if(STACON + H.STACON + charge_add < M.STACON)
+				unbuckle_all_mobs()
+				Knockdown(1)
+				H.Knockdown(rand(15,30))
+				Immobilize(30)
+				H.Immobilize(30)
+			if(STACON + H.STACON + charge_add == M.STACON)
+				H.emote("scream")
+				M.emote("scream")
+				M.Knockdown(rand(15,30))
+				Knockdown(30)
+			if(istype(U, /obj/item/rogueweapon/spear) && M.used_intent.type == SPEAR_THRUST && U.wielded)
+				Immobilize(30)
+				emote("pain")
+				U.melee_attack_chain(M, H)
+				H.Immobilize(30)
+				if(STACON + H.STACON + charge_add <= M.STACON)
+					unbuckle_all_mobs()
+					H.throw_at(get_edge_target_turf(M, dir),1,5,src,TRUE)
+					H.Knockdown(rand(15,30))
+			Immobilize(30)
+			var/playsound = FALSE
+			if(M.apply_damage(charge_power, BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = charge_power)))
+				playsound = TRUE
+			if(playsound)
+				playsound(src, "genblunt", 100, TRUE)
+			emote("aggro")
+			visible_message(span_warning("[H] charges into [M] with [src]!"), span_warning("I charge into [M]!"))
+			return TRUE
+

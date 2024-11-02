@@ -662,30 +662,6 @@
 	smeltresult = /obj/item/ingot/iron
 	armor_class = ARMOR_CLASS_MEDIUM
 
-/obj/item/clothing/suit/roguetown/armor/plate/half/orc_carapace
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "orc carapace armor"
-	desc = "A carapace armor worn by orc warriors"
-	icon_state = "orcplate"
-	item_state = "orcplate"
-	max_integrity = 200
-	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_MEDIUM
-
-/obj/item/clothing/suit/roguetown/armor/plate/half/orc_carapace_heavy
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "heavy orc carapace armor"
-	desc = "A heavy carapace armor worn by orc warriors"
-	icon_state = "orcplate_heavy"
-	item_state = "orcplate_heavy"
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	sleevetype = "orcplate_heavy"
-	max_integrity = 250
-	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_HEAVY
-
-
-
 /obj/item/clothing/suit/roguetown/armor/barrelarmor
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "Barrel Armor"
@@ -985,3 +961,52 @@
 	icon_state = "bearfur"
 	item_state = "bearfur"
 	smeltresult = /obj/item/ash
+
+
+/// ORCS STUFF
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/orc_carapace
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "orc carapace armor"
+	desc = "A carapace armor worn by orc warriors"
+	icon_state = "orcplate"
+	item_state = "orcplate"
+	max_integrity = 200
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/orc_carapace_heavy
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "heavy orc carapace armor"
+	desc = "A heavy carapace armor worn by orc warriors"
+	icon_state = "orcplate_heavy"
+	item_state = "orcplate_heavy"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	sleevetype = "orcplate_heavy"
+	max_integrity = 250
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_HEAVY
+
+/obj/item/clothing/suit/roguetown/armor/orc_pauldron
+	slot_flags = ITEM_SLOT_ARMOR
+	icon_state = "orc_pauldron"
+	name = "orc pauldron"
+	desc = "A pair of pauldrons secured with leather harness"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	sleevetype = "orcpauldron"
+	body_parts_covered = CHEST
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_LIGHT
+
+/obj/item/clothing/suit/roguetown/armor/orc_pauldron_2
+	slot_flags = ITEM_SLOT_ARMOR
+	icon_state = "orc_pauldron2"
+	name = "orc pauldron"
+	desc = "A single armored pauldron secured with a leather harness"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	sleevetype = "orcpauldron"
+	body_parts_covered = CHEST
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_LIGHT

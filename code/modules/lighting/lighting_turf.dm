@@ -121,7 +121,7 @@
 		return null // Since this proc gets used in a for loop, null won't be looped though.
 
 	return corners
-	
+
 /turf/proc/generate_missing_corners()
 	if(!IS_DYNAMIC_LIGHTING(src) && !light_sources)
 		return

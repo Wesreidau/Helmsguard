@@ -173,11 +173,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/remains_type
 
 	//stamina stuff
-	var/origin_maxfat
-	var/riding_maxfat
-	var/origin_maxstam
-	var/riding_maxstam
-
+	var/origin_rogstam
+	var/origin_rogfat
 
 /mob/living/simple_animal/Initialize()
 	. = ..()
@@ -768,8 +765,8 @@ mob/living/simple_animal/handle_fire()
 		playsound(src.loc, 'sound/foley/zfall.ogg', 100, FALSE)
 		M.visible_message(span_danger("[M] falls off [src]!"))
 	..()
-	M.maxrogfat = origin_maxfat
-	//M.maxrogstam = origin_maxstam
+	M.rogstam = origin_rogstam
+	M.rogfat = origin_rogfat
 	update_icon()
 
 /mob/living/simple_animal/hostile/user_buckle_mob(mob/living/M, mob/user)
@@ -781,13 +778,7 @@ mob/living/simple_animal/handle_fire()
 		riding_datum.vehicle_move_delay = move_to_delay
 		if(M.mind)
 			var/amt = M.mind.get_skill_level(/datum/skill/misc/riding)
-			origin_maxfat = M.maxrogfat
-		//	origin_maxstam = M.maxrogstam
 			if(amt)
-				riding_maxfat = M.maxrogfat + (amt*50)
-		//		riding_maxstam = M.maxrogstam + (amt*50)
-				M.maxrogfat =  riding_maxfat
-			//	M.maxrogstam = riding_maxstam
 				if(amt > 3)
 					time2mount = 0
 			else
@@ -803,6 +794,8 @@ mob/living/simple_animal/handle_fire()
 		M.forceMove(get_turf(src))
 		if(ssaddle)
 			playsound(src, 'sound/foley/saddlemount.ogg', 100, TRUE)
+	origin_rogstam = M.rogstam
+	origin_rogfat = M.rogfat
 	..()
 	update_icon()
 

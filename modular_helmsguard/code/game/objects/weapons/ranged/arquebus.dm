@@ -37,6 +37,8 @@
 	casing_ejector = FALSE
 	var/damfactor = 2
 	var/reloaded = FALSE
+	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
+	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
 
 /obj/item/gun/ballistic/arquebus/getonmobprop(tag)
 	. = ..()

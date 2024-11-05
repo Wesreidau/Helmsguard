@@ -139,7 +139,7 @@
 	var/obj/item/thing = O
 	if(!thing.anvilrepair)
 		return ..()
-	if((HAS_TRAIT(user, TRAIT_SQUIRE_REPAIR) || user.mind.get_skill_level(thing.anvilrepair)) && thing.polished == 0 && obj_integrity <= max_integrity)
+	if((user.mind.get_skill_level(thing.anvilrepair)) && thing.polished == 0 && obj_integrity <= max_integrity)
 		to_chat(user, span_info("I start applying some compound to \the [thing]..."))
 		if(do_after(user, 50 - user.STASPD*2, target = O))
 			thing.polished = 1
@@ -178,7 +178,7 @@
 		return ..()
 	var/obj/item/thing = O
 	if(thing.polished == 1 && roughness)
-		if((HAS_TRAIT(user, TRAIT_SQUIRE_REPAIR) || user.mind.get_skill_level(thing.anvilrepair)))
+		if(user.mind.get_skill_level(thing.anvilrepair))
 			to_chat(user, span_info("I start roughly scrubbing the compound on \the [thing]..."))
 			playsound(loc,"sound/foley/scrubbing[pick(1,2)].ogg", 100, TRUE)
 			if(do_after(user, 50 - user.STASTR*1.5, target = O))
@@ -187,7 +187,7 @@
 				thing.add_atom_colour("#9e9e9e", FIXED_COLOUR_PRIORITY)
 
 	else if(thing.polished == 2 && !roughness)
-		if((HAS_TRAIT(user, TRAIT_SQUIRE_REPAIR) || user.mind.get_skill_level(thing.anvilrepair)))
+		if((user.mind.get_skill_level(thing.anvilrepair)))
 			to_chat(user, span_info("I start gently scrubbing the edges of \the [thing]..."))
 			playsound(loc,"sound/foley/scrubbing[pick(1,2)].ogg", 100, TRUE)
 			if(do_after(user, 50 - user.STASTR*1.5, target = O))

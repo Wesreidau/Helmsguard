@@ -200,7 +200,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	var/list/examine_effects = list()
 
 	///played when an item that is equipped blocks a hit
-	var/list/blocksound 
+	var/list/blocksound
 
 	//is it an improvised weapon?
 	var/improvised = FALSE
@@ -321,7 +321,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	if(sharpness) //give sharp objects butchering functionality, for consistency
 		AddComponent(/datum/component/butchering, 80 * toolspeed)
 
-	if(max_blade_int) 
+	if(max_blade_int)
 		//set blade integrity to randomized 60% to 100% if not already set
 		if(!blade_int)
 			blade_int = max_blade_int + rand(-(max_blade_int * 0.4), 0)
@@ -674,7 +674,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		var/slotbit = slotdefine2slotbit(slot)
 		if(slot == ITEM_SLOT_HANDS)
 			playsound(src, pickup_sound, PICKUP_SOUND_VOLUME, ignore_walls = FALSE)
-		if(slotbit == ITEM_SLOT_HIP)
+		if(slotbit == ITEM_SLOT_HIP | ITEM_SLOT_BACK_R | ITEM_SLOT_BACK_L)
 			playsound(src, sheathe_sound, SHEATHE_SOUND_VOLUME, ignore_walls = FALSE)
 		else if(equip_sound &&(slot_flags & slotbit))
 			playsound(src, equip_sound, EQUIP_SOUND_VOLUME, TRUE, ignore_walls = FALSE)

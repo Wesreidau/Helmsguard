@@ -298,6 +298,7 @@
 		charge = (amt*10) + (charge_power*10)
 		var/weapon_boost = charge_power + (H.STASTR/2)
 		var/def_boost = charge_power + (M.STASTR/2)
+	//	var/playsound = FALSE
 		if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M)) //If you are charging
 			if(HAS_TRAIT(H, TRAIT_CHARGER))
 				charge_add = 2
@@ -315,6 +316,7 @@
 						if(atk_prob > def_prob)
 							I.melee_attack_chain(H, M)
 							visible_message(span_warning("[H] hits [M] with a damfactor of [H.used_intent.damfactor] and the penfactor of [H.used_intent.penfactor]")) //debug
+							visible_message(span_warning("[H] performed a successful charge with a attack prob of [atk_prob] against [M]'s [def_prob]")) //debug
 						if(atk_prob < def_prob)
 							playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
 							U.melee_attack_chain(M, H)
@@ -322,6 +324,7 @@
 							Knockdown(rand(15,30))
 							Immobilize(30)
 							visible_message(span_warning("Current damfactor for [U.name] is [M.used_intent.damfactor] and the penfactor is [M.used_intent.penfactor]")) //debug
+							visible_message(span_warning("[H] performed a failed charge with a attack prob of [atk_prob] against [M]'s [def_prob]"))
 							if(H.STACON < 10)
 								unbuckle_all_mobs()
 								H.Knockdown(rand(15,30))
@@ -329,6 +332,7 @@
 						if(atk_prob == def_prob)
 							playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
 							M.Immobilize(30)
+							visible_message(span_warning("[H] charge breaks with a attack prob of [atk_prob] against [M]'s [def_prob]"))
 					else	//if charging non-spears
 						if(atk_prob >= M.STACON*5)
 							I.melee_attack_chain(H, M)
@@ -344,7 +348,8 @@
 					M.used_intent.penfactor -= def_boost
 					visible_message(span_warning("Current damfactor for [I.name] is [H.used_intent.damfactor] and the penfactor is [H.used_intent.penfactor]")) //debug
 				if(charge + charge_add > M.STACON && !defending)
-					M.throw_at(get_edge_target_turf(src, dir),charge_power,5,src,TRUE)
+					M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+					M.apply_damage((charge_power*2), BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 					M.emote("scream")
 					M.Knockdown(rand(15,30))
 					M.Immobilize(30)
@@ -364,6 +369,7 @@
 						if(prob(60))
 							unbuckle_all_mobs()
 							H.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+							H.apply_damage((charge_power*2), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 							H.emote("scream")
 							H.Knockdown(rand(15,30))
 							H.Immobilize(30)
@@ -376,6 +382,7 @@
 				if(defending)
 					if(charge + charge_add > M.STACON + def_prob + rand(10,20))
 						M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+						M.apply_damage((charge_power*2), BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 						M.emote("scream")
 						M.Knockdown(rand(15,30))
 						M.Immobilize(30)
@@ -394,6 +401,7 @@
 							if(prob(60))
 								unbuckle_all_mobs()
 								H.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+								H.apply_damage((charge_power*2), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 								H.emote("scream")
 								H.Knockdown(rand(15,30))
 								H.Immobilize(30)
@@ -431,8 +439,10 @@
 									if(prob(50))
 										A.unbuckle_all_mobs()
 										J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+										J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 										J.Knockdown(rand(15,30))
 										J.Immobilize(30)
+										visible_message(span_warning("[H] performed a successful charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
 								if(atk_prob == A.atk_prob)
 									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
 									A.Immobilize(30)
@@ -441,6 +451,8 @@
 										if(prob(30))
 											A.unbuckle_all_mobs()
 											J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+											J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
+									visible_message(span_warning("[H] performed a failed charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
 						else					//You are charging WITHOUT a polearm
 							if(A.atk_prob) // But the enemy has one
 								if(charge + charge_add <= A.atk_prob)
@@ -475,10 +487,12 @@
 								if(atk_prob > def_prob)
 									I.melee_attack_chain(H, J)
 									visible_message(span_warning("[H] hits [J] with a damfactor of [H.used_intent.damfactor] and the penfactor of [H.used_intent.penfactor]")) //debug
+									visible_message(span_warning("[H] performed a successful charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
 									if(J.STACON < 10 || prob(50))
 										A.unbuckle_all_mobs()
 										J.emote("scream")
 										J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+										J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 										J.Knockdown(rand(15,30))
 										J.Immobilize(30)
 								if(atk_prob < def_prob)
@@ -486,6 +500,7 @@
 									H.emote("scream")
 									U.melee_attack_chain(J, H)
 									visible_message(span_warning("[J] hits [H] with a damfactor of [J.used_intent.damfactor] and the penfactor of [J.used_intent.penfactor]"))
+									visible_message(span_warning("[H] performed a failed charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
 									Knockdown(rand(15,30))
 									Immobilize(30)
 									visible_message(span_warning("Current damfactor for [U.name] is [J.used_intent.damfactor] and the penfactor is [J.used_intent.penfactor]"))
@@ -504,12 +519,14 @@
 									else
 										U.melee_attack_chain(J, H)
 										J.emote("scream")
+									visible_message(span_warning("[H] charge breaks with a attack prob of [atk_prob] against [J]'s [def_prob]"))
 							else	//if target is not braced with spear
 								if(atk_prob >= J.STACON)
 									I.melee_attack_chain(H, J)
 									J.emote("scream")
 									A.unbuckle_all_mobs()
 									J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+									J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 									J.Knockdown(rand(15,30))
 									J.Immobilize(30)
 							H.used_intent.damfactor -= weapon_boost
@@ -522,6 +539,7 @@
 							if(charge + charge_add > J.STACON && !defending)
 								A.unbuckle_all_mobs()
 								J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+								J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 								J.emote("scream")
 								J.Knockdown(rand(15,30))
 								J.Immobilize(30)
@@ -541,6 +559,7 @@
 								if(charge + charge_add > J.STACON + def_prob)
 									A.unbuckle_all_mobs()
 									J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
+									J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
 									J.emote("scream")
 									J.Knockdown(rand(15,30))
 									J.Immobilize(30)
@@ -565,22 +584,17 @@
 							J.used_intent.penfactor -= def_boost
 			Immobilize(30)
 			defending = FALSE
-
-			var/playsound = FALSE
-			if(M.apply_damage((charge_power*10), BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = (charge_power*10))))
-				playsound = TRUE
-			if(playsound)
-				playsound(src, "genblunt", 100, TRUE)
+			playsound(src, "genblunt", 100, TRUE)
 			emote("aggro")
 			visible_message(span_warning("[H] charges into [M] with [src]!"), span_warning("I charge into [M]!"))
-			defending = FALSE
+/*			defending = FALSE
 			weapon_boost = 0
 			charge_power = 0
 			charge = 0
 			def_boost = 0
 			weapon_boost = 0
 			def_prob = 0
-			atk_prob = 0
+			atk_prob = 0 */
 
 			charge_power = 0
 			return TRUE

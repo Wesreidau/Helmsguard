@@ -253,14 +253,14 @@
 	possible_item_intents = list(/datum/intent/shoot/arquebus_pistol)
 	internal_magazine = TRUE
 	mag_type = /obj/item/ammo_box/magazine/internal/arquebus
-	wlength = WLENGTH_LONG
-	w_class = WEIGHT_CLASS_BULKY
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_SMALL
 	randomspread = 1
 	spread = 0
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
 	minstr = 6
-	walking_stick = TRUE
+	walking_stick = FALSE
 	cartridge_wording = "musketball"
 	load_sound = 'sound/foley/musketload.ogg'
 	fire_sound = "modular_helmsguard/sound/arquebus/arquefire.ogg"
@@ -270,7 +270,7 @@
 	casing_ejector = FALSE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
 	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
-	slot_flags = ITEM_SLOT_HIP|
+	slot_flags = ITEM_SLOT_HIP
 	var/damfactor = 2
 	var/reloaded = FALSE
 	var/load_time = 50

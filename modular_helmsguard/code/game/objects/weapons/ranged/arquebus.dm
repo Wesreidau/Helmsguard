@@ -1,6 +1,6 @@
 
 /obj/item/gun/ballistic/arquebus
-	name = "arquebus"
+	name = "arquebus rifle"
 	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
 	icon = 'modular_helmsguard/icons/weapons/arquebus.dmi'
 	icon_state = "arquebus"
@@ -26,8 +26,7 @@
 	pin = /obj/item/firing_pin
 	minstr = 6
 	walking_stick = TRUE
-	var/gunpowder = FALSE
-	var/obj/item/ramrod/myrod = null
+	experimental_onback = TRUE
 	cartridge_wording = "musketball"
 	load_sound = 'sound/foley/musketload.ogg'
 	fire_sound = "modular_helmsguard/sound/arquebus/arquefire.ogg"
@@ -35,10 +34,13 @@
 	smeltresult = /obj/item/ingot/steel
 	bolt_type = BOLT_TYPE_NO_BOLT
 	casing_ejector = FALSE
-	var/damfactor = 2
-	var/reloaded = FALSE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
 	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
+	var/damfactor = 2
+	var/reloaded = FALSE
+	var/load_time = 50
+	var/gunpowder = FALSE
+	var/obj/item/ramrod/myrod = null
 
 /obj/item/gun/ballistic/arquebus/getonmobprop(tag)
 	. = ..()
@@ -47,9 +49,9 @@
 			if("gen")
 				return list("shrink" = 0.6,"sx" = -7,"sy" = 6,"nx" = 7,"ny" = 6,"wx" = -2,"wy" = 3,"ex" = 1,"ey" = 3,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -43,"sturn" = 43,"wturn" = 30,"eturn" = -30, "nflip" = 0, "sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
-				return list("shrink" = 0.6,"sx" = 5,"sy" = -2,"nx" = -5,"ny" = -1,"wx" = -3,"wy" = 2,"ex" = 8,"ey" = 2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -45,"sturn" = 45,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+				return list("shrink" = 0.6,"sx" = 5,"sy" = -2,"nx" = -5,"ny" = -1,"wx" = -8,"wy" = 2,"ex" = 8,"ey" = 2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 1,"nturn" = -45,"sturn" = 45,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+			if("onback")
+				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/gun/ballistic/arquebus/Initialize()
 	. = ..()
@@ -87,7 +89,7 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 80
-		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/crossbows) * 20)
+		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/firearms) * 20)
 		//per block
 		newtime = newtime + 20
 		newtime = newtime - ((mastermob.STAPER)*1.5)
@@ -116,7 +118,7 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 80
-		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/crossbows) * 20)
+		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/firearms) * 20)
 		//per block
 		newtime = newtime + 20
 		newtime = newtime - ((mastermob.STAPER)*1.5)
@@ -143,6 +145,9 @@
 	update_icon()
 
 /obj/item/gun/ballistic/arquebus/attackby(obj/item/A, mob/user, params)
+
+	var/firearm_skill = (user?.mind ? user.mind.get_skill_level(/datum/skill/combat/firearms) : 1)
+	var/load_time_skill = load_time - (firearm_skill*2)
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
 		if(chambered)
 			to_chat(user, "<span class='warning'>There is already a [chambered] in the [src]!</span>")
@@ -162,7 +167,7 @@
 			return
 		else
 			playsound(src, "modular_helmsguard/sound/arquebus/pour_powder.ogg",  100)
-			if(do_after(user, 30, src))
+			if(do_after(user, load_time_skill, src))
 				user.visible_message("<span class='notice'>[user] fills the [src] with gunpowder.</span>")
 				gunpowder = TRUE
 	if(istype(A, /obj/item/ramrod))
@@ -171,7 +176,7 @@
 			if(chambered)
 				user.visible_message("<span class='notice'>[user] begins ramming the [R.name] down the barrel of the [src] .</span>")
 				playsound(src, "modular_helmsguard/sound/arquebus/ramrod.ogg",  100)
-				if(do_after(user, 30, src))
+				if(do_after(user, load_time_skill, src))
 					user.visible_message("<span class='notice'>[user] has finished reloading the [src].</span>")
 					reloaded = TRUE
 		if(reloaded && !myrod)
@@ -235,6 +240,70 @@
 	max_ammo = 1
 	start_empty = TRUE
 
+
+
+/// PISTOLS
+/obj/item/gun/ballistic/arquebus_pistol
+	name = "arquebus pistol"
+	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "pistol"
+	item_state = "pistol"
+	force = 10
+	possible_item_intents = list(/datum/intent/shoot/arquebus_pistol)
+	internal_magazine = TRUE
+	mag_type = /obj/item/ammo_box/magazine/internal/arquebus
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_SMALL
+	randomspread = 1
+	spread = 0
+	can_parry = TRUE
+	pin = /obj/item/firing_pin
+	minstr = 6
+	walking_stick = FALSE
+	cartridge_wording = "musketball"
+	load_sound = 'sound/foley/musketload.ogg'
+	fire_sound = "modular_helmsguard/sound/arquebus/arquefire.ogg"
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = /obj/item/ingot/steel
+	bolt_type = BOLT_TYPE_NO_BOLT
+	casing_ejector = FALSE
+	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
+	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
+	slot_flags = ITEM_SLOT_HIP
+	var/damfactor = 2
+	var/reloaded = FALSE
+	var/load_time = 50
+	var/gunpowder = FALSE
+	var/obj/item/ramrod/myrod = null
+
+/obj/item/gun/ballistic/arquebus_pistol/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 30,"sturn" = -30,"wturn" = -30,"eturn" = 30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/datum/intent/shoot/arquebus_pistol
+	chargedrain = 0
+
+/datum/intent/shoot/arquebus_pistol/can_charge()
+	if(mastermob)
+		return TRUE
+
+/datum/intent/arc/arquebus_pistol
+	chargedrain = 0
+
+/datum/intent/arc/arquebus_pistol/can_charge()
+	if(mastermob)
+		return TRUE
+
+/// ITEMS
+
+
+
 /obj/item/ramrod
 	name = "ramrod"
 	icon = 'modular_helmsguard/icons/obj/items/arquebus_items.dmi'
@@ -243,17 +312,6 @@
 	item_state = "ramrod"
 	slot_flags = SLOT_BELT_L | SLOT_BELT_R | ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_SMALL
-
-
-/*/obj/item/ramrod/proc/arquebus_insert(mob/user, /obj/item/gun/ballistic/arquebus/R)
-	var/obj/item/gun/ballistic/arquebus = R
-	if(!R.myrod)
-		R.put_in_gun(src, user)
-		R.myrod=src
-		R.update_icon()
-	else
-		return*/
-
 
 
 /obj/item/powderflask

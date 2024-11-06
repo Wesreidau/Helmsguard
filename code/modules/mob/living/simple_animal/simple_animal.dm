@@ -517,6 +517,14 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 			transform = transform.Turn(180)
 		density = FALSE
 		..()
+	if(has_buckled_mobs())
+		var/mob/living/carbon/H = buckled_mobs[1]
+		H.rogstam = origin_rogstam
+		H.rogfat = origin_rogfat
+		update_icon()
+		..()
+
+
 
 /mob/living/simple_animal/proc/CanAttack(atom/the_target)
 	if(see_invisible < the_target.invisibility)

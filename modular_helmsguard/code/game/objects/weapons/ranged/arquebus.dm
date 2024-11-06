@@ -22,6 +22,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	randomspread = 1
 	spread = 0
+
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
 	minstr = 6
@@ -36,6 +37,7 @@
 	casing_ejector = FALSE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
 	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
+	var/spread_num = 10
 	var/damfactor = 2
 	var/reloaded = FALSE
 	var/load_time = 50
@@ -195,6 +197,36 @@
 
 
 /obj/item/gun/ballistic/arquebus/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+
+	var/accident_chance = 0
+	var/firearm_skill = (user?.mind ? user.mind.get_skill_level(/datum/skill/combat/firearms) : 1)
+	var/turf/knockback = get_ranged_target_turf(user, turn(user.dir, 180), rand(1,2))
+	spread = (spread_num - firearm_skill)
+	if(firearm_skill < 1)
+		accident_chance =80
+
+	if(firearm_skill < 2)
+		accident_chance =50
+	if(firearm_skill >= 2 && firearm_skill <= 5)
+		accident_chance =10
+	if(firearm_skill >= 5)
+		accident_chance =0
+	if(prob(accident_chance))
+		user.flash_fullscreen("whiteflash")
+		user.apply_damage(rand(5,15), BURN, pick(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_NOSE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND))
+		user.visible_message("<span class='danger'>[user] accidentally burnt themselves while firing the [src].</span>")
+		user.emote("painscream")
+		if(prob(60))
+			user.dropItemToGround(src)
+			user.Knockdown(rand(15,30))
+			user.Immobilize(30)
+	if(prob(accident_chance))
+		user.visible_message("<span class='danger'>[user] is knocked back by the recoil!</span>")
+		user.throw_at(knockback, rand(1,2), 7)
+		if(prob(accident_chance))
+			user.dropItemToGround(src)
+			user.Knockdown(rand(15,30))
+			user.Immobilize(30)
 	if(user.client)
 		if(user.client.chargedprog >= 100)
 			spread = 0
@@ -276,6 +308,7 @@
 	var/load_time = 50
 	var/gunpowder = FALSE
 	var/obj/item/ramrod/myrod = null
+	var/spread_num = 10
 
 /obj/item/gun/ballistic/arquebus_pistol/getonmobprop(tag)
 	. = ..()
@@ -378,6 +411,36 @@
 
 
 /obj/item/gun/ballistic/arquebus_pistol/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+
+	var/accident_chance = 0
+	var/firearm_skill = (user?.mind ? user.mind.get_skill_level(/datum/skill/combat/firearms) : 1)
+	var/turf/knockback = get_ranged_target_turf(user, turn(user.dir, 180), rand(1,2))
+	spread = (spread_num - firearm_skill)
+	if(firearm_skill < 1)
+		accident_chance =80
+
+	if(firearm_skill < 2)
+		accident_chance =50
+	if(firearm_skill >= 2 && firearm_skill <= 5)
+		accident_chance =10
+	if(firearm_skill >= 5)
+		accident_chance =0
+	if(prob(accident_chance))
+		user.flash_fullscreen("whiteflash")
+		user.apply_damage(rand(5,15), BURN, pick(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_NOSE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND))
+		user.visible_message("<span class='danger'>[user] accidentally burnt themselves while firing the [src].</span>")
+		user.emote("painscream")
+		if(prob(60))
+			user.dropItemToGround(src)
+			user.Knockdown(rand(15,30))
+			user.Immobilize(30)
+	if(prob(accident_chance))
+		user.visible_message("<span class='danger'>[user] is knocked back by the recoil!</span>")
+		user.throw_at(knockback, rand(1,2), 7)
+		if(prob(accident_chance))
+			user.dropItemToGround(src)
+			user.Knockdown(rand(15,30))
+			user.Immobilize(30)
 	if(user.client)
 		if(user.client.chargedprog >= 100)
 			spread = 0

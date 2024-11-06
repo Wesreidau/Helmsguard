@@ -250,7 +250,7 @@
 	icon_state = "pistol"
 	item_state = "pistol"
 	force = 10
-	possible_item_intents = list(/datum/intent/shoot/arquebus_pistol)
+	possible_item_intents = list(/datum/intent/shoot/arquebus_pistol, /datum/intent/arc/arquebus_pistol, /datum/intent/mace/strike/wood)
 	internal_magazine = TRUE
 	mag_type = /obj/item/ammo_box/magazine/internal/arquebus
 	wlength = WLENGTH_SHORT
@@ -299,6 +299,132 @@
 /datum/intent/arc/arquebus_pistol/can_charge()
 	if(mastermob)
 		return TRUE
+
+/obj/item/gun/ballistic/arquebus_pistol/Initialize()
+	. = ..()
+	myrod = new /obj/item/ramrod(src)
+
+
+/obj/item/gun/ballistic/arquebus_pistol/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
+	fire_sound = pick("modular_helmsguard/sound/arquebus/arquefire.ogg", "modular_helmsguard/sound/arquebus/arquefire2.ogg", "modular_helmsguard/sound/arquebus/arquefire3.ogg",
+				"modular_helmsguard/sound/arquebus/arquefire4.ogg", "modular_helmsguard/sound/arquebus/arquefire5.ogg")
+	. = ..()
+
+/obj/item/gun/ballistic/arquebus_pistol/attack_right(mob/user)
+	if(myrod)
+		playsound(src, "sound/items/sharpen_short1.ogg",  100)
+		to_chat(user, "<span class='warning'>I draw the ramrod from the [src]!</span>")
+		var/obj/item/ramrod/AM
+		for(AM in src)
+			user.put_in_hands(AM)
+			myrod = null
+	else
+		to_chat(user, "<span class='warning'>There is no rod stowed in the [src]!</span>")
+
+
+
+/obj/item/gun/ballistic/arquebus_pistol/shoot_with_empty_chamber()
+	playsound(src.loc, 'sound/foley/musketcock.ogg', 100, FALSE)
+	update_icon()
+
+/obj/item/gun/ballistic/arquebus_pistol/attackby(obj/item/A, mob/user, params)
+
+	var/firearm_skill = (user?.mind ? user.mind.get_skill_level(/datum/skill/combat/firearms) : 1)
+	var/load_time_skill = load_time - (firearm_skill*2)
+	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
+		if(chambered)
+			to_chat(user, "<span class='warning'>There is already a [chambered] in the [src]!</span>")
+			return
+		if(!gunpowder)
+			to_chat(user, "<span class='warning'>You must fill the [src] with gunpowder first!</span>")
+			return
+		if((loc == user) && (user.get_inactive_held_item() != src))
+			return
+		playsound(src, "modular_helmsguard/sound/arquebus/insert.ogg",  100)
+		user.visible_message("<span class='notice'>[user] forces a [A] down the barrel of the [src].</span>")
+		..()
+
+	if(istype(A, /obj/item/powderflask))
+		if(gunpowder)
+			user.visible_message("<span class='notice'>The [src] is already filled with gunpowder!</span>")
+			return
+		else
+			playsound(src, "modular_helmsguard/sound/arquebus/pour_powder.ogg",  100)
+			if(do_after(user, load_time_skill, src))
+				user.visible_message("<span class='notice'>[user] fills the [src] with gunpowder.</span>")
+				gunpowder = TRUE
+	if(istype(A, /obj/item/ramrod))
+		var/obj/item/ramrod/R=A
+		if(!reloaded)
+			if(chambered)
+				user.visible_message("<span class='notice'>[user] begins ramming the [R.name] down the barrel of the [src] .</span>")
+				playsound(src, "modular_helmsguard/sound/arquebus/ramrod.ogg",  100)
+				if(do_after(user, load_time_skill, src))
+					user.visible_message("<span class='notice'>[user] has finished reloading the [src].</span>")
+					reloaded = TRUE
+		if(reloaded && !myrod)
+			user.transferItemToLoc(R, src)
+			myrod = R
+			playsound(src, "sound/foley/musketload.ogg",  100)
+			user.visible_message("<span class='notice'>[user] stows the [R.name] under the barrel of the [src].</span>")
+		if(!chambered && !myrod)
+			user.transferItemToLoc(R, src)
+			myrod = R
+			playsound(src, "sound/foley/musketload.ogg",  100)
+			user.visible_message("<span class='notice'>[user] stows the [R.name] under the barrel of the [src] without chambering it.</span>")
+		if(!myrod == null)
+			to_chat(user, span_warning("There's already a [R.name] inside of the [name]."))
+			return
+
+
+/obj/item/gun/ballistic/arquebus_pistol/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+	if(user.client)
+		if(user.client.chargedprog >= 100)
+			spread = 0
+			//adjust_experience(user, /datum/skill/combat/crossbows, user.STAINT * 4)
+		else
+			spread = 150 - (150 * (user.client.chargedprog / 100))
+	else
+		spread = 0
+	for(var/obj/item/ammo_casing/CB in get_ammo_list(FALSE, TRUE))
+		var/obj/projectile/BB = CB.BB
+		BB.damage = BB.damage * damfactor
+		if(HAS_TRAIT(user, TRAIT_TINY))
+			BB.damage = (BB.damage * 0.3)
+	gunpowder = FALSE
+	reloaded = FALSE
+	spark_act()
+	for(var/mob/M in range(5, user))
+		if(!M.stat)
+			shake_camera(M, 3, 1)
+	spawn (1)
+		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
+	spawn (5)
+		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 2))
+	spawn (12)
+		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
+	..()
+
+/obj/item/gun/ballistic/arquebus_pistol/afterattack(atom/target, mob/living/user, flag, params)
+	. = ..()
+	if(!reloaded)
+		to_chat(user, span_warning("The [src] is not properly loaded yet!"))
+		return
+
+/obj/item/gun/ballistic/arquebus_pistol/can_shoot()
+	if (!reloaded)
+		return FALSE
+	return ..()
+
+/obj/item/ammo_box/magazine/internal/arquebus
+	name = "arquebus internal magazine"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
+	caliber = "musketball"
+	max_ammo = 1
+	start_empty = TRUE
+
+
+
 
 /// ITEMS
 

@@ -226,8 +226,9 @@
 	if(istype(target, /mob/living/carbon/human))
 		var/mob/living/carbon/human/M = target
 		var/list/screams = list("painscream", "paincrit")
+		var/check = rand(1, 20)
 		if(isliving(target))
-			if(prob(70))
+			if(check > M.STACON)
 				M.emote(screams)
 				M.Knockdown(rand(15,30))
 				M.Immobilize(rand(30,60))

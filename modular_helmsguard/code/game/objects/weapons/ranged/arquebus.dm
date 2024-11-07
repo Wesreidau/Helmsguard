@@ -43,6 +43,7 @@
 	var/load_time = 50
 	var/gunpowder = FALSE
 	var/obj/item/ramrod/myrod = null
+	var/gunchannel
 
 /obj/item/gun/ballistic/arquebus/getonmobprop(tag)
 	. = ..()
@@ -66,15 +67,18 @@
 	. = ..()
 
 /obj/item/gun/ballistic/arquebus/attack_right(mob/user)
-	if(myrod)
-		playsound(src, "sound/items/sharpen_short1.ogg",  100)
-		to_chat(user, "<span class='warning'>I draw the ramrod from the [src]!</span>")
-		var/obj/item/ramrod/AM
-		for(AM in src)
-			user.put_in_hands(AM)
-			myrod = null
+	if(user.get_active_held_item())
+		return
 	else
-		to_chat(user, "<span class='warning'>There is no rod stowed in the [src]!</span>")
+		if(myrod)
+			playsound(src, "sound/items/sharpen_short1.ogg",  100)
+			to_chat(user, "<span class='warning'>I draw the ramrod from the [src]!</span>")
+			var/obj/item/ramrod/AM
+			for(AM in src)
+				user.put_in_hands(AM)
+				myrod = null
+		else
+			to_chat(user, "<span class='warning'>There is no rod stowed in the [src]!</span>")
 
 
 /datum/intent/shoot/arquebus
@@ -147,9 +151,11 @@
 	update_icon()
 
 /obj/item/gun/ballistic/arquebus/attackby(obj/item/A, mob/user, params)
-
+	user.stop_sound_channel(gunchannel)
 	var/firearm_skill = (user?.mind ? user.mind.get_skill_level(/datum/skill/combat/firearms) : 1)
 	var/load_time_skill = load_time - (firearm_skill*2)
+	gunchannel = SSsounds.random_available_channel()
+
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
 		if(chambered)
 			to_chat(user, "<span class='warning'>There is already a [chambered] in the [src]!</span>")
@@ -172,6 +178,8 @@
 			if(do_after(user, load_time_skill, src))
 				user.visible_message("<span class='notice'>[user] fills the [src] with gunpowder.</span>")
 				gunpowder = TRUE
+			return
+		user.stop_sound_channel(gunchannel)
 	if(istype(A, /obj/item/ramrod))
 		var/obj/item/ramrod/R=A
 		if(!reloaded)
@@ -181,6 +189,7 @@
 				if(do_after(user, load_time_skill, src))
 					user.visible_message("<span class='notice'>[user] has finished reloading the [src].</span>")
 					reloaded = TRUE
+				return
 		if(reloaded && !myrod)
 			user.transferItemToLoc(R, src)
 			myrod = R
@@ -194,7 +203,7 @@
 		if(!myrod == null)
 			to_chat(user, span_warning("There's already a [R.name] inside of the [name]."))
 			return
-
+		user.stop_sound_channel(gunchannel)
 
 /obj/item/gun/ballistic/arquebus/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 
@@ -211,22 +220,6 @@
 		accident_chance =10
 	if(firearm_skill >= 5)
 		accident_chance =0
-	if(prob(accident_chance))
-		user.flash_fullscreen("whiteflash")
-		user.apply_damage(rand(5,15), BURN, pick(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_NOSE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND))
-		user.visible_message("<span class='danger'>[user] accidentally burnt themselves while firing the [src].</span>")
-		user.emote("painscream")
-		if(prob(60))
-			user.dropItemToGround(src)
-			user.Knockdown(rand(15,30))
-			user.Immobilize(30)
-	if(prob(accident_chance))
-		user.visible_message("<span class='danger'>[user] is knocked back by the recoil!</span>")
-		user.throw_at(knockback, rand(1,2), 7)
-		if(prob(accident_chance))
-			user.dropItemToGround(src)
-			user.Knockdown(rand(15,30))
-			user.Immobilize(30)
 	if(user.client)
 		if(user.client.chargedprog >= 100)
 			spread = 0
@@ -243,22 +236,41 @@
 	gunpowder = FALSE
 	reloaded = FALSE
 	spark_act()
-	for(var/mob/M in range(5, user))
-		if(!M.stat)
-			shake_camera(M, 3, 1)
-	spawn (1)
-		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
-	spawn (5)
-		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 2))
-	spawn (12)
-		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
-	..()
+
+	playsound(src, "modular_helmsguard/sound/arquebus/fuse.ogg", 100)
+	spawn(rand(10,20))
+		..()
+		spawn (1)
+			new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
+		spawn (5)
+			new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 2))
+		spawn (12)
+			new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
+		for(var/mob/M in range(5, user))
+			if(!M.stat)
+				shake_camera(M, 3, 1)
+		if(prob(accident_chance))
+			user.flash_fullscreen("whiteflash")
+			user.apply_damage(rand(5,15), BURN, pick(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_NOSE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND))
+			user.visible_message("<span class='danger'>[user] accidentally burnt themselves while firing the [src].</span>")
+			user.emote("painscream")
+			if(prob(60))
+				user.dropItemToGround(src)
+				user.Knockdown(rand(15,30))
+				user.Immobilize(30)
+		if(prob(accident_chance))
+			user.visible_message("<span class='danger'>[user] is knocked back by the recoil!</span>")
+			user.throw_at(knockback, rand(1,2), 7)
+			if(prob(accident_chance))
+				user.dropItemToGround(src)
+				user.Knockdown(rand(15,30))
+				user.Immobilize(30)
 
 /obj/item/gun/ballistic/arquebus/afterattack(atom/target, mob/living/user, flag, params)
 	. = ..()
-	if(!reloaded)
+/*	if(!reloaded)
 		to_chat(user, span_warning("The [src] is not properly loaded yet!"))
-		return
+		return*/
 
 /obj/item/gun/ballistic/arquebus/can_shoot()
 	if (!reloaded)
@@ -344,15 +356,18 @@
 	. = ..()
 
 /obj/item/gun/ballistic/arquebus_pistol/attack_right(mob/user)
-	if(myrod)
-		playsound(src, "sound/items/sharpen_short1.ogg",  100)
-		to_chat(user, "<span class='warning'>I draw the ramrod from the [src]!</span>")
-		var/obj/item/ramrod/AM
-		for(AM in src)
-			user.put_in_hands(AM)
-			myrod = null
+	if(user.get_active_held_item())
+		return
 	else
-		to_chat(user, "<span class='warning'>There is no rod stowed in the [src]!</span>")
+		if(myrod)
+			playsound(src, "sound/items/sharpen_short1.ogg",  100)
+			to_chat(user, "<span class='warning'>I draw the ramrod from the [src]!</span>")
+			var/obj/item/ramrod/AM
+			for(AM in src)
+				user.put_in_hands(AM)
+				myrod = null
+		else
+			to_chat(user, "<span class='warning'>There is no rod stowed in the [src]!</span>")
 
 
 
@@ -386,6 +401,7 @@
 			if(do_after(user, load_time_skill, src))
 				user.visible_message("<span class='notice'>[user] fills the [src] with gunpowder.</span>")
 				gunpowder = TRUE
+			return
 	if(istype(A, /obj/item/ramrod))
 		var/obj/item/ramrod/R=A
 		if(!reloaded)
@@ -395,6 +411,7 @@
 				if(do_after(user, load_time_skill, src))
 					user.visible_message("<span class='notice'>[user] has finished reloading the [src].</span>")
 					reloaded = TRUE
+				return
 		if(reloaded && !myrod)
 			user.transferItemToLoc(R, src)
 			myrod = R
@@ -421,26 +438,10 @@
 
 	if(firearm_skill < 2)
 		accident_chance =50
-	if(firearm_skill >= 2 && firearm_skill <= 5)
+	if(firearm_skill >= 2 && firearm_skill < 3)
 		accident_chance =10
-	if(firearm_skill >= 5)
+	if(firearm_skill >= 3)
 		accident_chance =0
-	if(prob(accident_chance))
-		user.flash_fullscreen("whiteflash")
-		user.apply_damage(rand(5,15), BURN, pick(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_NOSE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND))
-		user.visible_message("<span class='danger'>[user] accidentally burnt themselves while firing the [src].</span>")
-		user.emote("painscream")
-		if(prob(60))
-			user.dropItemToGround(src)
-			user.Knockdown(rand(15,30))
-			user.Immobilize(30)
-	if(prob(accident_chance))
-		user.visible_message("<span class='danger'>[user] is knocked back by the recoil!</span>")
-		user.throw_at(knockback, rand(1,2), 7)
-		if(prob(accident_chance))
-			user.dropItemToGround(src)
-			user.Knockdown(rand(15,30))
-			user.Immobilize(30)
 	if(user.client)
 		if(user.client.chargedprog >= 100)
 			spread = 0
@@ -457,22 +458,38 @@
 	gunpowder = FALSE
 	reloaded = FALSE
 	spark_act()
-	for(var/mob/M in range(5, user))
-		if(!M.stat)
-			shake_camera(M, 3, 1)
-	spawn (1)
-		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
-	spawn (5)
-		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 2))
-	spawn (12)
-		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
-	..()
+
+	playsound(src, "modular_helmsguard/sound/arquebus/fuse.ogg", 100)
+	spawn(rand(10,20))
+		..()
+		spawn (1)
+			new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
+		spawn (5)
+			new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 2))
+		spawn (12)
+			new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
+		for(var/mob/M in range(5, user))
+			if(!M.stat)
+				shake_camera(M, 3, 1)
+		if(prob(accident_chance))
+			user.flash_fullscreen("whiteflash")
+			user.apply_damage(rand(5,15), BURN, pick(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_NOSE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND))
+			user.visible_message("<span class='danger'>[user] accidentally burnt themselves while firing the [src].</span>")
+			user.emote("painscream")
+			if(prob(60))
+				user.dropItemToGround(src)
+				user.Knockdown(rand(15,30))
+				user.Immobilize(30)
+		if(prob(accident_chance))
+			user.visible_message("<span class='danger'>[user] is knocked back by the recoil!</span>")
+			user.throw_at(knockback, rand(1,2), 7)
+			if(prob(accident_chance))
+				user.dropItemToGround(src)
+				user.Knockdown(rand(15,30))
+				user.Immobilize(30)
 
 /obj/item/gun/ballistic/arquebus_pistol/afterattack(atom/target, mob/living/user, flag, params)
 	. = ..()
-	if(!reloaded)
-		to_chat(user, span_warning("The [src] is not properly loaded yet!"))
-		return
 
 /obj/item/gun/ballistic/arquebus_pistol/can_shoot()
 	if (!reloaded)

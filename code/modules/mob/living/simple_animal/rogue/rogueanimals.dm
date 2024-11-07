@@ -42,8 +42,8 @@
 	var/charge = 0
 	var/charge_add = 0
 	var/charge_power = 0
-	var/def_prob = 0
-	var/atk_prob = 0
+	var/def_val = 0
+	var/atk_val = 0
 
 /mob/living/simple_animal/hostile/retaliate/rogue/apply_damage(damage = 0,damagetype = BRUTE, def_zone = null, blocked = FALSE, forced = FALSE)
 	..()
@@ -284,318 +284,111 @@
 		if(H.m_intent == MOVE_INTENT_WALK)
 			charge_power = 0
 
-/mob/living/simple_animal/hostile/retaliate/rogue/MobBump(mob/living/M) //CHARGE AND TRAMPLE
+/mob/living/simple_animal/hostile/retaliate/rogue/MobBump(mob/living/M) //CHARGE
 	if(has_buckled_mobs())
 		var/mob/living/carbon/H = buckled_mobs[1]
-		var/obj/item/I = H.get_active_held_item()
-		var/obj/item/U = M.get_active_held_item()
-		var/amt = (H?.mind ? H.mind.get_skill_level(/datum/skill/misc/riding) : 1)
-		var/pole_skill_atk = (H?.mind ? H.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
-		var/pole_skill_def = (M?.mind ? M.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
-		var/defending = FALSE
-/*		var/ori_damfactor = H.used_intent.damfactor
-		var/ori_penfactor = H.used_intent.damfactor*/
-		charge = (amt*10) + (charge_power*10)
-		var/weapon_boost = charge_power + (H.STASTR/2)
-		var/def_boost = charge_power + (M.STASTR/2)
-	//	var/playsound = FALSE
 		if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M)) //If you are charging
-			if(HAS_TRAIT(H, TRAIT_CHARGER))
-				charge_add = 2
-			if(istype(U, /obj/item/rogueweapon) && U.associated_skill == /datum/skill/combat/polearms && U.wielded && M.dir == get_dir(M, src) && (M.cmode))// Target has a polearm and is facing you with combat mode on
-				defending = TRUE
-				def_prob = (pole_skill_def*10) + (M.STACON*5) + rand(10,30) //small defensive buff
-			if(!M.has_buckled_mobs())
-				if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && H.used_intent.type == SPEAR_THRUST && I.wielded && (H.cmode))// If you have a lance/spear is equipped
-					atk_prob = (pole_skill_atk*10) + (charge_power*10)
-					H.used_intent.damfactor += weapon_boost
-					H.used_intent.penfactor += weapon_boost
-					M.used_intent.damfactor += def_boost
-					M.used_intent.penfactor += def_boost
-					if(defending)		// If charging a braced spearman
-						if(atk_prob > def_prob)
-							I.melee_attack_chain(H, M)
-							visible_message(span_warning("[H] hits [M] with a damfactor of [H.used_intent.damfactor] and the penfactor of [H.used_intent.penfactor]")) //debug
-							visible_message(span_warning("[H] performed a successful charge with a attack prob of [atk_prob] against [M]'s [def_prob]")) //debug
-						if(atk_prob < def_prob)
-							playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
-							U.melee_attack_chain(M, H)
-							visible_message(span_warning("[M] hits [H] with a damfactor of [M.used_intent.damfactor] and the penfactor of [M.used_intent.penfactor]")) //debug
-							Knockdown(rand(15,30))
-							Immobilize(30)
-							visible_message(span_warning("Current damfactor for [U.name] is [M.used_intent.damfactor] and the penfactor is [M.used_intent.penfactor]")) //debug
-							visible_message(span_warning("[H] performed a failed charge with a attack prob of [atk_prob] against [M]'s [def_prob]"))
-							if(H.STACON < 10)
-								unbuckle_all_mobs()
-								H.Knockdown(rand(15,30))
-								H.Immobilize(30)
-						if(atk_prob == def_prob)
-							playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
-							M.Immobilize(30)
-							visible_message(span_warning("[H] charge breaks with a attack prob of [atk_prob] against [M]'s [def_prob]"))
-					else	//if charging non-spears
-						if(atk_prob >= M.STACON*5)
-							I.melee_attack_chain(H, M)
-							visible_message(span_warning("[H] hits [M] with a damfactor of [H.used_intent.damfactor] and the penfactor of [H.used_intent.penfactor]")) //debug
-						else
-							if(prob(50))
-				//				visible_message(span_warning("[M] narrowly avoided [H]'s attack!"))
-							else
-								I.melee_attack_chain(H, M)
-					H.used_intent.damfactor -= weapon_boost
-					H.used_intent.penfactor -= weapon_boost
-					M.used_intent.damfactor -= def_boost
-					M.used_intent.penfactor -= def_boost
-					visible_message(span_warning("Current damfactor for [I.name] is [H.used_intent.damfactor] and the penfactor is [H.used_intent.penfactor]")) //debug
-				if(charge + charge_add > M.STACON && !defending)
-					M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-					M.apply_damage((charge_power*2), BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-					M.emote("scream")
-					M.Knockdown(rand(15,30))
-					M.Immobilize(30)
-				//	visible_message(span_warning("[M] is knocked away by [H]'s charge!"))
-				if(charge + charge_add < M.STACON && !defending)
-					Knockdown(1)
-					H.Knockdown(rand(15,30))
-					Immobilize(30)
-					H.Immobilize(30)
-				//	visible_message(span_warning("[M] managed to withstand [H]'s charge! "))
-					if(H.STACON < M.STACON)
-						unbuckle_all_mobs()
-						H.Knockdown(rand(15,30))
-						H.Immobilize(30)
-					//	visible_message(span_warning("[H] is knocked off of the [src]! "))
-					if(M.STASTR > H.STACON)
-						if(prob(60))
-							unbuckle_all_mobs()
-							H.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-							H.apply_damage((charge_power*2), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-							H.emote("scream")
-							H.Knockdown(rand(15,30))
-							H.Immobilize(30)
-						//	visible_message(span_warning("[H] is knocked off of their [src]! "))
-				if(charge + charge_add == M.STACON && !defending)
-					H.emote("scream")
-					M.emote("scream")
-					M.Knockdown(rand(15,30))
-					Knockdown(30)
-				if(defending)
-					if(charge + charge_add > M.STACON + def_prob + rand(10,20))
-						M.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-						M.apply_damage((charge_power*2), BRUTE, "chest", M.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-						M.emote("scream")
-						M.Knockdown(rand(15,30))
-						M.Immobilize(30)
-					//	visible_message(span_warning("[M] is knocked away by [H]'s charge!"))
-					if(charge + charge_add < M.STACON + def_prob + rand(10,20))
-						Immobilize(30)
-						emote("pain")
-						H.Immobilize(30)
-					//	visible_message(span_warning("[M] managed to withstand [H]'s charge! "))
-						if(H.STACON < 10)
-							unbuckle_all_mobs()
-							H.Knockdown(rand(15,30))
-							H.Immobilize(30)
-						//	visible_message(span_warning("[H] is knocked off of their [src]! "))
-						if(M.STASTR > 10)
-							if(prob(60))
-								unbuckle_all_mobs()
-								H.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-								H.apply_damage((charge_power*2), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-								H.emote("scream")
-								H.Knockdown(rand(15,30))
-								H.Immobilize(30)
-						//		visible_message(span_warning("[H] is knocked off of their [src]! "))
-					if(charge + charge_add == M.STACON + def_prob + rand(10,20))
-						Immobilize(30)
-						emote("pain")
-						H.Immobilize(30)
-						if(H.STACON < 5)
-							unbuckle_all_mobs()
-							H.Knockdown(rand(15,30))
-							H.Immobilize(30)
+			var/mob/living/carbon/target = M
+			var/riding_skill = (H?.mind ? H.mind.get_skill_level(/datum/skill/misc/riding) : 1)
+			var/bonus = rand(1,10)
+			var/bonus2 = rand(6,20)
+			var/total_charge_val = charge_power + riding_skill
+			var/lance = FALSE					//check if you're charging with a lance
+			var/speared = FALSE					//check if your target is braced with a spear
+			var/target_mounted  = FALSE
+			atk_val = total_charge_val + (H.STASTR/2) + (STASTR/2) + bonus
+			def_val = target.STACON + bonus
+			H.canparry = FALSE
+			H.candodge = FALSE
+			if(target.has_buckled_mobs())
+				var/mob/living/carbon/J = target.buckled_mobs[1]
+				target = J
+				target_mounted = TRUE
+			else
+				target = M
+			target.canparry = FALSE
+			target.candodge = FALSE
+			var/obj/item/I = H.get_active_held_item()
+			var/obj/item/U = target.get_active_held_item()
+			if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && I.wielded && (H.cmode)) //You are charging with a lance
+				var/pole_skill_atk = (H?.mind ? H.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
+				atk_val += (pole_skill_atk)
+				lance = TRUE
+			if(target.dir == get_dir(target, src)) //target is facing you
+				def_val += 5
+				if((istype(U, /obj/item/rogueweapon)) && U.associated_skill == /datum/skill/combat/polearms && U.wielded && (target.cmode)) //target bracing with a spear
+					var/pole_skill_def = (target?.mind ? target.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
+					def_val += ((pole_skill_def)+2)
+					speared = TRUE
+			var/weapon_boost = charge_power + (H.STASTR/2)
+			var/def_boost = charge_power + (target.STASTR/2)
+			H.used_intent.damfactor += weapon_boost
+			H.used_intent.penfactor += weapon_boost
+			target.used_intent.damfactor += def_boost
+			target.used_intent.penfactor += def_boost
+			if(target_mounted && target.m_intent == MOVE_INTENT_RUN && target.dir == get_dir(target, src))
+				if(target.buckled && istype(target.buckled, /mob/living/simple_animal/hostile/retaliate/rogue))
+					var/mob/living/simple_animal/hostile/retaliate/rogue/R = target.buckled
+					def_val = R.atk_val
+			if(atk_val > def_val)
+				if(lance)
+					I.melee_attack_chain(H, target)
+				if((charge_power + bonus2) > target.STACON)
+					if(target_mounted)
+						M.unbuckle_all_mobs()
+					target.throw_at(get_edge_target_turf(src, dir),rand(2,5),2,src,TRUE)
+				target.emote("scream")
+				target.apply_damage((charge_power*2), BRUTE, "chest", target.run_armor_check("chest", "blunt", damage = (charge_power*2)))
+				target.Knockdown(rand(15,30))
+				target.Immobilize(30)
+			if(atk_val < def_val)
+				if(speared)
+					U.melee_attack_chain(target, H)
+				if((def_val + bonus2) > STACON)
+					unbuckle_all_mobs()
+					H.throw_at(get_ranged_target_turf(src, turn(src.dir, 180), rand(2,5)), rand(2,5),2,src,TRUE)
+				H.emote("scream")
+				H.apply_damage((charge_power*2), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = (charge_power*2)))
+				Knockdown(1)
+				H.Knockdown(rand(15,30))
+				Immobilize(30)
+				H.Immobilize(30)
+			if(atk_val == def_val)
+				H.emote("scream")
+				H.apply_damage((charge_power*2), BRUTE, "chest", target.run_armor_check("chest", "blunt", damage = (charge_power*2)))
+				H.Knockdown(rand(15,30))
+				H.Immobilize(30)
+				if(prob(50))
+					unbuckle_all_mobs()
+				if(target_mounted)
+					if(prob(50))
+						target.unbuckle_all_mobs()
+				target.emote("scream")
+				target.apply_damage((charge_power*2), BRUTE, "chest", target.run_armor_check("chest", "blunt", damage = (charge_power*2)))
+				target.Knockdown(rand(15,30))
+				target.Immobilize(30)
+			H.used_intent.damfactor -= weapon_boost
+			H.used_intent.penfactor -= weapon_boost
+			target.used_intent.damfactor -= def_boost
+			target.used_intent.penfactor -= def_boost
+			for(var/mob/Q in range(3, src))
+				if(!Q.stat)
+					shake_camera(Q, 3, 1)
+			visible_message(span_warning("[H] charges into [target] with [src]!"))
+			H.canparry = TRUE
+			H.candodge = TRUE
+		Immobilize(30)
+		playsound(src, "genblunt", 100, TRUE)
+		emote("aggro")
 
-			/// If target is mounted v
+/*		defending = FALSE
+		weapon_boost = 0
+		charge_power = 0
+		charge = 0
+		def_boost = 0
+		weapon_boost = 0
+		def_prob = 0
+		atk_prob = 0 */
 
-
-				if(istype(M, /mob/living/simple_animal/hostile/retaliate/rogue) && M.has_buckled_mobs())
-					var/mob/living/simple_animal/hostile/retaliate/rogue/A = M
-					var/mob/living/carbon/J = A.buckled_mobs[1]
-					var/obj/item/E = J.get_active_held_item()
-					def_boost = charge_power + (J.STASTR/2)
-					if(istype(E, /obj/item/rogueweapon) && E.associated_skill == /datum/skill/combat/polearms && E.wielded && J.dir == get_dir(J, src) && (J.cmode)) // Target is bracing with a polearm
-						defending = TRUE
-						pole_skill_def = (J?.mind ? J.mind.get_skill_level(/datum/skill/combat/polearms) : 1)
-						def_prob = (pole_skill_def*10) + (J.STACON*5) + rand(10,30)
-					if(J.m_intent == MOVE_INTENT_RUN && A.dir == get_dir(A, src)) //Target is charging you too
-						if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && I.wielded && (H.cmode)) //You are charging with a polearm
-							atk_prob = (pole_skill_atk*10) + (charge_power*10)
-							H.used_intent.damfactor += weapon_boost
-							H.used_intent.penfactor += weapon_boost
-							if(A.atk_prob) //Enemy has a polearm
-								if(atk_prob > A.atk_prob)
-									I.melee_attack_chain(H, J)
-									visible_message(span_warning("[H] hits [J] with a damfactor of [H.used_intent.damfactor] and the penfactor of [H.used_intent.penfactor]")) //debug
-									if(prob(50))
-										A.unbuckle_all_mobs()
-										J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-										J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-										J.Knockdown(rand(15,30))
-										J.Immobilize(30)
-										visible_message(span_warning("[H] performed a successful charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
-								if(atk_prob == A.atk_prob)
-									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
-									A.Immobilize(30)
-									if(prob(50))
-										I.melee_attack_chain(H, J)
-										if(prob(30))
-											A.unbuckle_all_mobs()
-											J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-											J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-									visible_message(span_warning("[H] performed a failed charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
-						else					//You are charging WITHOUT a polearm
-							if(A.atk_prob) // But the enemy has one
-								if(charge + charge_add <= A.atk_prob)
-									U.melee_attack_chain(J, H)
-									Immobilize(30)
-									H.Immobilize(30)
-									if(prob(80))
-										unbuckle_all_mobs()
-										H.throw_at(get_edge_target_turf(A, dir),rand(1,3),5,A,TRUE)
-								else
-									if(prob(50))
-										visible_message(span_warning("[J] narrowly avoided [H]'s attack!"))
-									else
-										U.melee_attack_chain(J, H)
-							else //Both are charging each other WITHOUT polearms
-								if(charge + charge_add >= A.charge + A.charge_add)
-									A.unbuckle_all_mobs()
-									A.Immobilize(30)
-									J.Immobilize(30)
-									J.apply_damage(charge_power, BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = charge_power))
-									J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-							H.used_intent.damfactor -= weapon_boost
-							H.used_intent.penfactor -= weapon_boost
-							visible_message(span_warning("Current damfactor is [H.used_intent.damfactor] and the penfactor is [H.used_intent.penfactor]")) //debug
-					else 	// target is not charging you
-						if(istype(I, /obj/item/rogueweapon) && I.associated_skill == /datum/skill/combat/polearms && I.wielded && (H.cmode)) //You are charging with a polearm
-							H.used_intent.damfactor += weapon_boost
-							H.used_intent.penfactor += weapon_boost
-							J.used_intent.damfactor += def_boost
-							J.used_intent.penfactor += def_boost
-							if(defending)		// If target is braced with spear on horseback
-								if(atk_prob > def_prob)
-									I.melee_attack_chain(H, J)
-									visible_message(span_warning("[H] hits [J] with a damfactor of [H.used_intent.damfactor] and the penfactor of [H.used_intent.penfactor]")) //debug
-									visible_message(span_warning("[H] performed a successful charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
-									if(J.STACON < 10 || prob(50))
-										A.unbuckle_all_mobs()
-										J.emote("scream")
-										J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-										J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-										J.Knockdown(rand(15,30))
-										J.Immobilize(30)
-								if(atk_prob < def_prob)
-									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
-									H.emote("scream")
-									U.melee_attack_chain(J, H)
-									visible_message(span_warning("[J] hits [H] with a damfactor of [J.used_intent.damfactor] and the penfactor of [J.used_intent.penfactor]"))
-									visible_message(span_warning("[H] performed a failed charge with a attack prob of [atk_prob] against [J]'s [def_prob]"))
-									Knockdown(rand(15,30))
-									Immobilize(30)
-									visible_message(span_warning("Current damfactor for [U.name] is [J.used_intent.damfactor] and the penfactor is [J.used_intent.penfactor]"))
-									if(H.STACON < 10 || prob(50))
-										unbuckle_all_mobs()
-										H.throw_at(get_edge_target_turf(A, dir),rand(1,3),5,A,TRUE)
-										H.Knockdown(rand(15,30))
-										H.Immobilize(30)
-
-								if(atk_prob == def_prob)
-									playsound(src,'sound/combat/parry/parrygen.ogg',100,FALSE)
-									A.Immobilize(30)
-									if(prob(50))
-										I.melee_attack_chain(H, J)
-										H.emote("scream")
-									else
-										U.melee_attack_chain(J, H)
-										J.emote("scream")
-									visible_message(span_warning("[H] charge breaks with a attack prob of [atk_prob] against [J]'s [def_prob]"))
-							else	//if target is not braced with spear
-								if(atk_prob >= J.STACON)
-									I.melee_attack_chain(H, J)
-									J.emote("scream")
-									A.unbuckle_all_mobs()
-									J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-									J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-									J.Knockdown(rand(15,30))
-									J.Immobilize(30)
-							H.used_intent.damfactor -= weapon_boost
-							H.used_intent.penfactor -= weapon_boost
-							J.used_intent.damfactor -= def_boost
-							J.used_intent.penfactor -= def_boost
-
-							visible_message(span_warning("Current damfactor for [I.name]is [H.used_intent.damfactor] and the penfactor is [H.used_intent.penfactor]"))
-						else   		//charging without polearm
-							if(charge + charge_add > J.STACON && !defending)
-								A.unbuckle_all_mobs()
-								J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-								J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-								J.emote("scream")
-								J.Knockdown(rand(15,30))
-								J.Immobilize(30)
-							if(charge + charge_add < J.STACON && !defending)
-								Knockdown(1)
-								H.Knockdown(rand(15,30))
-								Immobilize(30)
-								H.Immobilize(30)
-							if(charge + charge_add == J.STACON && !defending)
-								H.emote("scream")
-								J.emote("scream")
-								J.Knockdown(rand(15,30))
-								Knockdown(30)
-							if(defending)
-								J.used_intent.damfactor += def_boost
-								J.used_intent.penfactor += def_boost
-								if(charge + charge_add > J.STACON + def_prob)
-									A.unbuckle_all_mobs()
-									J.throw_at(get_edge_target_turf(src, dir),rand(1,3),5,src,TRUE)
-									J.apply_damage((charge_power*2), BRUTE, "chest", J.run_armor_check("chest", "blunt", damage = (charge_power*2)))
-									J.emote("scream")
-									J.Knockdown(rand(15,30))
-									J.Immobilize(30)
-								if(charge + charge_add < J.STACON + def_prob)
-									Immobilize(30)
-									emote("pain")
-									E.melee_attack_chain(M, H)
-									H.Immobilize(30)
-									if(H.STACON < 10)
-										unbuckle_all_mobs()
-										H.Knockdown(rand(15,30))
-										H.Immobilize(30)
-								if(charge + charge_add == J.STACON + def_prob)
-									Immobilize(30)
-									emote("pain")
-									H.Immobilize(30)
-									if(H.STACON < 5)
-										unbuckle_all_mobs()
-										H.Knockdown(rand(15,30))
-										H.Immobilize(30)
-							J.used_intent.damfactor -= def_boost
-							J.used_intent.penfactor -= def_boost
-			Immobilize(30)
-			defending = FALSE
-			playsound(src, "genblunt", 100, TRUE)
-			emote("aggro")
-			visible_message(span_warning("[H] charges into [M] with [src]!"), span_warning("I charge into [M]!"))
-/*			defending = FALSE
-			weapon_boost = 0
-			charge_power = 0
-			charge = 0
-			def_boost = 0
-			weapon_boost = 0
-			def_prob = 0
-			atk_prob = 0 */
-
-			charge_power = 0
-			return TRUE
-
+		charge_power = 0
+	return TRUE

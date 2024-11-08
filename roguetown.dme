@@ -3650,6 +3650,7 @@
 #include "modular_helmsguard\code\game\objects\structures\catapult.dm"
 #include "modular_helmsguard\code\game\objects\structures\ladders.dm"
 #include "modular_helmsguard\code\game\objects\weapons\ranged\arquebus.dm"
+#include "modular_helmsguard\code\game\objects\weapons\ranged\handgonne.dm"
 #include "modular_helmsguard\code\game\turfs\open\floor\roguefloor.dm"
 #include "modular_helmsguard\code\modules\jobs\job_types\roguetown\orc\orcgrunt.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\horse.dm"

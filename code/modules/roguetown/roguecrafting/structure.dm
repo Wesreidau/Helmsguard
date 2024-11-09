@@ -117,7 +117,7 @@
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 	verbage_simple = "make"
 	verbage = "makes"
-	skillcraft = /datum/skill/craft/carpentry	
+	skillcraft = /datum/skill/craft/carpentry
 
 /datum/crafting_recipe/roguetown/armor/foresterhelmet
 	name = "forester helmet"
@@ -125,7 +125,7 @@
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 	verbage_simple = "make"
 	verbage = "makes"
-	skillcraft = /datum/skill/craft/carpentry		
+	skillcraft = /datum/skill/craft/carpentry
 
 /datum/crafting_recipe/roguetown/roguebin
 	name = "wooden bin"
@@ -358,7 +358,7 @@
 
 /datum/crafting_recipe/roguetown/structure/headstake
 	name = "head stake"
-	result = /obj/structure/fluff/headstake	
+	result = /obj/structure/fluff/headstake
 	reqs = list(/obj/item/grown/log/tree/stake = 1,
 				/obj/item/bodypart/head = 1)
 	parts = list(/obj/item/bodypart/head = 1,
@@ -366,7 +366,7 @@
 	verbage_simple = "set up"
 	verbage = "sets up"
 	craftdiff = 0
-	
+
 
 /datum/crafting_recipe/roguetown/structure/fencealt
 	name = "palisade (small log)"
@@ -493,6 +493,15 @@
 	verbage = "constructs"
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 2
+
+/datum/crafting_recipe/roguetown/structure/wood_barricade
+	name = "wooden spike barricade"
+	result = /obj/structure/barricade/wood_spike
+	reqs = list(/obj/item/grown/log/tree/stake = 4)
+	verbage_simple = "construct"
+	verbage = "constructs"
+	skillcraft = /datum/skill/craft/carpentry
+	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/structure/table
 	name = "wooden table"

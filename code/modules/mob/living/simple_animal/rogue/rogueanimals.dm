@@ -275,6 +275,7 @@
 	charge_power += added
 	return TRUE
 
+
 /mob/living/simple_animal/hostile/retaliate/rogue/Move()
 	. = ..()
 	if(has_buckled_mobs())
@@ -283,6 +284,46 @@
 			charge_power_add(0.5)
 		if(H.m_intent == MOVE_INTENT_WALK)
 			charge_power = 0
+
+
+/mob/living/simple_animal/hostile/retaliate/rogue/Bump(atom/A)
+	. = ..()
+	if(istype(A, /turf/closed/wall))
+		visible_message(span_danger("[src] crashed into [A]!"))
+		if(has_buckled_mobs())
+			var/mob/living/carbon/H = buckled_mobs[1]
+			if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, A))
+				var/riding_skill = (H?.mind ? H.mind.get_skill_level(/datum/skill/misc/riding) : 1)
+				if(riding_skill < 2 || prob(50))
+					unbuckle_all_mobs()
+					visible_message(span_danger("[H] is thrown off the saddle!"))
+					H.throw_at(get_edge_target_turf(src, dir),rand(2,5),2,src,TRUE)
+					H.apply_damage(charge + rand(5,10), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = charge + rand(5,10)))
+					H.Knockdown(rand(15,30))
+					H.Immobilize(30)
+		emote("pain")
+		playsound(src, "genblunt", 100, TRUE)
+	return
+
+
+
+/mob/living/simple_animal/hostile/retaliate/rogue/ObjBump(obj/O)
+	if(istype(O, /obj/structure))
+		visible_message(span_danger("[src] crashed into [O]!"))
+		if(has_buckled_mobs())
+			var/mob/living/carbon/H = buckled_mobs[1]
+			if(H.m_intent == MOVE_INTENT_RUN && dir == get_dir(src, O))
+				var/riding_skill = (H?.mind ? H.mind.get_skill_level(/datum/skill/misc/riding) : 1)
+				if(riding_skill < 2 || prob(50))
+					unbuckle_all_mobs()
+					visible_message(span_danger("[H] is thrown off the saddle!"))
+					H.throw_at(get_edge_target_turf(src, dir),rand(2,5),2,src,TRUE)
+					H.apply_damage(charge + rand(5,10), BRUTE, "chest", H.run_armor_check("chest", "blunt", damage = charge + rand(5,10)))
+					H.Knockdown(rand(15,30))
+					H.Immobilize(30)
+		emote("pain")
+		playsound(src, "genblunt", 100, TRUE)
+	return
 
 /mob/living/simple_animal/hostile/retaliate/rogue/MobBump(mob/living/M) //CHARGE
 	if(has_buckled_mobs())
@@ -377,6 +418,7 @@
 			visible_message(span_warning("[H] charges into [target] with [src]!"))
 			H.canparry = TRUE
 			H.candodge = TRUE
+			H.toggle_rogmove_intent(MOVE_INTENT_WALK)
 		Immobilize(30)
 		playsound(src, "genblunt", 100, TRUE)
 		emote("aggro")

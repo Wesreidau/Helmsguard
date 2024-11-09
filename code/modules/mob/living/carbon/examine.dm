@@ -85,6 +85,9 @@
 	if(pulledby && pulledby.grab_state)
 		msg += "[m1] restrained by [pulledby]'s grip.\n"
 
+	if(buckled && istype(buckled, /obj/structure/barricade/wood_spike))
+		. += span_warning("[m1] impaled on [buckled]!")
+
 	msg += "</span>"
 
 	. += msg.Join("")

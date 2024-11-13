@@ -1,16 +1,16 @@
 
-/obj/item/banner/standard
+/obj/item/helmsbanner/pole
 	force = 10
 	force_wielded = 15
 	possible_item_intents = list(SPEAR_THRUST, SPEAR_BASH)
 	gripped_intents = list(SPEAR_THRUST, SPEAR_BASH)
-	name = "ashen tide banner"
-	icon_state = "ashen"
+	name = "banner pole"
+	icon_state = "banner_pole"
 	icon = 'modular_hearthstone/icons/obj/banners.dmi'
 	pixel_y = 0
 	pixel_x = 0
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
 	layer = ABOVE_MOB_LAYER
 	bigboy = TRUE
 	gripsprite = TRUE
@@ -27,112 +27,129 @@
 	thrown_bclass = BCLASS_STAB
 	throwforce = 20
 	resistance_flags = FLAMMABLE
+	var/picked = FALSE
+	var/obj/item/natural/cloth/banner = null
+	var/standard_color_base = null
+	var/base_color_picked = FALSE
+	var/standard_color_rim = null
+	var/rim_color_picked = FALSE
+	var/pattern_picked = FALSE
+	var/pattern_add = null
+	var/pattern_color = null
+	var/pattern_color_picked = FALSE
+	var/emblem_add = null
+	var/emblem_picked = FALSE
+	var/emblem_color = null
+	var/emblem_color_picked = FALSE
 
-
-/obj/item/banner/standard/getonmobprop(tag)
+/obj/item/helmsbanner/pole/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.6,"sx" = 6,"sy" = 8,"nx" = 7,"ny" = 3,"wx" = -10,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.6,"sx" = 21,"sy" = -5,"nx" = 7,"ny" = 3,"wx" = 16,"wy" = 1,"ex" = 16,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -30,"sturn" = 30,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
-				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.6,"sx" = 21,"sy" = -2,"nx" = 7,"ny" = 3,"wx" = 16,"wy" = 1,"ex" = 16,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 30,"sturn" = 30,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 
-/obj/item/banner/standard/ashen
-
-/obj/item/banner/standard/blacksteel_legion
-	name = "blacksteel legion banner"
-	icon_state = "blacksteel"
-
-
-/obj/item/banner/standard/eagle
-	name = "band of eagle banner"
-	icon_state = "eagle"
-
-///Crafting - Standard
-
-
-/datum/crafting_recipe/roguetown/standard
-	name = "ashen banner"
-	result = list(/obj/item/banner/standard/ashen)
-	reqs = list(/obj/item/natural/cloth = 2, /obj/item/rogueweapon/woodstaff = 1)
-	verbage_simple = "construct"
-	verbage = "constructs"
-	craftdiff = 0
-
-/datum/crafting_recipe/roguetown/standard/blacksteel_legion
-	name = "blacksteel banner"
-	result = list(/obj/item/banner/standard/blacksteel_legion)
-
-/datum/crafting_recipe/roguetown/standard/eagle
-	name = "eagle banner"
-	result = list(/obj/item/banner/standard/eagle)
-
-
-
-///Crafting - Banner
-
-/datum/crafting_recipe/roguetown/structure/banner
-	name = "plant banner (Ashen)"
-	result = list(/obj/structure/fluff/standard/ashen)
-	reqs = list(/obj/item/banner/standard/ashen = 1)
-	verbage_simple = "plants"
-	verbage = "plants"
-	craftdiff = 0
-	craftsound = 'sound/foley/dropsound/gen_drop.ogg'
-
-/datum/crafting_recipe/roguetown/structure/banner/blacksteel
-	name = "plant banner (Blacksteel)"
-	result = list(/obj/structure/fluff/standard/blacksteel_legion)
-	reqs = list(/obj/item/banner/standard/blacksteel_legion = 1)
-
-/datum/crafting_recipe/roguetown/structure/banner/eagle
-	name = "plant banner (Eagle)"
-	result = list(/obj/structure/fluff/standard/eagle)
-	reqs = list(/obj/item/banner/standard/eagle = 1)
-
-/obj/structure/fluff/standard
-	name = "Ashen Banner"
-	desc = ""
-	icon = 'modular_hearthstone/icons/obj/banners.dmi'
-	icon_state = "ashen"
-	density = FALSE
-	anchored = TRUE
-	layer = ABOVE_MOB_LAYER
-	plane = GAME_PLANE_UPPER
-	blade_dulling = DULLING_BASH
-	resistance_flags = FLAMMABLE
-	max_integrity = 20
-	integrity_failure = 0.33
-	dir = SOUTH
-	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
-	attacked_sound = list('sound/combat/hits/onwood/woodimpact (1).ogg','sound/combat/hits/onwood/woodimpact (2).ogg')
-
-/obj/structure/fluff/standard/ashen
-
-/obj/structure/fluff/standard/blacksteel_legion
-	name = "Blacksteel Banner"
-	desc = ""
-	icon_state = "blacksteel"
-
-/obj/structure/fluff/standard/eagle
-	name = "Band of the Eagle Banner"
-	desc = ""
-	icon_state = "eagle"
-
-/obj/structure/fluff/standard/MouseDrop(over_object, src_location, over_location)
+/obj/item/helmsbanner/pole/update_icon()
 	. = ..()
-	if(over_object == usr && Adjacent(usr) && (in_range(src, usr) || usr.contents.Find(src)))
-		if(!ishuman(usr))
-			return
-		visible_message(span_notice("[usr] lifts the [src]."))
-		if(do_after(usr, 30, target = src))
-			playsound(src,'sound/foley/dropsound/cloth_drop.ogg', 100, FALSE)
-			if(istype(src, /obj/structure/fluff/standard/ashen))
-				new /obj/item/banner/standard/ashen (get_turf(src))
-			if (istype(src, /obj/structure/fluff/standard/blacksteel_legion))
-				new /obj/item/banner/standard/blacksteel_legion (get_turf(src))
-			if(istype(src, /obj/structure/fluff/standard/eagle))
-				new /obj/item/banner/standard/eagle (get_turf(src))
-			qdel(src)
+//	cut_overlays()
+	update_overlays()
+	..()
 
+/obj/item/helmsbanner/pole/update_overlays()
+	. = ..()
+	if(banner)
+		var/mutable_appearance/heraldry = mutable_appearance(icon, "banner")
+		heraldry.color = standard_color_base
+		add_overlay(heraldry)
+		if(standard_color_rim)
+			var/mutable_appearance/rim = mutable_appearance(icon, "banner_rim")
+			rim.color = standard_color_rim
+			add_overlay(rim)
+		if(standard_color_rim)
+			var/mutable_appearance/rim = mutable_appearance(icon, "banner_rim")
+			rim.color = standard_color_rim
+			add_overlay(rim)
+		if(pattern_picked && pattern_color_picked)
+			var/mutable_appearance/pattern = mutable_appearance(icon, pattern_add)
+			pattern.color = pattern_color
+			add_overlay(pattern)
+		if(emblem_picked)
+			var/mutable_appearance/emblem = mutable_appearance(icon, emblem_add)
+			emblem.color = emblem_color
+			add_overlay(emblem)
+	..()
+
+
+/obj/item/helmsbanner/pole/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/natural/cloth))
+		var/list/colors = list(
+		"PURPLE"="#865c9c",
+		"RED"="#933030",
+		"BLACK"="#2f352f",
+		"BROWN"="#685542",
+		"GREEN"="#79763f",
+		"BLUE"="#395480",
+		"YELLOW"="#b5b004",
+		"TEAL"="#249589",
+		"WHITE"="#ffffff",
+		"ORANGE"="#b86f0c",
+		"MAJENTA"="#962e5c")
+		var/base_choice_color = input(user, "Choose a Primary Color", "Banner Base") as anything in colors
+		standard_color_base = base_choice_color
+		base_color_picked = TRUE
+		user.dropItemToGround(A, src)
+		A.forceMove(src)
+		user.visible_message("<span class='notice'>[user] attach a banner to the [src].</span>")
+		name = "banner"
+		banner = A
+		if(base_color_picked)
+			var/rim_choice_color = input(user, "Choose a Rim Color", "Banner Rim") as anything in colors
+			standard_color_rim = rim_choice_color
+			rim_color_picked = TRUE
+			if(rim_color_picked)
+				var/list/patterns = list(
+				"Vertical Line"="v_line",
+				"Horizontal Line"="h_line",
+				"Cross"="cross",
+				"Left Diagonal Line"="diagonal_l",
+				"Right Diagonal Line"="diagonal_r",
+				"X"="x",
+				"None"= ""
+				)
+				var/pattern_choice = input(user, "Choose a Pattern", "Banner Pattern") as anything in patterns
+				pattern_add = patterns[pattern_choice]
+				pattern_picked = TRUE
+				if(pattern_picked)
+					var/pattern_color_choice = input(user, "Choose a Pattern Color", "Banner Pattern") as anything in colors
+					pattern_color = pattern_color_choice
+					pattern_color_picked = TRUE
+					update_icon()
+					if(rim_color_picked)
+						var/list/emblems = list(
+						"Sword"="sword",
+						"Axe"="axe",
+						"Crown"="crown",
+						"Eagle"="eagle",
+						"Wreath"="wreath",
+						"Dragon"="dragon",
+						"Hand"= "hand",
+						"Psicross"= "psicross",
+						"None"= ""
+						)
+						var/emblem_choice = input(user, "Choose an Emblem", "Banner Emblem") as anything in emblems
+						emblem_add = emblems[emblem_choice]
+						emblem_picked = TRUE
+						if(emblem_picked)
+							var/emblem_color_choice = input(user, "Choose an emblem Color", "Banner Emblem") as anything in colors
+							emblem_color = emblem_color_choice
+							emblem_color_picked = TRUE
+							update_icon()
+		update_icon()
+
+
+
+/*		var/the_time = world.time
+		if(world.time > (the_time + 30 SECONDS))
+			return */

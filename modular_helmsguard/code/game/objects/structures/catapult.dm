@@ -51,7 +51,7 @@
 		return // Exit the proc early since no further action can be taken
 
 	if(busy)
-		to_chat(user, "<span class='warning'>Someone else is currently using this mortar.</span>")
+		to_chat(user, "<span class='warning'>Someone else is currently using this equipment.</span>")
 		return
     // Provide choices to the user
 	if(!ready)

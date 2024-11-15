@@ -41,7 +41,7 @@
 
 /mob/living/simple_animal/hostile/rogue/gravelord/Initialize()
 	. = ..()
-	resize = 2
+	resize = 1.5
 	update_transform()
 
 /mob/living/simple_animal/hostile/rogue/gravelord/taunted(mob/user)

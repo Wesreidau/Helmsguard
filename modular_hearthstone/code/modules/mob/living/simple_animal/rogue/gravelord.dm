@@ -14,8 +14,8 @@
 	base_intents = list(/datum/intent/simple/gravelord)
 	faction = list("undead")
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	health = 500
-	maxHealth = 600
+	health = 1500
+	maxHealth = 1600
 	melee_damage_lower = 55
 	melee_damage_upper = 80
 	vision_range = 3
@@ -39,6 +39,10 @@
 //	stat_attack = UNCONSCIOUS
 	patron = /datum/patron/inhumen/zizo		//So they can be hurt by holy fire/healing
 
+/mob/living/simple_animal/hostile/rogue/gravelord/Initialize()
+	. = ..()
+	resize = 2
+	update_transform()
 
 /mob/living/simple_animal/hostile/rogue/gravelord/taunted(mob/user)
 	emote("aggro")

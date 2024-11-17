@@ -3659,4 +3659,5 @@
 #include "modular_helmsguard\code\game\turfs\open\floor\roguefloor.dm"
 #include "modular_helmsguard\code\modules\jobs\job_types\roguetown\orc\orcgrunt.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
+#include "modular_stonehedge\code\modules\mob\living\overheads_effects.dm"
 // END_INCLUDE

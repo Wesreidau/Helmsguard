@@ -236,9 +236,8 @@
 	gunpowder = FALSE
 	reloaded = FALSE
 	user.mind.adjust_experience(/datum/skill/combat/firearms, (user.STAINT*5))
-	spark_act()
-
 	..()
+	new /obj/effect/particle_effect/sparks/muzzle(get_ranged_target_turf(user, user.dir, 1))
 	spawn (5)
 		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
 	spawn (10)
@@ -463,6 +462,7 @@
 	spark_act()
 	user.mind.adjust_experience(/datum/skill/combat/firearms, (user.STAINT*5))
 	..()
+	new /obj/effect/particle_effect/sparks/muzzle(get_ranged_target_turf(user, user.dir, 1))
 	spawn (5)
 		new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(user, user.dir, 1))
 	spawn (10)
@@ -566,3 +566,19 @@
 	item_state = "powderflask"
 	slot_flags = SLOT_BELT_L | SLOT_BELT_R | ITEM_SLOT_NECK | ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_SMALL
+
+/// MUZZLE
+
+/obj/effect/particle_effect/sparks/muzzle
+	name = "sparks"
+	icon = 'icons/effects/64x64.dmi'
+	icon_state = "sparks"
+	anchored = TRUE
+	light_system = MOVABLE_LIGHT
+	light_range = 2
+	light_power = 1.5
+	light_color = LIGHT_COLOR_FIRE
+	pixel_x = -16
+	pixel_y = -16
+	layer = ABOVE_LIGHTING_LAYER
+	plane = ABOVE_LIGHTING_PLANE

@@ -1,52 +1,18 @@
+// This file is for creating custom keys that will belong to the Sundmark map. Use sund_ as the prefix to all lockids made here and on the Sundmark map.
+// Each faction will have its own keys so this anticipates the overlap we would otherwise have, that is, orc keys unlocking human doors.
 
-/obj/item/roguekey
-	name = "key"
-	desc = "An unremarkable iron key."
-	icon_state = "iron"
-	icon = 'icons/roguetown/items/keys.dmi'
-	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
-	w_class = WEIGHT_CLASS_TINY
-	dropshrink = 0.75
-	throwforce = 0
-	var/lockhash = 0
-	var/lockid = null
-	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH|ITEM_SLOT_NECK
-	drop_sound = 'sound/items/gems (1).ogg'
-	anvilrepair = /datum/skill/craft/blacksmithing
 
-/obj/item/roguekey/Initialize()
-	. = ..()
-	if(lockid)
-		if(GLOB.lockids[lockid])
-			lockhash = GLOB.lockids[lockid]
-		else
-			lockhash = rand(100,999)
-			while(lockhash in GLOB.lockhashes)
-				lockhash = rand(100,999)
-			GLOB.lockhashes += lockhash
-			GLOB.lockids[lockid] = lockhash
+// Sundmark's clockwork key replaces the old Master key with something with an in-world logic.
 
-/obj/item/lockpick
-	name = "lockpick"
-	desc = "A small, sharp piece of metal to aid opening locks in the absence of a key."
-	icon_state = "lpick"
-	icon = 'icons/roguetown/items/keys.dmi'
-	w_class = WEIGHT_CLASS_TINY
-	dropshrink = 0.75
-	throwforce = 0
-	max_integrity = 10
-	picklvl = 1
-	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH|ITEM_SLOT_NECK
-	destroy_sound = 'sound/items/pickbreak.ogg'
-
-/obj/item/roguekey/lord
-	name = "master key"
-	desc = "The Lord's key."
+/obj/item/roguekey/sund/clockwork
+	name = "Clockwork Key"
+	desc = "A marvelous Dwarven key crafted with ingenius mechanisms, able to unlock nearly any door or chest by some contrivance of springs and clockwork."
 	icon_state = "bosskey"
-	lockid = "lord"
+	lockid = "sund_clockwork"
 
-/obj/item/roguekey/lord/pre_attack(target, user, params)
+// This sets the clockwork key's lockhash to whatever closet or mineral_door it is used on. Note this doesn't work on machines, etc.
+
+/obj/item/roguekey/sund/clockwork/pre_attack(target, user, params)
 	. = ..()
 	if(istype(target, /obj/structure/closet))
 		var/obj/structure/closet/C = target
@@ -57,7 +23,7 @@
 		if(D.masterkey)
 			lockhash = D.lockhash
 
-/obj/item/roguekey/royal
+/obj/item/roguekey/sund/royal
 	name = "Royal Key"
 	desc = "The Key to the royal chambers. It even feels pretentious."
 	icon_state = "ekey"
@@ -343,139 +309,3 @@
 	desc = "Hm. Sinister."
 	icon_state = "toothkey"
 	lockid = "blk"
-
-//custom key
-/obj/item/roguekey/custom
-	name = "custom key"
-	desc = "A custom key designed by a blacksmith."
-	icon_state = "brownkey"
-
-/obj/item/roguekey/custom/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/rogueweapon/hammer))
-		var/input = (input(user, "What would you name this key?", "", "") as text) 
-		if(input)
-			name = input + " key"
-			to_chat(user, span_notice("You rename the key to [name]."))
-
-//custom key blank
-/obj/item/customblank //i'd prefer not to make a seperate item for this honestly
-	name = "blank custom key"
-	desc = "A key without its teeth carved in. Endless possibilities..."
-	icon = 'icons/roguetown/items/keys.dmi'
-	icon_state = "brownkey"
-	w_class = WEIGHT_CLASS_TINY
-	dropshrink = 0.75
-	var/lockhash = 0
-
-/obj/item/customblank/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/rogueweapon/hammer))
-		var/input = input(user, "What would you like to set the key ID to?", "", 0) as num
-		input = max(0, input)
-		to_chat(user, span_notice("You set the key ID to [input]."))
-		lockhash = 10000 + input //having custom lock ids start at 10000 leaves it outside the range that opens normal doors, so you can't make a key that randomly unlocks existing key ids like the church
-
-/obj/item/customblank/attack_right(mob/user)
-	if(istype(user.get_active_held_item(), /obj/item/roguekey))
-		var/obj/item/roguekey/held = user.get_active_held_item()
-		src.lockhash = held.lockhash
-		to_chat(user, span_notice("You trace the teeth from [held] to [src]."))
-	else if(istype(user.get_active_held_item(), /obj/item/customlock))
-		var/obj/item/customlock/held = user.get_active_held_item()
-		src.lockhash = held.lockhash
-		to_chat(user, span_notice("You fine-tune [src] to the lock's internals."))
-	else if(istype(user.get_active_held_item(), /obj/item/rogueweapon/hammer) && src.lockhash != 0)
-		var/obj/item/roguekey/custom/F = new (get_turf(src))
-		F.lockhash = src.lockhash
-		to_chat(user, span_notice("You finish [F]."))
-		qdel(src)
-	
-
-//custom lock unfinished
-/obj/item/customlock
-	name = "unfinished lock"
-	desc = "A lock without its pins set. Endless possibilities..."
-	icon = 'icons/roguetown/items/keys.dmi'
-	icon_state = "lock"
-	w_class = WEIGHT_CLASS_SMALL
-	dropshrink = 0.75
-	var/lockhash = 0
-
-/obj/item/customlock/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/rogueweapon/hammer))
-		var/input = input(user, "What would you like to set the lock ID to?", "", 0) as num
-		input = max(0, input)
-		to_chat(user, span_notice("You set the lock ID to [input]."))
-		lockhash = 10000 + input //same deal as the customkey
-	else if(istype(I, /obj/item/roguekey))
-		var/obj/item/roguekey/ID = I
-		if(ID.lockhash == src.lockhash)
-			to_chat(user, span_notice("[I] twists cleanly in [src]."))
-		else
-			to_chat(user, span_warning("[I] jams in [src],"))
-	else if(istype(I, /obj/item/customblank))
-		var/obj/item/customblank/ID = I
-		if(ID.lockhash == src.lockhash)
-			to_chat(user, span_notice("[I] twists cleanly in [src].")) //this makes no sense since the teeth aren't formed yet but i want people to be able to check whether the locks theyre making actually fit
-		else
-			to_chat(user, span_warning("[I] jams in [src]."))
-
-/obj/item/customlock/attack_right(mob/user)
-	if(istype(user.get_active_held_item(), /obj/item/roguekey))//i need to figure out how to avoid these massive if/then trees, this sucks
-		var/obj/item/roguekey/held = user.get_active_held_item()
-		src.lockhash = held.lockhash
-		to_chat(user, span_notice("You align the lock's internals to [held].")) //locks for non-custom keys
-	else if(istype(user.get_active_held_item(), /obj/item/customblank))
-		var/obj/item/customblank/held = user.get_active_held_item()
-		src.lockhash = held.lockhash
-		to_chat(user, span_notice("You align the lock's internals to [held]."))
-	else if(istype(user.get_active_held_item(), /obj/item/rogueweapon/hammer) && src.lockhash != 0)
-		var/obj/item/customlock/finished/F = new (get_turf(src))
-		F.lockhash = src.lockhash
-		to_chat(user, span_notice("You finish [F]."))
-		qdel(src)
-
-//finished lock
-/obj/item/customlock/finished
-	name = "lock"
-	desc = "A customized iron lock that is used by keys."
-	var/holdname = ""
-
-/obj/item/customlock/finished/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/rogueweapon/hammer))
-		src.holdname = input(user, "What would you like to name this?", "", "") as text
-		if(holdname)
-			to_chat(user, span_notice("You label the [name] with [holdname]."))
-	else
-		..()
-
-/obj/item/customlock/finished/attack_right(mob/user)//does nothing. probably better ways to do this but whatever
-
-/obj/item/customlock/finished/attack_obj(obj/structure/K, mob/living/user)
-	if(istype(K, /obj/structure/closet))
-		var/obj/structure/closet/KE = K
-		if(KE.keylock == TRUE)
-			to_chat(user, span_warning("[K] already has a lock."))
-		else
-			KE.keylock = TRUE
-			KE.lockhash = src.lockhash
-			KE.lock_strength = 100
-			if(src.holdname)
-				KE.name = (src.holdname + " " + KE.name)
-			to_chat(user, span_notice("You add [src] to [K]."))
-			qdel(src)
-	if(istype(K, /obj/structure/mineral_door))
-		var/obj/structure/mineral_door/KE = K
-		if(KE.can_add_lock)
-			if(KE.keylock == TRUE)
-				to_chat(user, span_warning("[K] already has a lock."))
-			else
-				KE.keylock = TRUE
-				KE.lockhash = src.lockhash
-				KE.lock_strength = 100
-				if(src.holdname)
-					KE.name = src.holdname
-				to_chat(user, span_notice("You add [src] to [K]."))
-				qdel(src)
-		else
-			to_chat(user, span_warning("A lock can't be added to [K]."))
-			

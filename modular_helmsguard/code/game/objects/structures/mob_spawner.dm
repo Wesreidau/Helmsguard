@@ -57,7 +57,7 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 				return
 			else
 				playsound(src, pick(spawn_sound), 100)
-				shake_camera(M, 3, 1)
+	//			shake_camera(M, 3, 1)
 				M.visible_message("<span class='danger'>[text_faction] [spawn_text] [src]</span>")
 				activated = TRUE
 				break
@@ -75,6 +75,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 				activate()*/
 
 /obj/structure/mobspawner/proc/activate()
+	for(var/mob/living/M in view(detect_range, src))
+		shake_camera(M, 3, 1)
 	last_activated = world.time
 	mobs_to_spawn = rand(min_mobs, max_mobs)
 	while(mobs < mobs_to_spawn)
@@ -189,7 +191,7 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 				return
 			else
 				playsound(src, pick(spawn_sound), 100)
-				shake_camera(M, 3, 1)
+		//		shake_camera(M, 3, 1)
 				M.visible_message("<span class='danger'>[text_faction] [picked_string]</span>")
 				activated = TRUE
 				break
@@ -197,6 +199,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 		activate()
 
 /obj/effect/mobspawner/proc/activate()
+	for(var/mob/living/M in view(detect_range, src))
+		shake_camera(M, 3, 1)
 	last_activated = world.time
 	mobs_to_spawn = rand(min_mobs, max_mobs)
 	while(mobs < mobs_to_spawn)
@@ -331,14 +335,15 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 				qdel(src)
 	if(istype(attacking_item, /obj/item/rogueweapon/pick))
 		var/obj/item/rogueweapon/pick/attacking_pick = attacking_item
-		playsound(loc,'sound/items/empty_shovel.ogg', 100, TRUE)
+		playsound(loc,'sound/foley/hit_rock.ogg', 100, TRUE)
 		src.visible_message("<span class='danger'>[user] is picking at the [src] with [attacking_pick]!</span>")
 		if(do_after(user, rand(30,60), src))
 			src.visible_message("<span class='danger'>[user] picked some rocks into [src] with [attacking_pick]!</span>")
+			new /obj/effect/particle_effect/sparks(src.loc)
 			playsound(loc,'sound/foley/hit_rock.ogg', 100, TRUE)
 			fill++
 			if(fill >= filltoseal)
 				playsound(loc,'sound/foley/break_stone.ogg', 100, TRUE)
-				src.visible_message("<span class='danger'>[user] seals [src] with dirts!</span>")
+				src.visible_message("<span class='danger'>[user] collapsed [src] with [attacking_pick]!</span>")
 				qdel(src)
 	..()

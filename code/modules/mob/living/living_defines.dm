@@ -181,3 +181,4 @@
 	var/voice_pitch
 
 	var/mounted = FALSE
+	var/del_on_deaggro = 0

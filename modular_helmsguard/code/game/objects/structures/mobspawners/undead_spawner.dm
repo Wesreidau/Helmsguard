@@ -56,8 +56,8 @@
 	desc = ""
 	anchored = TRUE
 	density = FALSE
-	min_mobs = 2
-	max_mobs = 3
+	min_mobs = 5
+	max_mobs = 8
 	mob_types = list(
 	/mob/living/simple_animal/hostile/rogue/skeleton/axe = 6,
 	/mob/living/simple_animal/hostile/rogue/skeleton/spear = 6,

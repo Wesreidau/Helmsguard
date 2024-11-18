@@ -24,7 +24,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 	var/last_activated
 	var/detect_range = 6
 	var/spawn_range = 3
-	var/restart_time = 8 MINUTES
+	var/restart_time = 2 MINUTES
+	var/activated = FALSE
 	var/min_mobs = 1
 	var/max_mobs = 3
 	var/mobs = 0
@@ -58,8 +59,12 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 				playsound(src, pick(spawn_sound), 100)
 				shake_camera(M, 3, 1)
 				M.visible_message("<span class='danger'>[text_faction] [spawn_text] [src]</span>")
-				activate()
-
+				activated = TRUE
+				break
+	if(activated)
+		activate()
+	else
+		return
 /*/obj/structure/mobspawner/HasProximity(atom/movable/AM)
 	if(ready)
 		if(istype(AM, /mob/living))
@@ -74,8 +79,7 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 	mobs_to_spawn = rand(min_mobs, max_mobs)
 	while(mobs < mobs_to_spawn)
 		spawn_mob()
-		if(mobs == mobs_to_spawn)
-			ready = FALSE
+		if(mobs >= mobs_to_spawn)
 			reset()
 			break
 
@@ -100,6 +104,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 /obj/structure/mobspawner/proc/reset()
 	mobs_to_spawn = 3
 	mobs = 0
+	ready = FALSE
+	activated = FALSE
 
 
 /obj/structure/mobspawner/deconstruct(disassembled = TRUE)
@@ -148,7 +154,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 	var/mobs = 0
 	var/detect_range = 6
 	var/spawn_range = 3
-	var/restart_time = 8 MINUTES
+	var/restart_time = 2 MINUTES
+	var/activated = FALSE
 	var/min_mobs = 1
 	var/max_mobs = 3
 	var/mobs_to_spawn = 3
@@ -184,15 +191,17 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 				playsound(src, pick(spawn_sound), 100)
 				shake_camera(M, 3, 1)
 				M.visible_message("<span class='danger'>[text_faction] [picked_string]</span>")
-				activate()
+				activated = TRUE
+				break
+	if(activated)
+		activate()
 
 /obj/effect/mobspawner/proc/activate()
 	last_activated = world.time
 	mobs_to_spawn = rand(min_mobs, max_mobs)
 	while(mobs < mobs_to_spawn)
 		spawn_mob()
-		if(mobs == mobs_to_spawn)
-			ready = FALSE
+		if(mobs >= mobs_to_spawn)
 			reset()
 			break
 
@@ -219,6 +228,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 /obj/effect/mobspawner/proc/reset()
 	mobs_to_spawn = 3
 	mobs = 0
+	ready = FALSE
+	activated = FALSE
 
 
 
@@ -281,7 +292,7 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 	mobs_to_spawn = rand(min_mobs, max_mobs)
 	while(mobs < mobs_to_spawn)
 		spawn_mob()
-		if(mobs == mobs_to_spawn)
+		if(mobs >= mobs_to_spawn)
 			ready = FALSE
 			reset()
 			break

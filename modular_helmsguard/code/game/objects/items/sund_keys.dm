@@ -23,289 +23,212 @@
 		if(D.masterkey)
 			lockhash = D.lockhash
 
-/obj/item/roguekey/sund/royal
-	name = "Royal Key"
-	desc = "The Key to the royal chambers. It even feels pretentious."
-	icon_state = "ekey"
-	lockid = "royal"
-
-/obj/item/roguekey/manor
-	name = "manor key"
-	desc = "This key will open any manor doors."
-	icon_state = "mazekey"
-	lockid = "manor"
-
-/obj/item/roguekey/clinic
-	name = "clinic key"
-	desc = "This key will open the old clinic in the bog."
-	icon_state = "mazekey"
-	lockid = "vamp"
-
-/obj/item/roguekey/tribe
-	name = "bone key"
-	desc = "This key is made of bone. It will open the tribal fort."
-	icon_state = "cheesekey"
-	lockid = "tribe"
-
-
-/obj/item/roguekey/garrison
-	name = "town watch key"
-	desc = "This key belongs to the town guards."
-	icon_state = "spikekey"
-	lockid = "garrison"
-
-/obj/item/roguekey/dungeon
-	name = "dungeon key"
-	desc = "This key should unlock the rusty bars and doors of the dungeon."
-	icon_state = "rustkey"
-	lockid = "dungeon"
-
-/obj/item/roguekey/noble
-	name = "Noble Manor key"
-	desc = "This key should unlock the noble manor"
-	icon_state = "rustkey"
-	lockid = "nobleguest"
-
-/obj/item/roguekey/vault
-	name = "vault key"
-	desc = "This key opens the mighty vault."
-	icon_state = "cheesekey"
-	lockid = "vault"
-
-/obj/item/roguekey/sheriff
-	name = "guard captain's key"
-	desc = "This key belongs to the captain of the guard."
-	icon_state = "cheesekey"
-	lockid = "sheriff"
-
-/obj/item/roguekey/judge
-	name = "judge's key"
-	desc = "This key belongs to the judge."
-	icon_state = "cheesekey"
-	lockid = "sheriff"
+// The merchant key unlocks the Goldface. Goldface lockid is set in Goldface code; do not sund_ this.
 
 /obj/item/roguekey/merchant
 	name = "merchant's key"
 	desc = "A merchant's key."
-	icon_state = "cheesekey"
+	icon_state = "bosskey"
 	lockid = "merchant"
 
-/obj/item/roguekey/shop
-	name = "shop key"
-	desc = "This key opens and closes a shop door."
-	icon_state = "ekey"
-	lockid = "shop"
+// Castle and Retinue keys.
 
-/obj/item/roguekey/tavern
-	name = "tavern key"
-	desc = "This key should open and close any tavern door."
+/obj/item/roguekey/sund/sund_ruler
+	name = "Markgraf's key"
+	desc = "This key is emblazoned with Sundmark's arms in gold."
+	icon_state = "bosskey"
+	lockid = "sund_ruler"
+
+/obj/item/roguekey/sund/sund_family
+	name = "emblazoned key"
+	desc = "This key is emblazoned with the Markgraf's family crest."
+	icon_state = "bosskey"
+	lockid = "sund_family"
+
+/obj/item/roguekey/sund/sund_secret
+	name = "fine gilded key"
+	desc = "Gloved and gentle hands have not worn away the gold leaf."
+	icon_state = "cheesekey"
+	lockid = "sund_secret"
+
+/obj/item/roguekey/sund/sund_steward
+	name = "heavy golden key"
+	desc = "This lavish key is weighty from a head of solid gold on a brass shank."
+	icon_state = "cheesekey"
+	lockid = "sund_steward"
+
+/obj/item/roguekey/sund/sund_noble
+	name = "staghorn key"
+	desc = "The antler of some noble stag adorns this fine brass key."
 	icon_state = "hornkey"
-	lockid = "tavern"
+	lockid = "sund_noble"
 
-/obj/item/roguekey/velder
-	name = "elder's key"
-	desc = "This key should open and close the elder's home."
-	icon_state = "brownkey"
-	lockid = "velder"
-
-/obj/item/roguekey/tavern/village
-	lockid = "vtavern"
-
-/obj/item/roguekey/roomi/village
-	lockid = "vroomi"
-
-/obj/item/roguekey/roomii/village
-	lockid = "vroomii"
-
-/obj/item/roguekey/roomiii/village
-	lockid = "vroomiii"
-
-/obj/item/roguekey/roomiv/village
-	lockid = "vroomiv"
-
-/obj/item/roguekey/roomv/village
-	lockid = "vroomv"
-
-/obj/item/roguekey/roomvi/village
-	lockid = "vroomvi"
-
-/obj/item/roguekey/roomi
-	name = "room I key"
-	desc = "The key to the first room."
-	icon_state = "brownkey"
-	lockid = "roomi"
-
-/obj/item/roguekey/roomii
-	name = "room II key"
-	desc = "The key to the second room."
-	icon_state = "brownkey"
-	lockid = "roomii"
-
-/obj/item/roguekey/roomiii
-	name = "room III key"
-	desc = "The key to the third room."
-	icon_state = "brownkey"
-	lockid = "roomiii"
-
-/obj/item/roguekey/roomiv
-	name = "room IV key"
-	desc = "The key to the fourth room."
-	icon_state = "brownkey"
-	lockid = "roomiv"
-
-/obj/item/roguekey/roomv
-	name = "room V key"
-	desc = "The key to the fifth room."
-	icon_state = "brownkey"
-	lockid = "roomv"
-
-/obj/item/roguekey/roomvi
-	name = "room VI key"
-	desc = "The key to the sixth room."
-	icon_state = "brownkey"
-	lockid = "roomvi"
-
-/obj/item/roguekey/roomhunt
-	name = "room HUNT key"
-	desc = "This is the HUNT key!"
-	icon_state = "brownkey"
-	lockid = "roomhunt"
-
-//vampire mansion//
-/obj/item/roguekey/vampire
-	name = "mansion key"
-	desc = "The key to a vampire lord's castle."
-	icon_state = "vampkey"
-	lockid = "mansionvampire"
-//
-
-/obj/item/roguekey/blacksmith
-	name = "blacksmith key"
-	desc = "This key opens a blacksmith's workshop."
-	icon_state = "brownkey"
-	lockid = "blacksmith"
-
-/obj/item/roguekey/blacksmith/town
-	name = "town blacksmith key"
-	lockid = "townblacksmith"
-
-/obj/item/roguekey/walls
-	name = "walls key"
-	desc = "This is a rusty key."
-	icon_state = "rustkey"
-	lockid = "walls"
-
-/obj/item/roguekey/farm
-	name = "farm key"
-	desc = "This is a rusty key that'll open farm doors."
-	icon_state = "rustkey"
-	lockid = "farm"
-
-/obj/item/roguekey/butcher
-	name = "butcher key"
-	desc = "This is a rusty key that'll open butcher doors."
-	icon_state = "rustkey"
-	lockid = "butcher"
-
-/obj/item/roguekey/church
-	name = "church key"
-	desc = "This bronze key should open almost all doors in the church."
-	icon_state = "brownkey"
-	lockid = "church"
-
-/obj/item/roguekey/priest
-	name = "priest's key"
-	desc = "This is the master key of the church."
-	icon_state = "cheesekey"
-	lockid = "priest"
-
-/obj/item/roguekey/tower
-	name = "tower key"
-	desc = "This key should open anything within the tower."
-	icon_state = "greenkey"
-	lockid = "tower"
-
-/obj/item/roguekey/mage
-	name = "magicians's key"
-	desc = "This is the court wizard's key. It watches you..."
-	icon_state = "eyekey"
-	lockid = "mage"
-
-/obj/item/roguekey/graveyard
-	name = "crypt key"
-	desc = "This rusty key belongs to the gravekeeper."
-	icon_state = "rustkey"
-	lockid = "graveyard"
-
-/obj/item/roguekey/mason
-	name = "mason's key"
-	desc = "This bronze key should open the mason's guild."
-	icon_state = "brownkey"
-	lockid = "mason"
-
-/obj/item/roguekey/nightman
-	name = "nightmaster's key"
-	desc = "This regal key opens a few doors within the castle."
-	icon_state = "greenkey"
-	lockid = "nightman"
-
-/obj/item/roguekey/nightmaiden
-	name = "nightmaiden's key"
-	desc = "This regal key opens a few doors within the castle."
-	icon_state = "brownkey"
-	lockid = "nightmaiden"
-
-/obj/item/roguekey/mercenary
-	name = "mercenary key"
-	desc = "Why, a mercenary would not kick doors down."
-	icon_state = "greenkey"
-	lockid = "merc"
-
-/obj/item/roguekey/physician
-	name = "physician key"
-	desc = "The key smells of herbs, feeling soothing to the touch."
-	icon_state = "greenkey"
-	lockid = "physician"
-
-/obj/item/roguekey/puritan
-	name = "puritan's key"
-	desc = "This is an intricate key." // i have no idea what is this key about
-	icon_state = "mazekey"
-	lockid = "puritan"
-
-/obj/item/roguekey/confession
-	name = "confessional key"
-	desc = "This key opens the doors of the confessional."
-	icon_state = "brownkey"
-	lockid = "confession"
-
-/obj/item/roguekey/hand
-	name = "hand's key"
-	desc = "This regal key belongs to the King's Right Hand."
-	icon_state = "cheesekey"
-	lockid = "hand"
-
-/obj/item/roguekey/steward
-	name = "steward's key"
-	desc = "This key belongs to the court's greedy steward."
-	icon_state = "cheesekey"
-	lockid = "steward"
-
-/obj/item/roguekey/archive
-	name = "archive key"
-	desc = "This key looks barely used."
+/obj/item/roguekey/sund/sund_knights
+	name = "shining key"
+	desc = "Savage steel polished to a silvery finish makes up this key."
 	icon_state = "ekey"
-	lockid = "archive"
+	lockid = "sund_knights"
 
-//grenchensnacker
-/obj/item/roguekey/porta
-	name = "strange key"
-	desc = "Was this key enchanted by a wizard locksmith...?"//what is grenchensnacker.
-	icon_state = "eyekey"
-	lockid = "porta"
+/obj/item/roguekey/sund/sund_castle
+	name = "cast iron key"
+	desc = "Made cheap and sturdy, this key must have an army of brothers."
+	icon_state = "rustkey"
+	lockid = "sund_castle"
 
-/obj/item/roguekey/blk
-	name = "Blackmarket Key"
-	desc = "Hm. Sinister."
-	icon_state = "toothkey"
-	lockid = "blk"
+/obj/item/roguekey/sund/sund_arms
+	name = "black iron key"
+	desc = "Hard beeswax gleams on this iron key, proofing it from rust."
+	icon_state = "rustkey"
+	lockid = "sund_arms"
+
+/obj/item/roguekey/sund/sund_butler
+	name = "pewter key"
+	desc = "This key is humble pewter, diligently polished."
+	icon_state = "ekey"
+	lockid = "sund_butler"
+
+/obj/item/roguekey/sund/sund_ladymaid
+	name = "bright silver key"
+	desc = "Not a spot of tarnish stains this fine silver key."
+	icon_state = "ekey"
+	lockid = "sund_ladymaid"
+
+/obj/item/roguekey/sund/sund_servant
+	name = "tarnished bronze key"
+	desc = "The greenish bronze seems as old and weary as the depths of the keep."
+	icon_state = "greenkey"
+	lockid = "sund_servant"
+
+// Watch keys.
+
+/obj/item/roguekey/sund/sund_watch
+	name = "heavy bronze key"
+	desc = "This rugged key bears the mark of the Watch."
+	icon_state = "mazekey"
+	lockid = "sund_watch"
+
+/obj/item/roguekey/sund/sund_gaol
+	name = "blood-rusted key"
+	desc = "This key surely belongs to a place of misery."
+	icon_state = "rustkey"
+	lockid = "sund_gaol"
+
+/obj/item/roguekey/sund/sund_wall
+	name = "simple bronze key"
+	desc = "Sturdy and well-worn, this key bears the town seal of Sundmark."
+	icon_state = "brownkey"
+	lockid = "sund_wall"
+
+// Church keys.
+
+/obj/item/roguekey/sund/sund_priest
+	name = "cross-shaped key"
+	desc = "The Cross Mundane in gold makes up the shank of this key."
+	icon_state = "bosskey"
+	lockid = "sund_priest"
+
+/obj/item/roguekey/sund/sund_church
+	name = "polished brass key"
+	desc = "This key is of humble material but faithfully maintained."
+	icon_state = "cheesekey"
+	lockid = "sund_church"
+
+/obj/item/roguekey/sund/sund_churchm
+	name = "humble copper key"
+	desc = "This small key is no longer than a man's finger."
+	icon_state = "brownkey"
+	lockid = "sund_churchm"
+
+/obj/item/roguekey/sund/sund_churchf
+	name = "modest copper key"
+	desc = "This diminutive key is no longer than a lady's thumb."
+	icon_state = "rustkey"
+	lockid = "sund_churchf"
+
+/obj/item/roguekey/sund/sund_inquisitor
+	name = "goathorn key"
+	desc = "The path sinister, the path descendant."
+	icon_state = "rustkey"
+	lockid = "sund_inquisitor"
+
+// Chapter House Keys
+
+/obj/item/roguekey/sund/sund_chapmaster
+	name = "cross-sealed key"
+	desc = "This bright brass key is marked with the Chapter Master's seal."
+	icon_state = "cheesekey"
+	lockid = "sund_chapmaster"
+
+/obj/item/roguekey/sund/sund_chapter
+	name = "sturdy bronze key"
+	desc = "Resolute but tarnished bronze makes up this stout key."
+	icon_state = "greenkey"
+	lockid = "sund_chapter"
+
+/obj/item/roguekey/sund/sund_chapterm
+	name = "stout bronze key"
+	desc = "This is the master key of the church."
+	icon_state = "greenkey"
+	lockid = "sund_chapterm"
+
+/obj/item/roguekey/sund/sund_chapterf
+	name = "graceful bronze key"
+	desc = "While well-made, this key has a bit of a delicate handle."
+	icon_state = "greenkey"
+	lockid = "sund_chapterf"
+
+// Merchants and Shops
+
+/obj/item/roguekey/sund/sund_shop
+	name = "dull silver key"
+	desc = "Although made of fine metal, this key has a certain greasy feel."
+	icon_state = "ekey"
+	lockid = "sund_shop"
+
+/obj/item/roguekey/sund/sund_smith
+	name = "wrought-iron key"
+	desc = "This hammer-forged key has a twisted shank and elaborite ironwork."
+	icon_state = "rustkey"
+	lockid = "sund_smith"
+
+/obj/item/roguekey/sund/sund_tailor
+	name = "ribbon-bound key"
+	desc = "A white ribbon is tied round the handle of this key."
+	icon_state = "hornkey"
+	lockid = "sund_tailor"
+
+/obj/item/roguekey/sund/sund_innkeep
+	name = "carved antler key"
+	desc = "A bit of carved antler makes this key stand out to the touch."
+	icon_state = "hornkey"
+	lockid = "sund_innkeep"
+
+/obj/item/roguekey/sund/sund_inn
+	name = "dull bronze key"
+	desc = "This key is stained with grease and soot."
+	icon_state = "brownkey"
+	lockid = "sund_inn"
+
+/obj/item/roguekey/sund/sund_gameroom
+	name = "coin-shaped key"
+	desc = "The head of this key is an old coin."
+	icon_state = "brownkey"
+	lockid = "sund_gameroom"
+
+/obj/item/roguekey/sund/sund_bawdymaster
+	name = "ornate dark key"
+	desc = "This dark key feels as heavy as a guilty secret."
+	icon_state = "mazekey"
+	lockid = "sund_bawdymaster"
+
+/obj/item/roguekey/sund/sund_bawdy
+	name = "filthy dark key"
+	desc = "This key is filthy to a degree that can never be clean again."
+	icon_state = "rustkey"
+	lockid = "sund_bawdy"
+
+/obj/item/roguekey/sund/sund_bawdyroom
+	name = "gleaming brass key"
+	desc = "The second-rate metal has been franticly scoured to seem better than it is."
+	icon_state = "cheesekey"
+	lockid = "sund_bawdyroom"

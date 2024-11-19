@@ -209,9 +209,9 @@
 	icon_state = "brownkey"
 	lockid = "sund_inn"
 
-/obj/item/roguekey/sund/sund_gameroom
-	name = "coin-shaped key"
-	desc = "The head of this key is an old coin."
+/obj/item/roguekey/sund/sund_parlor
+	name = "bright bronze key"
+	desc = "Clean and presentable, this key is well-cared for and unweathered."
 	icon_state = "brownkey"
 	lockid = "sund_gameroom"
 
@@ -232,3 +232,48 @@
 	desc = "The second-rate metal has been franticly scoured to seem better than it is."
 	icon_state = "cheesekey"
 	lockid = "sund_bawdyroom"
+
+
+// Inn rooms.
+
+/obj/item/roguekey/sund/sund_innroom1
+	name = "number I key"
+	desc = "This plain key is engraved with the numeral 'I'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom1"
+
+/obj/item/roguekey/sund/sund_innroom2
+	name = "number II key"
+	desc = "This plain key is engraved with the numeral 'II'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom2"
+
+/obj/item/roguekey/sund/sund_innroom3
+	name = "number III key"
+	desc = "This plain key is engraved with the numeral 'III'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom3"
+
+/obj/item/roguekey/sund/sund_innroom4
+	name = "number IV key"
+	desc = "This plain key is engraved with the numeral 'IV'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom4"
+
+/obj/item/roguekey/sund/sund_innroom5
+	name = "number V key"
+	desc = "This plain key is engraved with the numeral 'V'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom5"
+
+/obj/item/roguekey/sund/sund_innroom6
+	name = "number VI key"
+	desc = "This plain key is engraved with the numeral 'VI'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom6"
+
+/obj/item/roguekey/sund/sund_innroom7
+	name = "number VII key"
+	desc = "This plain key is engraved with the numeral 'VII'."
+	icon_state = "brownkey"
+	lockid = "sund_innroom7"

@@ -63,11 +63,11 @@
 	icon_state = "hornkey"
 	lockid = "sund_noble"
 
-/obj/item/roguekey/sund/sund_knights
+/obj/item/roguekey/sund/sund_knight
 	name = "shining key"
 	desc = "Savage steel polished to a silvery finish makes up this key."
 	icon_state = "ekey"
-	lockid = "sund_knights"
+	lockid = "sund_knight"
 
 /obj/item/roguekey/sund/sund_castle
 	name = "cast iron key"

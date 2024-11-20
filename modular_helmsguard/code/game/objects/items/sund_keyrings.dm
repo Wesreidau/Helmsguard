@@ -3,80 +3,127 @@
 // This file defines the keyrings assigned to jobs and keys for the Sundmark map. For clarity use the subfolder keyring/sund/.
 // Keys on the keys = list that aren't in the roguekey/sund/ subfolder will not work on sundmark.dmm by design.
 
-/obj/item/storage/keyring/butcher	// Just incase, butcher can at least see to getting farmers incase there are none given he sucks at farming.
-	keys = list(/obj/item/roguekey/farm, /obj/item/roguekey/butcher)
+// Keep keychains.
 
-/obj/item/storage/keyring/sheriff
-	keys = list(/obj/item/roguekey/sheriff, /obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/walls, /obj/item/roguekey/manor, /obj/item/roguekey/graveyard)
+/obj/item/storage/keyring/sund/sund_ruler
+	keys = list(/obj/item/roguekey/sund/sund_ruler, /obj/item/roguekey/sund/sund_family, /obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_steward, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms)
 
-/obj/item/storage/keyring/judge
-	keys = list(/obj/item/roguekey/sheriff, /obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/walls, /obj/item/roguekey/manor, /obj/item/roguekey/graveyard)
+/obj/item/storage/keyring/sund/sund_consort
+	keys = list(/obj/item/roguekey/sund/sund_ruler, /obj/item/roguekey/sund/sund_family, /obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms)
 
-/obj/item/storage/keyring/councillor
-	keys = list(/obj/item/roguekey/sheriff, /obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/walls, /obj/item/roguekey/manor, /obj/item/roguekey/graveyard)
+/obj/item/storage/keyring/sund/sund_steward
+	keys = list(/obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_steward, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_butler, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms, /obj/item/roguekey/sund/sund_watch)
 
-/obj/item/storage/keyring/nobleguest
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/noble)
+/obj/item/storage/keyring/sund/sund_heir
+	keys = list(/obj/item/roguekey/sund/sund_family, /obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/guard
-	keys = list(/obj/item/roguekey/dungeon, /obj/item/roguekey/garrison)
+/obj/item/storage/keyring/sund/sund_council
+	keys = list(/obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_watch, /obj/item/roguekey/sund/sund_gaol)
 
-/obj/item/storage/keyring/guardcastle
-	keys = list(/obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/walls, /obj/item/roguekey/manor)
+/obj/item/storage/keyring/sund/sund_noble
+	keys = list(/obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/velder
-	keys = list(/obj/item/roguekey/velder, /obj/item/roguekey/blacksmith/town, /obj/item/roguekey/farm, /obj/item/roguekey/butcher)
+/obj/item/storage/keyring/sund/sund_wlord
+	keys = list(/obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_knight)
 
-/obj/item/storage/keyring/vtavern
-	keys = list(/obj/item/roguekey/tavern/village, /obj/item/roguekey/roomvi/village, /obj/item/roguekey/roomv/village, /obj/item/roguekey/roomiv/village, /obj/item/roguekey/roomiii/village, /obj/item/roguekey/roomii/village, /obj/item/roguekey/roomi/village)
+/obj/item/storage/keyring/sund/sund_wlady
+	keys = list(/obj/item/roguekey/sund/sund_family, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_ladymaid, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/gatemaster
-	keys = list(/obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/walls, /obj/item/roguekey/manor)
+/obj/item/storage/keyring/sund/sund_jester
+	keys = list(/obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/merchant
-	keys = list(/obj/item/roguekey/shop, /obj/item/roguekey/merchant)
+/obj/item/storage/keyring/sund/sund_butler
+	keys = list(/obj/item/roguekey/sund/sund_ruler, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_butler, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/mguard
-	keys = list(/obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/walls, /obj/item/roguekey/manor)
+/obj/item/storage/keyring/sund/sund_wlady
+	keys = list(/obj/item/roguekey/sund/sund_family, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_ladymaid, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/mage
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/tower, /obj/item/roguekey/mage)
+/obj/item/storage/keyring/sund/sund_valet
+	keys = list(/obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/innkeep
-	keys = list(/obj/item/roguekey/tavern, /obj/item/roguekey/roomiv, /obj/item/roguekey/roomiii, /obj/item/roguekey/roomii, /obj/item/roguekey/roomi)
+/obj/item/storage/keyring/sund/sund_servant
+	keys = list(/obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle)
 
-/obj/item/storage/keyring/priest
-	keys = list(/obj/item/roguekey/priest, /obj/item/roguekey/confession, /obj/item/roguekey/church)
+// Retinue keychains.
 
-/obj/item/storage/keyring/puritan
-	keys = list(/obj/item/roguekey/puritan, /obj/item/roguekey/manor, /obj/item/roguekey/dungeon, /obj/item/roguekey/confession, /obj/item/roguekey/church, /obj/item/roguekey/sheriff)
+/obj/item/storage/keyring/sund/sund_knight
+	keys = list(/obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_knight, /obj/item/roguekey/sund/sund_castle , /obj/item/roguekey/sund/sund_arms, /obj/item/roguekey/sund/sund_watch, /obj/item/roguekey/sund/sund_gaol, /obj/item/roguekey/sund/sund_wall)
 
-/obj/item/storage/keyring/shepherd
-	keys = list(/obj/item/roguekey/confession, /obj/item/roguekey/church)
+/obj/item/storage/keyring/sund/sund_arms
+	keys = list(/obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms, /obj/item/roguekey/sund/sund_watch, /obj/item/roguekey/sund/sund_gaol, /obj/item/roguekey/sund/sund_wall)
 
-/obj/item/storage/keyring/nightman
-	keys = list(/obj/item/roguekey/nightman, /obj/item/roguekey/nightmaiden)
+/obj/item/storage/keyring/sund/sund_gate
+	keys = list(/obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_servant, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms, /obj/item/roguekey/sund/sund_watch, /obj/item/roguekey/sund/sund_gaol, /obj/item/roguekey/sund/sund_wall)
 
-/obj/item/storage/keyring/hand
-	keys = list(/obj/item/roguekey/hand, /obj/item/roguekey/steward, /obj/item/roguekey/tavern, /obj/item/roguekey/church, /obj/item/roguekey/walls, /obj/item/roguekey/dungeon, /obj/item/roguekey/garrison, /obj/item/roguekey/manor, /obj/item/roguekey/graveyard)
+// Church keychains.
 
-/obj/item/storage/keyring/steward
-	keys = list(/obj/item/roguekey/steward, /obj/item/roguekey/walls, /obj/item/roguekey/dungeon, /obj/item/roguekey/manor, /obj/item/roguekey/graveyard)
+/obj/item/storage/keyring/sund/sund_priest
+	keys = list(/obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_priest, /obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchm, /obj/item/roguekey/sund/sund_churchf, /obj/item/roguekey/sund/sund_inquisitor, /obj/item/roguekey/sund/sund_chapter)
 
-/obj/item/storage/keyring/clerk
-	keys = list(/obj/item/roguekey/walls, /obj/item/roguekey/dungeon, /obj/item/roguekey/manor, /obj/item/roguekey/graveyard)
+/obj/item/storage/keyring/sund/sund_monk
+	keys = list(/obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchm)
 
-/obj/item/storage/keyring/dungeoneer
-	keys = list(/obj/item/roguekey/dungeon, /obj/item/roguekey/manor, /obj/item/roguekey/garrison, /obj/item/roguekey/archive)
+/obj/item/storage/keyring/sund/sund_vestal
+	keys = list(/obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchf)
 
-/obj/item/storage/keyring/servant
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/garrison)
+/obj/item/storage/keyring/sund/sund_inquisitor
+	keys = list(/obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchm, /obj/item/roguekey/sund/sund_churchf, /obj/item/roguekey/sund/sund_inquisitor, /obj/item/roguekey/sund/sund_chapter, /obj/item/roguekey/sund/sund_chapterm, /obj/item/roguekey/sund/sund_chapterf,/obj/item/roguekey/sund/sund_chapmaster)
 
-/obj/item/storage/keyring/archivist
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/archive)
+/obj/item/storage/keyring/sund/sund_chapmaster
+	keys = list(/obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_wall, /obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_inquisitor, /obj/item/roguekey/sund/sund_chapter, /obj/item/roguekey/sund/sund_chapterm, /obj/item/roguekey/sund/sund_chapterf, /obj/item/roguekey/sund/sund_chapmaster)
 
-/obj/item/storage/keyring/physician
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/garrison, /obj/item/roguekey/physician)
+/obj/item/storage/keyring/sund/sund_kchapterm
+	keys = list(/obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_wall, /obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchm, /obj/item/roguekey/sund/sund_chapter, /obj/item/roguekey/sund/sund_chapterm)
 
-/obj/item/storage/keyring/royal
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/royal)
+/obj/item/storage/keyring/sund/sund_kchapterf
+	keys = list(/obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_wall, /obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchf, /obj/item/roguekey/sund/sund_chapter, /obj/item/roguekey/sund/sund_chapterf)
+
+/obj/item/storage/keyring/sund/sund_chapterm
+	keys = list(/obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_wall, /obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchm, /obj/item/roguekey/sund/sund_chapter, /obj/item/roguekey/sund/sund_chapterm)
+
+/obj/item/storage/keyring/sund/sund_chapterf
+	keys = list(/obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_wall, /obj/item/roguekey/sund/sund_church, /obj/item/roguekey/sund/sund_churchf, /obj/item/roguekey/sund/sund_chapter, /obj/item/roguekey/sund/sund_chapterf)
+
+// Burgher keychains.
+
+/obj/item/storage/keyring/sund/sund_merchant
+	keys = list(/obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/merchant, /obj/item/roguekey/sund/sund_shop)
+
+/obj/item/storage/keyring/sund/sund_tailor
+	keys = list(/obj/item/roguekey/sund/sund_tailor)
+
+/obj/item/storage/keyring/sund/sund_smith
+	keys = list(/obj/item/roguekey/sund/sund_smith)
+
+/obj/item/storage/keyring/sund/sund_shop
+	keys = list(/obj/item/roguekey/sund/sund_shop)
+
+// Watch keys.
+
+/obj/item/storage/keyring/sund/sund_bailiff
+	keys = list(/obj/item/roguekey/sund/sund_secret, /obj/item/roguekey/sund/sund_noble, /obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms, /obj/item/roguekey/sund/sund_watch, /obj/item/roguekey/sund/sund_gaol, /obj/item/roguekey/sund/sund_wall)
+
+/obj/item/storage/keyring/sund/sund_watch
+	keys = list(/obj/item/roguekey/sund/sund_castle, /obj/item/roguekey/sund/sund_arms, /obj/item/roguekey/sund/sund_watch, /obj/item/roguekey/sund/sund_gaol, /obj/item/roguekey/sund/sund_wall)
+
+// Bawdy keys.
+
+/obj/item/storage/keyring/sund/sund_bawdymaster
+	keys = list(/obj/item/roguekey/sund/sund_bawdymaster, /obj/item/roguekey/sund/sund_bawdyroom, /obj/item/roguekey/sund/sund_bawdy)
+
+/obj/item/storage/keyring/sund/sund_bawdyroom
+	keys = list(/obj/item/roguekey/sund/sund_bawdyroom, /obj/item/roguekey/sund/sund_bawdy)
+
+/obj/item/storage/keyring/sund/sund_bawdy
+	keys = list(/obj/item/roguekey/sund/sund_bawdy)
+
+// Inn key chains.
+
+/obj/item/storage/keyring/sund/sund_innkeep
+	keys = list(/obj/item/roguekey/sund/sund_innkeep, /obj/item/roguekey/sund/sund_inn, /obj/item/roguekey/sund/sund_parlor)
+
+/obj/item/storage/keyring/sund/sund_inn
+	keys = list(/obj/item/roguekey/sund/sund_inn, /obj/item/roguekey/sund/sund_parlor)
+
+/obj/item/storage/keyring/sund/sund_innrooms
+	keys = list(/obj/item/roguekey/sund/sund_innroom1, /obj/item/roguekey/sund/sund_innroom2, /obj/item/roguekey/sund/sund_innroom3, /obj/item/roguekey/sund/sund_innroom4, /obj/item/roguekey/sund/sund_innroom5, /obj/item/roguekey/sund/sund_innroom6, /obj/item/roguekey/sund/sund_innroom7, /obj/item/roguekey/sund/sund_parlor)
